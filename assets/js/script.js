@@ -49,6 +49,32 @@ let locationSwiper = new Swiper(".location__slider", {
             });
         }
     },
+    breakpoints: {
+        '1499': {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+        },
+        '1199': {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+        },
+
+        '300': {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+
+
+        },
+        '300': {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+
+
+        },
+    },
 });
 
 
@@ -97,6 +123,28 @@ let purchaseSwiper = new Swiper(".purchase__slider", {
     navigation: {
         nextEl: ".purchase-swiper-next",
         prevEl: ".purchase-swiper-prev",
+    },
+    breakpoints: {
+        '1399': {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+        },
+        '1299': {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+
+        },
+        '1200': {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+        },
+        '300': {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+        },
     },
 });
 
@@ -200,7 +248,12 @@ checkboxApartment.addEventListener('change', function () {
 
 
 
+let queueClose = document.getElementsByClassName('queue-close')[0];
+let queueModal = document.getElementsByClassName('queue-modal')[0];
 
+    queueClose.addEventListener('click', function () {
+        queueModal.classList.add('queue-modal__close');
+    });
 
 
 

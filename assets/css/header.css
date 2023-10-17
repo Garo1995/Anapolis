@@ -322,5 +322,64 @@ header{
     .aeroporama__block{
         display: none;
     }
-
+    .open-menu {
+        margin-right: auto;
+    }
+}
+@media (max-width: 1399px){
+    .header__menu{
+        display: none;
+    }
+    .aeroporama__block {
+        display: flex;
+        margin-right: 40px;
+    }
+    .header__main {
+        padding: 30px 20px 19px 35px;
+    }
+    .head-fix__menu>ul>li>a {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .head-fix__menu>ul li + li {
+        margin-top: 40px;
+    }
+    .head-fix__menu {
+        margin-left: 0;
+    }
+    .head-fix__menu>ul>li {
+        max-width: 307px;
+        width: 100%;
+    }
+    .submenu__block>a:after {
+        right: -50px;
+    }
+    .head-fix__menu>ul li ul li + li{
+        margin-top: 35px;
+    }
+    .head-fix__menu {
+        max-width: 590px;
+        margin-left: 0;
+    }
+    .header__icon {
+        margin-right: 24px;
+    }
+    .aeroporama__block {
+        margin-right: 30px;
+    }
+    .header__flex {
+        padding: 30px 20px 20px 20px;
+        flex-wrap: wrap;
+    }
+    .header__cnt {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+    .head-fix__link {
+        margin-top: 30px;
+    }
+    .header__apartment {
+        margin-top: 25px;
+    }
 }
