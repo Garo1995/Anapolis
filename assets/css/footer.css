@@ -102,3 +102,48 @@
 .footer__made {
     margin: 0;
 }
+
+@media (max-width: 991px){
+    .container-main {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .footer__menu {
+        margin: 33px 0 0;
+        max-width: 720px;
+    }
+    .footer__text {
+        margin: 33px auto 0;
+    }
+    .footer__text p + p {
+        margin-top: 24px;
+    }
+    .footer__under {
+        margin-top: 30px;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer__made {
+        margin-top: 15px;
+    }
+    .container-foot {
+        padding: 0 20px 60px;
+    }
+    .countless__data span, .countless__out span, .countless__develop span {
+        font-size: 17px;
+        line-height: 22px;
+    }
+    .countless__out span {
+        max-width: 250px;
+    }
+}
+@media (max-width: 760px){
+    .container-main {
+        padding-top: 0;
+    }
+    .footer__menu ul li {
+        width: 47%;
+        margin-bottom: 20px;
+    }
+}

@@ -55,24 +55,31 @@ let locationSwiper = new Swiper(".location__slider", {
             slidesPerGroup: 1,
         },
         '1199': {
-            slidesPerView: 4,
+            slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 50,
+            grabCursor: false,
+            mousewheelControl: false,
+            keyboardControl: false,
         },
-
-        '300': {
-            slidesPerView: 4,
+        '760': {
+            slidesPerView: 2,
             slidesPerGroup: 1,
-            spaceBetween: 50,
-
+            spaceBetween: 25,
+            grabCursor: false,
+            mousewheelControl: false,
+            keyboardControl: false,
 
         },
-        '300': {
-            slidesPerView: 4,
+        '480': {
+            slidesPerView: 2,
             slidesPerGroup: 1,
-            spaceBetween: 50,
-
-
+            spaceBetween: 20,
+        },
+        '300': {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
         },
     },
 });
@@ -96,7 +103,7 @@ let chooseSwiper = new Swiper(".choose-apart__slider", {
     slidesPerView: 1,
     loop: true,
     pagination: {
-        el: "",
+        el: ".choose-pag",
     },
     navigation: {
         nextEl: ".choose-swiper-next",
@@ -135,15 +142,20 @@ let purchaseSwiper = new Swiper(".purchase__slider", {
             spaceBetween: 20,
 
         },
-        '1200': {
+        '991': {
             slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+        },
+        '760': {
+            slidesPerView: 2,
             slidesPerGroup: 1,
             spaceBetween: 20,
         },
         '300': {
             slidesPerView: 2,
             slidesPerGroup: 1,
-            spaceBetween: 20,
+            spaceBetween: 10,
         },
     },
 });
