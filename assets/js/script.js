@@ -55,12 +55,21 @@ let locationSwiper = new Swiper(".location__slider", {
             slidesPerGroup: 1,
         },
         '1199': {
-            slidesPerView: 3,
+            slidesPerView: 4,
             slidesPerGroup: 1,
             spaceBetween: 50,
             grabCursor: false,
             mousewheelControl: false,
             keyboardControl: false,
+        },
+        '991': {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 25,
+            grabCursor: false,
+            mousewheelControl: false,
+            keyboardControl: false,
+
         },
         '760': {
             slidesPerView: 2,
