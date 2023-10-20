@@ -18,158 +18,23 @@ if ($('.head-fix__menu ul li').find('submenu')){
     $('.submenu').parent().addClass('submenu__block')
 }
 
-let locationSwiper = new Swiper(".location__slider", {
-    slidesPerView: 4,
-    spaceBetween: 105,
-    loop: true,
-    autoplay: {
-        delay: 1,
-        disableOnInteraction: false
-    },
-    speed: 4000,
-    grabCursor: true,
-    mousewheelControl: true,
-    keyboardControl: true,
-    pagination: {
-        el: ".location-pag",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".loc-swiper-next",
-        prevEl: ".loc-swiper-prev",
-    },
-    on: {
-        init() {
-            this.el.addEventListener('mouseenter', () => {
-                this.autoplay.stop();
-            });
-
-            this.el.addEventListener('mouseleave', () => {
-                this.autoplay.start();
-            });
-        }
-    },
-    breakpoints: {
-        '1499': {
-            slidesPerView: 4,
-            slidesPerGroup: 1,
-        },
-        '1199': {
-            slidesPerView: 4,
-            slidesPerGroup: 1,
-            spaceBetween: 50,
-            grabCursor: false,
-            mousewheelControl: false,
-            keyboardControl: false,
-        },
-        '991': {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            spaceBetween: 25,
-            grabCursor: false,
-            mousewheelControl: false,
-            keyboardControl: false,
-
-        },
-        '760': {
-            slidesPerView: 2,
-            slidesPerGroup: 1,
-            spaceBetween: 25,
-            grabCursor: false,
-            mousewheelControl: false,
-            keyboardControl: false,
-
-        },
-        '480': {
-            slidesPerView: 2,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-        '300': {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 5,
-        },
-    },
-});
 
 
 
-let openMenu = document.getElementsByClassName('open-menu')[0];
-let closeMenu = document.getElementsByClassName('close-menu')[0];
-let headerFix = document.getElementsByClassName('header__fix')[0];
 
-openMenu.addEventListener('click', function () {
-    headerFix.classList.add('header__act');
-});
+$(document).ready(function () {
+    let openMenu = document.getElementsByClassName('open-menu')[0];
+    let closeMenu = document.getElementsByClassName('close-menu')[0];
+    let headerFix = document.getElementsByClassName('header__fix')[0];
 
-closeMenu.addEventListener('click', function () {
-    headerFix.classList.remove('header__act');
-});
+    openMenu.addEventListener('click', function () {
+        headerFix.classList.add('header__act');
+    });
+    closeMenu.addEventListener('click', function () {
+        headerFix.classList.remove('header__act');
+    });
 
-
-let chooseSwiper = new Swiper(".choose-apart__slider", {
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-        el: ".choose-pag",
-    },
-    navigation: {
-        nextEl: ".choose-swiper-next",
-        prevEl: ".choose-swiper-prev",
-    },
-});
-
-
-let designSwiper = new Swiper(".design__slider", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: ".design-swiper-next",
-        prevEl: ".design-swiper-prev",
-    },
-});
-
-
-let purchaseSwiper = new Swiper(".purchase__slider", {
-    slidesPerView: 4,
-    spaceBetween: 34,
-    loop: true,
-    navigation: {
-        nextEl: ".purchase-swiper-next",
-        prevEl: ".purchase-swiper-prev",
-    },
-    breakpoints: {
-        '1399': {
-            slidesPerView: 4,
-            slidesPerGroup: 1,
-        },
-        '1299': {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-
-        },
-        '991': {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-        '760': {
-            slidesPerView: 2,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        },
-        '300': {
-            slidesPerView: 2,
-            slidesPerGroup: 1,
-            spaceBetween: 10,
-        },
-    },
-});
-
-
+})
 
 
 $(document).ready(function () {
@@ -227,7 +92,6 @@ $(document).ready(function () {
     }
 
 
-
     addActiveClass('choose-moved__href', 'active-moved');
     changeCaseBlock(this, 'choose-moved__href', 'choose-moved__info', 'active-moved', 'click-moved');
     $('.click-moved').on('click', function () {
@@ -249,10 +113,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
 let checkboxApartment = document.getElementsByClassName('checkbox-js')[0];
 checkboxApartment.addEventListener('change', function () {
     console.log(checkboxApartment.checked)
@@ -267,8 +127,6 @@ checkboxApartment.addEventListener('change', function () {
 
 
 
-
-
 let queueClose = document.getElementsByClassName('queue-close')[0];
 let queueModal = document.getElementsByClassName('queue-modal')[0];
 
@@ -279,6 +137,25 @@ let queueModal = document.getElementsByClassName('queue-modal')[0];
 
 
 
+function slowScroll (id) {
+    var offset = 0;
+    $('html, body'). animate({
+        scrollTop: $(id).offset ().top - offset
+    },1000);
+    return false;
+};
+
+jQuery(window).scroll(function(){
+    if (jQuery(this).scrollTop() > 4000) {
+        jQuery('.scrollup').fadeIn('slow');
+    } else {
+        jQuery('.scrollup').fadeOut('slow');
+    }
+});
+jQuery('.scrollup').click(function(){
+    jQuery("html, body").animate({ scrollTop: 0 }, 4000);
+    return false;
+});
 
 
 
