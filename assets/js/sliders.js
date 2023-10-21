@@ -39,6 +39,26 @@ let designSwiper = new Swiper(".design__slider", {
 });
 
 
+let designSwiperTwo = new Swiper(".design__sliderTwo", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".designTwo-swiper-next",
+        prevEl: ".designTwo-swiper-prev",
+    },
+});
+let designSwiperTyhree = new Swiper(".design__sliderThree", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".designThree-swiper-next",
+        prevEl: ".designThree-swiper-prev",
+    },
+});
+
+
 let purchaseSwiper = new Swiper(".purchase__slider", {
     slidesPerView: 4,
     spaceBetween: 34,
@@ -93,8 +113,114 @@ let metersSwiper = new Swiper(".meters-sea__slider", {
         nextEl: ".meters-swiper-next",
         prevEl: ".meters-swiper-prev",
     },
+    breakpoints: {
+
+        '991': {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+        },
+
+        '760': {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
+
+        },
+        '480': {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
+        },
+        '300': {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
+        },
+    },
 
 });
+
+
+let maintainedSwiper = new Swiper(".maintained__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".scape-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".scape-swiper-next",
+        prevEl: ".scape-swiper-prev",
+    },
+
+});
+
+
+
+
+
+let scapeSwiper = new Swiper(".scape__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".scape-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".scape-swiper-next",
+        prevEl: ".scape-swiper-prev",
+    },
+});
+
+
+
+
+
+
+
+
+let buildTwoSwiper = new Swiper(".buildings__two", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+let buildingsSwiper = new Swiper(".buildings__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".buildings-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".buildings-swiper-next",
+        prevEl: ".buildings-swiper-prev",
+    },
+    thumbs: {
+        swiper: buildTwoSwiper,
+    },
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

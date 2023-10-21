@@ -456,6 +456,7 @@ p{
     max-width: 1920px;
     width: 100%;
     margin: 65px auto 0;
+    position: relative;
 }
 .choose-apart__info{
     width: 100%;
@@ -3099,6 +3100,9 @@ input:checked + .slider:before {
         font-size: 20px;
         line-height: 26px;
     }
+    .countless__flex {
+        max-width: 976px;
+    }
     .calculator-pay__info h2 {
         font-size: 34px;
         margin-top: 20px;
@@ -3298,6 +3302,7 @@ input:checked + .slider:before {
         padding-left: 0;
         flex-direction: column;
         align-items: flex-start;
+        padding-bottom: 25px;
     }
 
     .premises__apart__text p {
@@ -3575,7 +3580,9 @@ input:checked + .slider:before {
     .design__parent ul li a{
         padding: 0;
     }
-
+    .countless__flex {
+        max-width: 724px;
+    }
 }
 @media (max-width: 760px){
     .apartments-bg {
@@ -3641,6 +3648,10 @@ input:checked + .slider:before {
         height: 60px;
         grid-gap: 15px;
         z-index: 2;
+    }
+    .countless__flex {
+        max-width: 435px;
+        width: 100%;
     }
 
     .choose-apart__left {
@@ -3870,7 +3881,7 @@ input:checked + .slider:before {
         background-position: 66% center;
     }
     h1 {
-        font-size: 41px;
+        font-size: 40px;
     }
     .apartments__block {
         bottom: 334px;
@@ -4012,9 +4023,19 @@ input:checked + .slider:before {
     .countless__develop {
         max-width: 132px;
         height: 132px;
-        margin: -117px auto 0;
+        margin: -60px auto 0;
         margin-left: 0;
         right: -16px;
+    }
+    .investments__block:before {
+        left: 43px;
+        max-width: 182px;
+        width: 100%;
+        height: 155px;
+    }
+    .countless__out {
+        margin-left: 72px;
+        margin-top: -80px;
     }
     .latest-awards__pic {
         max-width: 150px;
@@ -4043,5 +4064,26 @@ input:checked + .slider:before {
         border-radius: 20px 20px 0 0;
         border-bottom: unset;
     }
+    h2 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+}
+@media (max-width: 370px){
+    .answer-quest__info strong {
+        font-size: 35px;
+        line-height: 43px;
+        margin: 20px 0;
+    }
+    .meters-sea__info {
+        right: 11px;
+        max-width: 296px;
+    }
+    .get-cat {
+        font-size: 16px;
+        max-width: 300px;
+        text-align: left;
+    }
+
 
 }

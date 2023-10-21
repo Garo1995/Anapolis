@@ -1,0 +1,121 @@
+.finish-opt .design__item{
+    margin-top: 100px;
+}
+.design__qwe .design__slider{
+    margin-right: 0;
+    margin-left: -80px;
+}
+.design__sliderTwo ,.design__sliderThree {
+    margin-right: 0;
+    margin-left: -80px;
+}
+
+.design__qwe  .design__cnt {
+    margin-left: auto;
+}
+.acquisitions__cnt {
+    padding-top: 45px;
+    margin-bottom: 200px;
+}
+.acquisitions__cnt>p{
+    max-width: 676px;
+    width: 100%;
+}
+.acquisitions__flex{
+    margin-top: 105px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.acquisitions__box{
+    padding: 55px 35px 42px 57px;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 400px;
+    background: #ffffff;
+}
+.acquisitions__box h2{
+    font-size: 80px;
+    line-height: 52px;
+    color: rgba(16, 47, 92, 1);
+}
+.acquisitions__box p{
+    font-size: 20px;
+    line-height: 26px;
+    color: rgba(16, 47, 92, 1);
+
+}
+.acquisitions__page h1{
+    max-width: 772px;
+    width: 100%;
+    padding-top: 50px;
+}
+.acquisitions__main .purchase__info h2{
+    color: #ffffff;
+}
+
+.calculator__acquis{
+    padding: 420px 0 220px;
+}
+.acuis__secs .investments__block{
+    margin-bottom: -280px;
+    z-index: 1;
+}
+
+@media (max-width: 1400px){
+    .design__sliderTwo, .design__sliderThree {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .acquisitions__box {
+        padding: 40px 24px 30px 21px;
+        min-height: 374px;
+    }
+}
+@media (max-width: 991px){
+    .design__option {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+    .acquisitions__box h2 {
+        font-size: 60px;
+        line-height: 65px;
+        color: rgba(16, 47, 92, 1);
+    }
+    .acquisitions__box h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    .acquisitions__box {
+        padding: 30px 20px;
+        min-height: 311px;
+    }
+    .acquisitions__box p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .acquisitions__cnt {
+        padding-top: 45px;
+        margin-bottom: 100px;
+    }
+    .acuis__secs .investments__block {
+        margin-bottom: 0;
+        z-index: 1;
+    }
+    .calculator__acquis {
+        padding: 90px 0;
+    }
+    .acquisitions__flex {
+        margin-top: 60px;
+        flex-direction: column;
+    }
+    .acquisitions__box {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+        max-width: 500px;
+        width: 100%;
+    }
+}
