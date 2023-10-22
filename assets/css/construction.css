@@ -1,0 +1,134 @@
+.construct-page{
+    padding-top: 60px;
+}
+.construct__det{
+    margin-top: 50px;
+}
+.construct__det ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.construct__det ul li{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.40);
+    transition: 0.3s;
+}
+.construct__det ul li:hover{
+    color: rgba(255, 255, 255, 1);
+}
+.construct__cnt{
+    margin-top: 60px;
+}
+.construct__block{
+    display: flex;
+}
+.construct__info{
+    position: relative;
+    background: #ffffff;
+    padding: 32px 35px;
+    max-width: 380px;
+    width: 100%;
+}
+.construct__info p{
+    margin-top: 80px;
+}
+.construct__video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 905px;
+    width: 100%;
+}
+.construct__video>img{
+    object-fit: cover;
+    width: 100%;
+    height: 607px;
+
+}
+
+.construct__info p{
+    color: rgba(16, 47, 92, 1);
+    font-weight: 400;
+}
+.construct__info h2 {
+    color: rgba(16, 47, 92, 1);
+    font-weight: 300;
+    line-height: 52px;
+    font-size: 42px;
+}
+.construct__info .location__arrows {
+    margin-top: 41px;
+    position: relative;
+}
+
+.construct__slider .swiper-pagination{
+    color: rgba(16, 47, 92, 1);
+    font-size: 24px;
+    line-height: 34px;
+    max-width: 90px;
+    margin-left: auto;
+}
+.construct__slider .swiper-pagination-current{
+    font-size: 54px;
+    line-height: 52px;
+    color: rgba(16, 47, 92, 1);
+}
+.construct__slider .swiper-pagination-total{
+    color: rgba(16, 47, 92, 1);
+    font-size: 24px;
+    line-height: 34px;
+}
+
+
+@media (max-width: 991px){
+    .construct__block {
+        flex-direction: column-reverse;
+    }
+    .construct__info {
+        padding: 29px 20px;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .construct__info p {
+        margin-top: 40px;
+    }
+    .construct__info .location__arrows {
+        margin-top: 10px;
+        order: 1;
+        position: relative;
+    }
+    .construct__info h2 {
+        line-height: 46px;
+        font-size: 38px;
+        order: 2;
+        margin-top: 30px;
+    }
+    .construct__info p {
+        order: 3;
+    }
+    .construct__video>img {
+        object-fit: cover;
+        width: 100%;
+        height: 335px;
+    }
+    .construct__det {
+        margin-top: 35px;
+    }
+    .construct__cnt {
+        margin-top: 40px;
+    }
+    .construct__det ul{
+        flex-wrap: wrap;
+        grid-gap: 10px;
+    }
+    .construct-page {
+        padding-top: 40px;
+    }
+}

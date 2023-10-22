@@ -20,8 +20,6 @@ if ($('.head-fix__menu ul li').find('submenu')){
 
 
 
-
-
 $(document).ready(function () {
     let openMenu = document.getElementsByClassName('open-menu')[0];
     let closeMenu = document.getElementsByClassName('close-menu')[0];
@@ -113,17 +111,11 @@ $(document).ready(function () {
 
 
 
-let checkboxApartment = document.getElementsByClassName('checkbox-js')[0];
-checkboxApartment.addEventListener('change', function () {
-    console.log(checkboxApartment.checked)
-    if(checkboxApartment.checked){
-        document.getElementsByClassName('design__item')[0].classList.add('remove-photo')
 
-    }else{
-        document.getElementsByClassName('design__item')[0].classList.remove('remove-photo')
-    }
+$('.more-news-info').on('click',function () {
+    $(this).addClass('more-news__none')
+    $('.news-page__flex').addClass('news-block__act')
 })
-
 
 
 
@@ -161,3 +153,38 @@ jQuery('.scrollup').click(function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let checkboxApartment = document.getElementsByClassName('checkbox-js')[0];
+
+checkboxApartment.addEventListener('change', function () {
+    if(checkboxApartment.checked){
+        document.getElementsByClassName('design__item')[0].classList.add('remove-photo');
+    }else{
+        document.getElementsByClassName('design__item')[0].classList.remove('remove-photo');
+    }
+});

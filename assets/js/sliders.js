@@ -59,6 +59,21 @@ let designSwiperTyhree = new Swiper(".design__sliderThree", {
 });
 
 
+let constructSwiper = new Swiper(".construct__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct-swiper-next",
+        prevEl: ".construct-swiper-prev",
+    },
+
+});
+
 let purchaseSwiper = new Swiper(".purchase__slider", {
     slidesPerView: 4,
     spaceBetween: 34,
@@ -294,6 +309,87 @@ let locationSwiper = new Swiper(".location__slider", {
             slidesPerView: 2,
             slidesPerGroup: 1,
             spaceBetween: 20,
+        },
+        '300': {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
+        },
+    },
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let partnersSwiper = new Swiper(".dev-partners__slider", {
+    slidesPerView: 6,
+    spaceBetween: 10,
+
+    loop: true,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: false
+    },
+    speed: 4000,
+    grabCursor: true,
+    mousewheelControl: true,
+    keyboardControl: true,
+
+    breakpoints: {
+
+        '1500': {
+            slidesPerView: 6,
+            slidesPerGroup: 1,
+            spaceBetween: 10,
+        },
+
+        '1300': {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
+
+        },
+        '991': {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
+        },
+        '760': {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
+        },
+        '570': {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
+        },
+        '420': {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 5,
         },
         '300': {
             slidesPerView: 1,

@@ -4,6 +4,9 @@
     margin-top: -124px;
     padding-top: 200px;
     padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .head-tit{
     margin-top: 140px;
@@ -414,6 +417,7 @@
     border: 2px solid #15386B;
     padding: 40px 50px 0;
     margin-top: 106px;
+    margin-bottom: 65px;
 }
 .construction__flex{
     width: 100%;
@@ -676,6 +680,7 @@
     }
     .construction__item {
         padding: 34px 25px 0;
+        margin-top: 70px;
     }
 }
 @media (max-width: 760px){
