@@ -16,9 +16,16 @@
     text-align: left;
     color: rgba(255, 255, 255, 0.40);
     transition: 0.3s;
+    cursor: pointer;
 }
 .construct__det ul li:hover{
     color: rgba(255, 255, 255, 1);
+}
+.construct__det ul .active-moved{
+    color: rgba(255, 255, 255, 1);
+}
+.construct__click strong{
+    display: none;
 }
 .construct__cnt{
     margin-top: 60px;
@@ -130,5 +137,68 @@
     }
     .construct-page {
         padding-top: 40px;
+    }
+    .construct__det{
+        display: none;
+    }
+    .construct__click{
+        max-width: 330px;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 12px;
+        margin-top: 50px;
+    }
+    .construct__click strong {
+        display: block;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        text-align: left;
+        color: #ffffff;
+        position: relative;
+
+    }
+    .construct__click strong:after{
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 9px;
+        height: 9px;
+        border-top: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
+        transform: rotate(135deg);
+    }
+    .construct-click__open .construct__det{
+        display: block;
+    }
+    .construct__det{
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        margin-top: 13px;
+        width: 100%;
+        z-index: 11;
+    }
+    .construct__det ul{
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 0;
+    }
+    .construct__det ul li{
+        width: 100%;
+        text-align: center;
+        color: rgba(16, 47, 92, 0.40);
+    }
+    .construct__det ul li{
+        width: 100%;
+        text-align: center;
+        color: rgba(16, 47, 92, 0.40);
+        padding: 10px 0;
+        transition: 0.3s;
+    }
+    .construct__det ul  .active-moved{
+        color: rgba(16, 47, 92, 1);
+        background: rgba(16, 47, 92, 0.40);
     }
 }

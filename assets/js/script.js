@@ -108,6 +108,23 @@ $(document).ready(function () {
 });
 
 
+$('.construct__click strong').on('click', function (e) {
+    $(this).parent().toggleClass('construct-click__open');
+    e.stopPropagation()
+});
+
+$('.construct__det ul li').on('click', function () {
+    var text_in = $('.construct__click strong').html();
+    let selected_text = $(this).html();
+    $('.construct__click strong').html(selected_text);
+    $('.construct__click').removeClass('construct-click__open')
+});
+$(window).on('click', function (e) {
+    let menuSort = $('.construct__click');
+    if (e.target !== menuSort) {
+        menuSort.removeClass('construct-click__open')
+    }
+});
 
 
 
