@@ -4,23 +4,6 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
-    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-        disableOn: 280,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
-});
-
-if ($('.head-fix__menu ul li').find('submenu')){
-    $('.submenu').parent().addClass('submenu__block')
-}
-
-
-
-$(document).ready(function () {
     let openMenu = document.getElementsByClassName('open-menu')[0];
     let closeMenu = document.getElementsByClassName('close-menu')[0];
     let headerFix = document.getElementsByClassName('header__fix')[0];
@@ -32,7 +15,86 @@ $(document).ready(function () {
         headerFix.classList.remove('header__act');
     });
 
+    if ($('.head-fix__menu ul li').find('submenu')){
+        $('.submenu').parent().addClass('submenu__block')
+    }
+    $('.head-fix__menu>ul>li>a').on('click',function () {
+        if (!$('.head-fix__menu>ul>li').hasClass('submenu__active')){
+            $(this).parent().addClass('submenu__active');
+        }
+        else{
+            $('.head-fix__menu>ul>li').removeClass('submenu__active')
+        }
+    });
+
 })
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+    setTimeout(function () {
+        $(".animate__style").addClass("in-viewport");
+    }, 500);
+});
+
+
+
+
+$(window).scroll(function () {
+    let $elemAdvantages = $('.location__main');
+    let $window = $(window);
+    let docViewTop = $window.scrollTop();
+    let docViewBottom = docViewTop + $window.height();
+
+    let elemTop = $elemAdvantages.offset().top;
+    let elemBottom = elemTop + $elemAdvantages.height();
+
+    if (elemTop + $elemAdvantages.height() / 4 <= docViewBottom && docViewBottom  < elemBottom + $elemAdvantages.height()) {
+        $elemAdvantages.addClass('location-animation');
+    } else {
+        $elemAdvantages.removeClass('location-animation');
+    }
+
+    let $chooseAnim = $('.choose-anim');
+    let $chooseAnimTop = $chooseAnim.offset().top;
+    let $chooseAnimBottom = $chooseAnimTop + $chooseAnim.height();
+
+    if ($chooseAnimTop + $chooseAnim.height() / 4 <= docViewBottom && docViewBottom  < $chooseAnimBottom + $chooseAnim.height()) {
+        $chooseAnim.addClass('choose-animation');
+    } else {
+        $chooseAnim.removeClass('choose-animation');
+    }
+
+});
+
+
+
+
+
+
+$(document).ready(function () {
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+        disableOn: 280,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+});
+
+
+
+
+
+
 
 
 $(document).ready(function () {
@@ -106,6 +168,8 @@ $(document).ready(function () {
     })
 
 });
+
+
 
 
 $('.construct__click strong').on('click', function (e) {

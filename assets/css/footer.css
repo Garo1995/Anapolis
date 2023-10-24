@@ -48,6 +48,22 @@
     line-height: 21px;
     text-align: left;
     color: rgba(255, 255, 255, 1);
+    transition: 0.3s;
+    position: relative;
+}
+.footer__menu ul li a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 1);
+    transition: 0.3s;
+}
+.footer__menu ul li a:hover:before{
+    width: 100%;
 }
 .footer__text{
     max-width: 1380px;
@@ -113,6 +129,11 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     position: relative;
+    transition: 0.3s;
+}
+.scrollup:hover{
+    border: 1px solid rgba(245, 131, 87, 1);
+    background: rgba(245, 131, 87, 1);
 }
 .scrollup:before{
     content: "";
@@ -124,6 +145,8 @@
     border-radius: 2px;
     transform: rotate(45deg);
     top: 42%;
+    transition: 0.3s;
+
 }
 @media (max-width: 1880px){
     .container-foot {

@@ -32,6 +32,36 @@ p{
 
 }
 
+
+.animate__style {
+    transform: translateZ(0);
+}
+.animate__style .header__main{
+    opacity: 0;
+    transform: translateY(-100px);
+    transition-duration: .8s;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(.33, 1, .68, 1);
+    will-change: transform, opacity;
+}
+.animate__style .header__main {
+    transition-delay: .2s;
+}
+
+.animate__style.in-viewport .header__main {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
 .apartments-bg{
     background-image: url("../img/home-bg.jpg");
     background-size: cover;
@@ -52,12 +82,20 @@ p{
 .apartments__item{
     display: flex;
     align-items: flex-end;
+    transition: 1.3s;
+    transform: rotate(-40deg) translateX(-250px) scale(1.8);
+    opacity: 0;
+}
+.in-viewport .apartments__item{
+    transform: rotate(0deg) translateX(0) scale(1);
+    opacity: 1;
 }
 .apartments__item:nth-child(1) {
     margin-top: 241px;
     max-width: 400px;
     width: 100%;
 }
+
 .apartments__item:nth-child(1) .apartments__text{
     position: relative;
     top: 48px;
@@ -127,6 +165,25 @@ p{
     margin-top: 25px;
     margin-left: 20px;
 }
+.apartments__main{
+    transition: 0.4s;
+}
+.apartments__info h1{
+    opacity: 0;
+    transition: 0.9s;
+}
+.in-viewport .apartments__info h1{
+    opacity: 1;
+}
+.apartments__info .btn-liner{
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: 1.1s;
+}
+.in-viewport .apartments__info .btn-liner{
+    transform: translateX(0);
+    opacity: 1;
+}
 .btn-liner{
     display: flex;
     align-items: center;
@@ -171,7 +228,15 @@ p{
     height: 253px;
     padding: 15px;
     margin-top: 20px;
+    transition: 0.9s;
+    transform: translateX(-185px);
+    opacity: 0;
 }
+.in-viewport .apartments__pay{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .apartments__pay p{
     margin-top: 15px;
     text-align: center;
@@ -179,15 +244,14 @@ p{
 }
 
 .location__main{
-    padding-top: 435px;
     max-width: 2180px;
     width: 100%;
-    margin: 0 auto;
+    margin: 435px auto 0;
 }
 .location__main:before{
     content: "";
     position: absolute;
-    top: 28px;
+    top: -403px;
     left: 0;
     background-image: url("../img/terev.svg");
     background-repeat: no-repeat;
@@ -221,8 +285,15 @@ p{
     min-height: 774px;
     left: -40px;
     top: -1px;
-
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: 1.7s;
 }
+.location-animation .location__info{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .location__info h3{
     margin-top: 60px;
     max-width: 515px;
@@ -400,7 +471,16 @@ p{
 .section-margin{
     margin-top: 240px;
 }
+.choose-apart{
+    transition: 0.89s;
+    transform: translateX(-200px);
+    opacity: 0;
+}
+.choose-animation .choose-apart{
+    transform: translateX(0);
+    opacity: 1;
 
+}
 .choose-apart h2{
     text-align: center;
 }
@@ -467,9 +547,25 @@ p{
 }
 .choose-apart__left, .choose-apart__right{
     width: 50%;
+    opacity: 0;
+}
+.choose-apart__left{
+    transform: translateX(-180px);
+    transition: 1.0s;
 }
 .choose-apart__right{
     display: flex;
+    transform: translateX(-300px);
+    transition: 1.7s;
+}
+.choose-animation .choose-apart__left{
+    transform: translateX(0);
+    opacity: 1;
+}
+.choose-animation .choose-apart__right{
+    transform: translateX(0);
+    opacity: 1;
+
 }
 .choose-apart__left{
     padding: 68px 50px 50px;
@@ -3169,8 +3265,12 @@ input:checked + .slider:before {
         height: 482px;
     }
     .location__main {
-        padding-top: 295px;
+        margin-top: 295px;
         padding-bottom: 125px;
+    }
+    .location__main:before {
+        top: -203px;
+
     }
     .location__info {
         max-width: 980px;
@@ -3383,7 +3483,7 @@ input:checked + .slider:before {
     }
 
     .location__main {
-        padding-top: 825px;
+        margin-top: 825px;
         padding-bottom: 125px;
     }
 
@@ -3893,7 +3993,7 @@ input:checked + .slider:before {
         margin-top: 48px;
     }
     .location__main {
-        padding-top: 959px;
+        margin-top: 959px;
         padding-bottom: 125px;
     }
     .location__info h2{
