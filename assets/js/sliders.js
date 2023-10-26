@@ -297,7 +297,7 @@ let locationSwiper = new Swiper(".location__slider", {
 
         },
         '760': {
-            slidesPerView: 2,
+            slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 25,
             grabCursor: false,
@@ -305,13 +305,13 @@ let locationSwiper = new Swiper(".location__slider", {
             keyboardControl: false,
 
         },
-        '480': {
-            slidesPerView: 2,
+        '420': {
+            slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 20,
         },
         '300': {
-            slidesPerView: 1,
+            slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 5,
         },

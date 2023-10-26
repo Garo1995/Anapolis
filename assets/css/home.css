@@ -32,7 +32,10 @@ p{
 
 }
 
-
+html,body{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 .animate__style {
     transform: translateZ(0);
 }
@@ -204,7 +207,7 @@ p{
     width: 100%;
     height: 110px;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: 0.4s;
     margin-right: 26px;
     position: relative;
     display: flex;
@@ -215,6 +218,10 @@ p{
     top: 50%;
     transform: translateY(-50%);
     left: -18px;
+    transition: 0.4s;
+}
+.anim-liner:hover:before{
+    left: 0;
 }
 .apartments__pay{
     display: flex;
@@ -285,13 +292,11 @@ p{
     min-height: 774px;
     left: -40px;
     top: -1px;
-    opacity: 0;
     transform: translateX(-150px);
     transition: 1.7s;
 }
 .location-animation .location__info{
     transform: translateX(0);
-    opacity: 1;
 }
 
 .location__info h3{
@@ -330,6 +335,11 @@ p{
     width: 11px;
     height: 11px;
     transform: rotate(45deg);
+    transition: 0.5s;
+}
+.get-cat:hover:before{
+    left: 15px;
+
 }
 .get-cat span{
     margin-left: 27px;
@@ -343,9 +353,7 @@ p{
 .location__cnt{
     overflow: hidden;
 }
-/*.location__cnt .swiper-slide.swiper-slide-next{*/
-/*    opacity: 0;*/
-/*}*/
+
 .location__slider {
     width: 2635px;
     transform: translateX(-320px);
@@ -472,7 +480,7 @@ p{
     margin-top: 240px;
 }
 .choose-apart{
-    transition: 0.89s;
+    transition: 1.5s;
     transform: translateX(-200px);
     opacity: 0;
 }
@@ -551,7 +559,7 @@ p{
 }
 .choose-apart__left{
     transform: translateX(-180px);
-    transition: 1.0s;
+    transition: 1.2s;
 }
 .choose-apart__right{
     display: flex;
@@ -688,6 +696,7 @@ p{
     justify-content: space-between;
     margin-bottom: 40px;
     position: relative;
+    transition: 0.7s;
 }
 .premises__title:before{
     content: "";
@@ -705,6 +714,26 @@ p{
     max-width: 332px;
     width: 100%;
     border-radius: 50%;
+    transform: translateX(-100px);
+    transition: 1.6s;
+
+}
+.premises-animation .premises__title img{
+    transform: translateX(0);
+}
+.prem-for-anim .premises__box h2{
+    transition: 1.9s;
+    transform: translateX(110px);
+}
+.premises-animation .premises__box h2{
+    transform: translateX(0);
+}
+.prem-for-anim .btn-liner{
+    transform: translateX(-100px);
+    transition: 1.5s;
+}
+.premises-animation .btn-liner{
+    transform: translateX(0);
 }
 .premises__apartment{
     margin-top: 45px;
@@ -727,6 +756,7 @@ p{
 }
 .design__main{
     padding-bottom: 240px;
+    transition: 0.6s;
 }
 .design__main:before{
     content: "";
@@ -772,12 +802,18 @@ p{
 .design__href ul{
     justify-content: flex-start;
 }
+.design__slider{
+    margin-left: -367px;
+    max-width: 868px;
+    width: 100%;
+    margin-right: -80px;
+}
 .design__photo{
     display: flex;
+    width: 100%;
 }
-
-.design__slider{
-    margin-right: -80px;
+.design__photo img{
+    width: 100%;
 }
 .design__option{
     display: flex;
@@ -833,19 +869,26 @@ p{
     font-size: 18px;
     line-height: 24px;
 }
-.design__cnt{
+.design__cnt {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
     position: relative;
-    margin-top: -98px;
-    max-width: 500px;
+    margin-top: -100px;
+    max-width: 516px;
     z-index: 5;
 }
-.remove-photo .swiper-slide-active .design__photo img{
+.remove-photo .with-furniture{
     display: none;
 }
+.without-furniture{
+    display: none;
+}
+.remove-photo .without-furniture{
+    display: block;
+}
+
 .check-radius{
     display: flex;
     align-items: center;
@@ -913,8 +956,28 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+.design__href{
+    transition: 1.9s;
+    transform: translateX(-150px);
+}
+.design-animation .design__href{
+    transform: translateX(0);
+}
+.add-check__des .design__slider{
+    transition: 1.9s;
+    transform: translateX(150px);
+}
 
-
+.design-animation .add-check__des .design__slider{
+    transform: translateX(0);
+}
+.choose-apart__info .design__left{
+    transition: 1.9s;
+    transform: translateX(-180px);
+}
+.design-animation .choose-apart__info .design__left{
+    transform: translateX(0);
+}
 .apart-queue__bg{
     background-image: url("../img/apartment.jpg");
     background-size: contain;
@@ -940,7 +1003,15 @@ input:checked + .slider:before {
     justify-content: center;
     width: max-content;
     position: absolute;
-    transition: 0.3s;
+    transition: 1.7s;
+    transform: translateY(70px);
+    opacity: 0;
+}
+.apart-queue-animation .queue__box{
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1.1s;
+
 }
 .queue__box h3{
     font-family: 'Spectral';
@@ -1300,6 +1371,9 @@ input:checked + .slider:before {
 .btn-bord:hover{
     background: rgba(245, 131, 87, 1);
 }
+.design-series{
+    margin-top: 240px;
+}
 .design__pad{
     padding-bottom: 240px;
 }
@@ -1312,6 +1386,26 @@ input:checked + .slider:before {
     width: 49%;
     margin-top: 80px;
 }
+.series-moved__box:nth-child(1){
+    transform: translateX(-125px);
+    transition: 1.2s;
+}
+.series-moved__box:nth-child(2){
+    transform: translateX(105px);
+    transition: 1.2s;
+}
+.series-moved__box:nth-child(3){
+    transform: translateX(-105px);
+    transition: 1.8s;
+}
+.series-moved__box:nth-child(4){
+    transform: translateX(105px);
+    transition: 1.8s;
+}
+.deser-animation .series-moved__box{
+    transform: translateX(0);
+
+}
 .series-moved__photo{
     width: 100%;
     position: relative;
@@ -1319,14 +1413,31 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
     margin-bottom: 34px;
+    transition: 0.3s;
+    overflow: hidden;
+    border-radius: 10px;
+
 }
 .series-moved__photo>img{
     width: 100%;
     border-radius: 10px;
+    transition: 0.3s;
+}
+.series-moved__photo:hover img{
+    transform: scale(1.2);
 }
 .video-click__icon{
     position: absolute;
     display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+.video-click__icon img{
+    transition: 0.5s;
+}
+.series-moved__photo:hover .video-click__icon img{
+    transform: scale(0.7);
+
 }
 .series-moved__title{
     font-family: 'Spectral';
@@ -1467,7 +1578,7 @@ input:checked + .slider:before {
 .infrastructure__wrap{
     display: flex;
     justify-content: center;
-    padding-bottom: 133px;
+    padding-bottom: 233px;
 }
 .infrastructure__box{
     max-width: 480px;
@@ -1521,6 +1632,27 @@ input:checked + .slider:before {
     background: rgba(16, 47, 92, 1);
 
 }
+
+.infrast-sec .infrastructure__box:nth-child(1){
+    transform: translateX(-120px);
+    transition: 1.6s;
+}
+.infrast-sec .infrastructure__box:nth-child(2){
+    transform: translateX(-100px);
+    transition: 1.9s;
+}
+.infrast-sec .infrastructure__box:nth-child(3){
+    transform: translateX(100px);
+    transition: 1.6s;
+}
+.infrast-sec .infrastructure__box:nth-child(4){
+    transform: translateX(80px);
+    transition: 1.9s;
+}
+.infrast-sec-animation .infrastructure__box{
+    transform: translateX(0);
+}
+
 
 .purchase__main{
     padding-top: 200px;
@@ -1996,6 +2128,23 @@ input:checked + .slider:before {
     max-width: 350px;
     width: 100%;
 }
+.countless__data{
+    transition: 1.5s;
+    transform: translateX(-180px);
+}
+.countless__out{
+    transition: 1.8s;
+    transform: translateX(120px);
+
+}
+.countless__develop{
+    transition: 1.5s;
+    transform: translateX(-180px);
+}
+.infrast-sec-animation .countless__data, .infrast-sec-animation .countless__out, .infrast-sec-animation .countless__develop{
+    transform: translateX(0);
+
+}
 .countless__develop{
     background: rgba(16, 47, 92, 1);
     max-width: 325px;
@@ -2356,6 +2505,14 @@ input:checked + .slider:before {
 
 }
 @media (max-width: 1760px){
+    h1{
+        font-size: 95px;
+        line-height: 96px;
+    }
+    .apartments__info {
+        max-width: 792px;
+        width: 100%;
+    }
     .queue__box:nth-child(1) {
         left: 136px;
         top: 131px;
@@ -2594,11 +2751,9 @@ input:checked + .slider:before {
     }
 }
 @media (max-width: 1599px){
-    .design__slider {
-        margin-right: -40px;
-    }
+
     h1{
-        font-size: 100px;
+        font-size: 90px;
     }
     h2 {
         font-size: 50px;
@@ -2607,6 +2762,50 @@ input:checked + .slider:before {
     .apartments__info {
         max-width: 830px;
     }
+    .design__slider {
+        margin-left: -384px;
+        max-width: 768px;
+        margin-right: 0;
+    }
+    .design__info strong {
+        font-size: 95px;
+        line-height: 91px;
+    }
+    .design__info span {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .design__info p {
+        margin-top: 25px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .purchase__box h3 {
+        font-size: 43px;
+        line-height: 43px;
+    }
+    .purchase__text {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    .purchase__slider {
+        width: 1868px;
+    }
+    .purchase__box {
+        max-width: 450px;
+        padding: 40px 30px;
+    }
+    .purchase__bid span {
+        font-size: 36px;
+        line-height: 42px;
+        max-width: 160px;
+    }
+    .answer-quest__info strong {
+        font-size: 70px;
+        line-height: 70px;
+        margin: 25px 0;
+    }
+
 }
 @media (max-width: 1560px){
     .queue__box h3 {
@@ -2812,7 +3011,6 @@ input:checked + .slider:before {
     }
 
     .design__photo {
-        display: flex;
         max-width: 669px;
     }
     .design__parent ul li, .choose-apart__link ul li a {
@@ -3172,6 +3370,10 @@ input:checked + .slider:before {
     .purchase__info {
         max-width: 1280px;
     }
+    .design__slider {
+        margin-left: -218px;
+        max-width: 678px;
+    }
 }
 @media (max-width: 1359px){
     .queue__wrap {
@@ -3210,7 +3412,7 @@ input:checked + .slider:before {
     .location__arrows {
         margin-top: 60px;
         position: absolute;
-        bottom: 0;
+        bottom: -600px;
         max-width: 345px;
         width: 100%;
     }
@@ -3244,7 +3446,7 @@ input:checked + .slider:before {
         line-height: 24px;
     }
     .location__slider {
-        width: 100%;
+        width: 1080px;
         transform: translateX(0);
     }
     .apartments-bg {
@@ -3380,6 +3582,7 @@ input:checked + .slider:before {
     }
 
 }
+
 @media (max-width: 991px) {
     .design__parent ul li, .choose-apart__link ul li a {
         margin: 0 6px;
@@ -3504,11 +3707,10 @@ input:checked + .slider:before {
         align-items: flex-start;
     }
 
-    .design__photo {
-        max-width: 385px;
-        margin-top: 40px;
+    .design__slider {
+        max-width: 500px;
+        margin: 40px auto 0;
     }
-
     .design__main:after {
         display: none;
     }
@@ -3683,7 +3885,9 @@ input:checked + .slider:before {
     .countless__flex {
         max-width: 724px;
     }
+
 }
+
 @media (max-width: 760px){
     .apartments-bg {
         background-position: 70% center;
@@ -3957,7 +4161,11 @@ input:checked + .slider:before {
     .section-margin {
         margin-top: 60px;
     }
+    .choose-apart__sec .choose-apart__arrows{
+        display: none;
+    }
 }
+
 
 @media (max-width: 570px){
     .get-cat span {
@@ -4006,12 +4214,7 @@ input:checked + .slider:before {
     .get-cat {
         font-size: 16px;
     }
-    .location__cnt {
-        padding: 0 20px;
-    }
-    .choose-apart__arrows{
-        display: none;
-    }
+
     .premises__box h2 {
         font-size: 34px;
         line-height: 40px;

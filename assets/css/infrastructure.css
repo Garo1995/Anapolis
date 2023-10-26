@@ -483,6 +483,14 @@
         margin-top: -76px;
     }
 }
+@media (max-width: 1599px){
+    .global__head {
+        height: 544px;
+        margin-top: -124px;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+}
 @media (max-width: 1399px){
     .global__head {
         height: 480px;

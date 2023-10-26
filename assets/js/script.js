@@ -72,6 +72,78 @@ $(window).scroll(function () {
         $chooseAnim.removeClass('choose-animation');
     }
 
+
+
+
+    let $premisesAnim = $('.premises__main');
+    let $premisesAnimTop = $premisesAnim.offset().top;
+    let $premisesAnimBottom = $premisesAnimTop + $premisesAnim.height();
+
+    if ($premisesAnimTop + $premisesAnim.height() / 2 < docViewBottom && docViewBottom / 6 < $premisesAnimBottom + $premisesAnim.height()) {
+        $premisesAnim.addClass('premises-animation');
+    } else {
+        $premisesAnim.removeClass('premises-animation');
+    }
+
+
+    let $designAnim = $('.design__main');
+    let $designAnimTop = $designAnim.offset().top;
+    let $designAnimBottom = $designAnimTop + $designAnim.height();
+
+    if ($designAnimTop + $designAnim.height() / 4 < docViewBottom && docViewBottom  < $designAnimBottom + $designAnim.height()) {
+        $designAnim.addClass('design-animation');
+    } else {
+        $designAnim.removeClass('design-animation');
+    }
+
+
+    let $seriesAnim = $('.apart-queue__bg');
+    let $seriesAnimTop = $seriesAnim.offset().top;
+    let $seriesAnimBottom = $seriesAnimTop + $seriesAnim.height();
+
+    if ($seriesAnimTop + $seriesAnim.height()  < docViewBottom && docViewBottom  < $seriesAnimBottom + $seriesAnim.height()) {
+        $seriesAnim.addClass('apart-queue-animation');
+    } else {
+        $seriesAnim.removeClass('apart-queue-animation');
+    }
+
+
+
+    let $desSerAnim = $('.design-series');
+    let $desSerAnimTop = $desSerAnim.offset().top;
+    let $desSerAnimBottom = $desSerAnimTop + $desSerAnim.height();
+
+    if ($desSerAnimTop + $desSerAnim.height() / 4 < docViewBottom && docViewBottom  < $desSerAnimBottom + $desSerAnim.height() / 4) {
+        $desSerAnim.addClass('deser-animation');
+    } else {
+        $desSerAnim.removeClass('deser-animation');
+    }
+
+
+
+    let $infraSecAnim = $('.infrast-sec');
+    let $infraSecTop = $infraSecAnim.offset().top;
+    let $infraSecBottom = $infraSecTop + $infraSecAnim.height();
+
+    if ($infraSecTop + $infraSecAnim.height() / 2 < docViewBottom && docViewBottom  < $infraSecBottom + $infraSecAnim.height() / 2) {
+        $infraSecAnim.addClass('infrast-sec-animation');
+    } else {
+        $infraSecAnim.removeClass('infrast-sec-animation');
+    }
+
+
+    let $countlessAnim = $('.countless__padd');
+    let $countlessTop = $countlessAnim.offset().top;
+    let $countlessBottom = $countlessTop + $countlessAnim.height();
+
+    if ($countlessTop + $countlessAnim.height() / 4 < docViewBottom && docViewBottom  < $countlessBottom + $countlessAnim.height() / 4) {
+        $countlessAnim.addClass('infrast-sec-animation');
+    } else {
+        $countlessAnim.removeClass('infrast-sec-animation');
+    }
+
+
+
 });
 
 
@@ -167,6 +239,9 @@ $(document).ready(function () {
         changeCaseBlock(this, 'infrastructure__cnt', 'infrastructure__info', 'active-infrast', 'click-infrast');
     })
 
+
+
+
 });
 
 
@@ -207,16 +282,6 @@ let queueModal = document.getElementsByClassName('queue-modal')[0];
         queueModal.classList.add('queue-modal__close');
     });
 
-
-
-
-function slowScroll (id) {
-    var offset = 0;
-    $('html, body'). animate({
-        scrollTop: $(id).offset ().top - offset
-    },1000);
-    return false;
-};
 
 jQuery(window).scroll(function(){
     if (jQuery(this).scrollTop() > 4000) {
@@ -261,11 +326,12 @@ jQuery('.scrollup').click(function(){
 
 
 let checkboxApartment = document.getElementsByClassName('checkbox-js')[0];
-
 checkboxApartment.addEventListener('change', function () {
     if(checkboxApartment.checked){
-        document.getElementsByClassName('design__item')[0].classList.add('remove-photo');
-    }else{
-        document.getElementsByClassName('design__item')[0].classList.remove('remove-photo');
+        document.getElementsByClassName('add-check__des')[0].classList.add('remove-photo');
+    }
+    else{
+        document.getElementsByClassName('add-check__des')[0].classList.remove('remove-photo');
     }
 });
+
