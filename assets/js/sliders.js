@@ -18,6 +18,8 @@ let territorySwiper = new Swiper(".territory__slider", {
 let chooseSwiper = new Swiper(".choose-apart__slider", {
     slidesPerView: 1,
     loop: true,
+
+    speed: 1500,
     pagination: {
         el: ".choose-pag",
     },
@@ -82,6 +84,11 @@ let purchaseSwiper = new Swiper(".purchase__slider", {
         nextEl: ".purchase-swiper-next",
         prevEl: ".purchase-swiper-prev",
     },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    speed: 1000,
     breakpoints: {
         '1399': {
             slidesPerView: 4,

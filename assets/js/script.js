@@ -113,92 +113,93 @@ $(document).ready(function () {
 
 
 
-$(window).scroll(function () {
-    let $elemAdvantages = $('.location__main');
-    let $window = $(window);
-    let docViewTop = $window.scrollTop();
-    let docViewBottom = docViewTop + $window.height();
+$(document).ready(function () {
+    $(window).scroll(function () {
+        let $elemAdvantages = $('.location__main');
+        let $window = $(window);
+        let docViewTop = $window.scrollTop();
+        let docViewBottom = docViewTop + $window.height();
 
-    let elemTop = $elemAdvantages.offset().top;
-    let elemBottom = elemTop + $elemAdvantages.height();
+        let elemTop = $elemAdvantages.offset().top;
+        let elemBottom = elemTop + $elemAdvantages.height();
 
-    if (elemTop + $elemAdvantages.height() / 4 <= docViewBottom && docViewBottom  < elemBottom + $elemAdvantages.height()) {
-        $elemAdvantages.addClass('location-animation');
-    } else {
-        $elemAdvantages.removeClass('location-animation');
-    }
+        if (elemTop + $elemAdvantages.height() / 4 <= docViewBottom && docViewBottom  < elemBottom + $elemAdvantages.height()) {
+            $elemAdvantages.addClass('location-animation');
+        } else {
+            $elemAdvantages.removeClass('location-animation');
+        }
 
-    let $chooseAnim = $('.choose-anim');
-    let $chooseAnimTop = $chooseAnim.offset().top;
-    let $chooseAnimBottom = $chooseAnimTop + $chooseAnim.height();
+        let $chooseAnim = $('.choose-anim');
+        let $chooseAnimTop = $chooseAnim.offset().top;
+        let $chooseAnimBottom = $chooseAnimTop + $chooseAnim.height();
 
-    if ($chooseAnimTop + $chooseAnim.height() / 4 <= docViewBottom && docViewBottom  < $chooseAnimBottom + $chooseAnim.height()) {
-        $chooseAnim.addClass('choose-animation');
-    } else {
-        $chooseAnim.removeClass('choose-animation');
-    }
-
-
-
-
-    let $premisesAnim = $('.premises__main');
-    let $premisesAnimTop = $premisesAnim.offset().top;
-    let $premisesAnimBottom = $premisesAnimTop + $premisesAnim.height();
-
-    if ($premisesAnimTop + $premisesAnim.height() / 2 < docViewBottom && docViewBottom / 6 < $premisesAnimBottom + $premisesAnim.height()) {
-        $premisesAnim.addClass('premises-animation');
-    } else {
-        $premisesAnim.removeClass('premises-animation');
-    }
-
-
-    let $designAnim = $('.design__main');
-    let $designAnimTop = $designAnim.offset().top;
-    let $designAnimBottom = $designAnimTop + $designAnim.height();
-
-    if ($designAnimTop + $designAnim.height() / 4 < docViewBottom && docViewBottom  < $designAnimBottom + $designAnim.height()) {
-        $designAnim.addClass('design-animation');
-    } else {
-        $designAnim.removeClass('design-animation');
-    }
-
-
-    let $desSerAnim = $('.design-series');
-    let $desSerAnimTop = $desSerAnim.offset().top;
-    let $desSerAnimBottom = $desSerAnimTop + $desSerAnim.height();
-
-    if ($desSerAnimTop + $desSerAnim.height() / 4 < docViewBottom && docViewBottom  < $desSerAnimBottom + $desSerAnim.height() / 4) {
-        $desSerAnim.addClass('deser-animation');
-    } else {
-        $desSerAnim.removeClass('deser-animation');
-    }
+        if ($chooseAnimTop + $chooseAnim.height() / 4 <= docViewBottom && docViewBottom  < $chooseAnimBottom + $chooseAnim.height()) {
+            $chooseAnim.addClass('choose-animation');
+        } else {
+            $chooseAnim.removeClass('choose-animation');
+        }
 
 
 
-    let $infraSecAnim = $('.infrast-sec');
-    let $infraSecTop = $infraSecAnim.offset().top;
-    let $infraSecBottom = $infraSecTop + $infraSecAnim.height();
 
-    if ($infraSecTop + $infraSecAnim.height() / 2 < docViewBottom && docViewBottom  < $infraSecBottom + $infraSecAnim.height() / 2) {
-        $infraSecAnim.addClass('infrast-sec-animation');
-    } else {
-        $infraSecAnim.removeClass('infrast-sec-animation');
-    }
+        let $premisesAnim = $('.premises__main');
+        let $premisesAnimTop = $premisesAnim.offset().top;
+        let $premisesAnimBottom = $premisesAnimTop + $premisesAnim.height();
 
-
-    let $countlessAnim = $('.countless__padd');
-    let $countlessTop = $countlessAnim.offset().top;
-    let $countlessBottom = $countlessTop + $countlessAnim.height();
-
-    if ($countlessTop + $countlessAnim.height() / 4 < docViewBottom && docViewBottom  < $countlessBottom + $countlessAnim.height() / 4) {
-        $countlessAnim.addClass('infrast-sec-animation');
-    } else {
-        $countlessAnim.removeClass('infrast-sec-animation');
-    }
-
-});
+        if ($premisesAnimTop + $premisesAnim.height() / 2 < docViewBottom && docViewBottom / 6 < $premisesAnimBottom + $premisesAnim.height()) {
+            $premisesAnim.addClass('premises-animation');
+        } else {
+            $premisesAnim.removeClass('premises-animation');
+        }
 
 
+        let $designAnim = $('.design__main');
+        let $designAnimTop = $designAnim.offset().top;
+        let $designAnimBottom = $designAnimTop + $designAnim.height();
+
+        if ($designAnimTop + $designAnim.height() / 4 < docViewBottom && docViewBottom  < $designAnimBottom + $designAnim.height()) {
+            $designAnim.addClass('design-animation');
+        } else {
+            $designAnim.removeClass('design-animation');
+        }
+
+
+        let $desSerAnim = $('.design-series');
+        let $desSerAnimTop = $desSerAnim.offset().top;
+        let $desSerAnimBottom = $desSerAnimTop + $desSerAnim.height();
+
+        if ($desSerAnimTop + $desSerAnim.height() / 4 < docViewBottom && docViewBottom  < $desSerAnimBottom + $desSerAnim.height() / 4) {
+            $desSerAnim.addClass('deser-animation');
+        } else {
+            $desSerAnim.removeClass('deser-animation');
+        }
+
+
+
+        let $infraSecAnim = $('.infrast-sec');
+        let $infraSecTop = $infraSecAnim.offset().top;
+        let $infraSecBottom = $infraSecTop + $infraSecAnim.height();
+
+        if ($infraSecTop + $infraSecAnim.height() / 2 < docViewBottom && docViewBottom  < $infraSecBottom + $infraSecAnim.height() / 2) {
+            $infraSecAnim.addClass('infrast-sec-animation');
+        } else {
+            $infraSecAnim.removeClass('infrast-sec-animation');
+        }
+
+
+        let $countlessAnim = $('.countless__padd');
+        let $countlessTop = $countlessAnim.offset().top;
+        let $countlessBottom = $countlessTop + $countlessAnim.height();
+
+        if ($countlessTop + $countlessAnim.height() / 4 < docViewBottom && docViewBottom  < $countlessBottom + $countlessAnim.height() / 4) {
+            $countlessAnim.addClass('infrast-sec-animation');
+        } else {
+            $countlessAnim.removeClass('infrast-sec-animation');
+        }
+
+    });
+
+})
 
 
 
