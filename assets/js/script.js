@@ -373,7 +373,6 @@ for (let i = 0; i < percents.length; i++) {
         for (let j = 0; j < percents.length; j++) {
             percents[j].classList.remove('percent__active')
         }
-
         percents[i].classList.add('percent__active')
     })
 }

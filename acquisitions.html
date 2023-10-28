@@ -118,7 +118,7 @@
     </div>
 </header>
 
-<section class="global__head acquisitions__page">
+<section class="global__head acquisitions__page animate__style">
     <div class="container">
         <div class="about-proj-tit">
             <h1>Условия
@@ -298,36 +298,36 @@
                     <h3>Стоимость недвижимости</h3>
                     <div class="calculator__price">
                         <span>0</span>
-                        <span>100 000 000</span>
+                        <span class="real-estate-js">100 000 000</span>
                     </div>
                     <div class="calculator__range">
-                        <input type="range" name="range" value="500" min="0" max="100000000" >
+                        <input type="range" name="range" value="0" min="0" max="100000000" class="getValue">
                     </div>
                 </div>
                 <div class="calculator__value">
                     <h3>Первоначальный взос</h3>
                     <div class="calculator__price">
                         <span>0</span>
-                        <span>100 000 000</span>
+                        <span class="first-pay-price">100 000 000</span>
                     </div>
                     <div class="calculator__range">
-                        <input type="range" name="hours" value="50" min="0" max="100000000" >
+                        <input type="range" name="hours" value="0" min="0" max="100000000" class="getInput">
                     </div>
                 </div>
                 <div class="calculator__percent">
-                    <div class="percent__number percent__active">
+                    <div class="percent__number percent__active" data-percent="15">
                         <span>15<small>%</small></span>
                     </div>
-                    <div class="percent__number">
+                    <div class="percent__number" data-percent="20">
                         <span>20<small>%</small></span>
                     </div>
-                    <div class="percent__number">
+                    <div class="percent__number" data-percent="25">
                         <span>25<small>%</small></span>
                     </div>
-                    <div class="percent__number">
+                    <div class="percent__number" data-percent="30">
                         <span>30<small>%</small></span>
                     </div>
-                    <div class="percent__number">
+                    <div class="percent__number" data-percent="50">
                         <span>50<small>%</small></span>
                     </div>
                 </div>
@@ -337,11 +337,11 @@
                 <div class="calculator__value">
                     <h3>Срок кредита</h3>
                     <div class="calculator__price">
-                        <span>0</span>
-                        <span>20</span>
+                        <span>1</span>
+                        <span class="date-range-value">20</span>
                     </div>
                     <div class="calculator__range">
-                        <input type="range" name="data" value="10" min="0" max="20" >
+                        <input type="range" name="data" value="1" min="1" max="20" class="date-range">
                     </div>
                 </div>
             </div>
@@ -357,14 +357,14 @@
                     </div>
                     <div class="calculator-pay__info">
                         <h3>Сумма кредита</h3>
-                        <h2 class="amount-credit">300 000 ₽</h2>
+                        <h2 class="amount-credit">0 ₽</h2>
                     </div>
                     <div class="calculator-pay__info">
                         <h3>Налоговый вычет</h3>
                         <h2 class="tax-deduction">630 809 ₽</h2>
                     </div>
                 </div>
-                <button class="btn">Рассчитать стоимость <br>  с учетом скидок</button>
+                <button class="btn">Рассчитать стоимость <br> с учетом скидок</button>
             </div>
         </div>
     </div>

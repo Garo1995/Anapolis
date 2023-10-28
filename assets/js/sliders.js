@@ -431,7 +431,7 @@ let partnersSwiper = new Swiper(".dev-partners__slider", {
 
 
 
-var pspath =  $('[data-percent]'),
+var pspath =  $('[data-perc]'),
     zn = 0;
 
 pspath.mousemove(function(e){
