@@ -1460,10 +1460,6 @@ input:checked + .slider:before {
 }
 
 
-.round {
-    opacity: 1 !important;
-    position: relative;
-}
 .circles-wrp {
     position: relative;
     padding: 5px;
@@ -1471,21 +1467,7 @@ input:checked + .slider:before {
     border: 2px solid #ccc;
 }
 
-.round path {
-    stroke-linecap: round;
-}
 
-.circles-wrp {
-    position: relative;
-}
-.round .circles-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 14px;
-    font-weight: 700;
-}
 .plans-free__list li{
     display: flex;
     align-items: center;

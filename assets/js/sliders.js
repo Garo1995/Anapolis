@@ -33,6 +33,7 @@ let chooseSwiper = new Swiper(".choose-apart__slider", {
 let designSwiper = new Swiper(".design__slider", {
     slidesPerView: 1,
     spaceBetween: 30,
+    speed: 800,
     loop: true,
     navigation: {
         nextEl: ".design-swiper-next",
@@ -44,6 +45,8 @@ let designSwiper = new Swiper(".design__slider", {
 let designSwiperTwo = new Swiper(".design__sliderTwo", {
     slidesPerView: 1,
     spaceBetween: 30,
+    speed: 800,
+
     loop: true,
     navigation: {
         nextEl: ".designTwo-swiper-next",
@@ -53,6 +56,8 @@ let designSwiperTwo = new Swiper(".design__sliderTwo", {
 let designSwiperTyhree = new Swiper(".design__sliderThree", {
     slidesPerView: 1,
     spaceBetween: 30,
+    speed: 800,
+
     loop: true,
     navigation: {
         nextEl: ".designThree-swiper-next",
