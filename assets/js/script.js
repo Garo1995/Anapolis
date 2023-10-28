@@ -1,3 +1,27 @@
+
+
+
+
+
+
+
+
+$('html, body').animate({
+    scrollTop: $('body').offset().top
+}, 1500);
+
+jQuery(window).scroll(function(){
+    if (jQuery(this).scrollTop() > 4000) {
+        jQuery('.scrollup').fadeIn('slow');
+    } else {
+        jQuery('.scrollup').fadeOut('slow');
+    }
+});
+jQuery('.scrollup').click(function(){
+    jQuery("html, body").animate({ scrollTop: 0 }, 4000);
+    return false;
+});
+
 $(document).ready(function () {
     $(".phone").mask('+7 (999)-999-99-99');
     $('select').styler();
@@ -31,6 +55,48 @@ $(document).ready(function () {
 
 
 
+
+$('.open_modal').on('click', function () {
+    let attr = $(this).attr('data-val');
+    let modal = $('#' + attr);
+    let isCopyText = $(this).attr('data-is-copy-text');
+    if (isCopyText) {
+        $('.add-text-btn')[0].innerText = $(this)[0].innerText;
+    }
+    modal.removeClass('out');
+    modal.fadeIn();
+});
+
+$('.close').on('click', function () {
+    var prt = $(this).parents('.modal');
+    prt.addClass('out')
+    setTimeout(function () {
+        prt.fadeOut();
+    }, 100);
+});
+$(window).on('click', function (event) {
+    $('.modal').each(function () {
+        var gtattr = $(this).attr('id');
+        var new_mod = $('#' + gtattr);
+        var md_cnt = $(new_mod).find('.modal-content');
+
+        if (event.target === $(md_cnt)[0]) {
+            setTimeout(function () {
+                $(new_mod).addClass('out');
+                $(new_mod).fadeOut()
+
+            }, 100)
+        }
+        if (event.target === this) {
+            setTimeout(function () {
+                $(new_mod).addClass('out');
+                $(new_mod).fadeOut()
+
+            }, 100)
+
+        }
+    })
+});
 
 
 
@@ -97,18 +163,6 @@ $(window).scroll(function () {
     }
 
 
-    let $seriesAnim = $('.apart-queue__bg');
-    let $seriesAnimTop = $seriesAnim.offset().top;
-    let $seriesAnimBottom = $seriesAnimTop + $seriesAnim.height();
-
-    if ($seriesAnimTop + $seriesAnim.height()  < docViewBottom && docViewBottom  < $seriesAnimBottom + $seriesAnim.height()) {
-        $seriesAnim.addClass('apart-queue-animation');
-    } else {
-        $seriesAnim.removeClass('apart-queue-animation');
-    }
-
-
-
     let $desSerAnim = $('.design-series');
     let $desSerAnimTop = $desSerAnim.offset().top;
     let $desSerAnimBottom = $desSerAnimTop + $desSerAnim.height();
@@ -142,8 +196,6 @@ $(window).scroll(function () {
         $countlessAnim.removeClass('infrast-sec-animation');
     }
 
-
-
 });
 
 
@@ -161,9 +213,6 @@ $(document).ready(function () {
         fixedContentPos: false
     });
 });
-
-
-
 
 
 
@@ -275,48 +324,81 @@ $('.more-news-info').on('click',function () {
 
 
 
-let queueClose = document.getElementsByClassName('queue-close')[0];
-let queueModal = document.getElementsByClassName('queue-modal')[0];
-
-    queueClose.addEventListener('click', function () {
-        queueModal.classList.add('queue-modal__close');
-    });
 
 
-jQuery(window).scroll(function(){
-    if (jQuery(this).scrollTop() > 4000) {
-        jQuery('.scrollup').fadeIn('slow');
-    } else {
-        jQuery('.scrollup').fadeOut('slow');
-    }
+
+//  CALCULATION
+
+
+let addNumber = document.getElementsByClassName('amount-credit')[0];
+let range = document.getElementsByClassName("getValue")[0];
+let firstPayPrice = document.getElementsByClassName("first-pay-price")[0];
+let getInput = document.getElementsByClassName("getInput")[0];
+let realEstate = document.getElementsByClassName('real-estate-js')[0]
+let dateRange = document.getElementsByClassName('date-range')[0]
+let dateRangeValue = document.getElementsByClassName('date-range-value')[0]
+let monthlyPayment = document.getElementsByClassName('monthly-payment')[0]
+let percents = document.getElementsByClassName('percent__number')
+
+
+let mainValue = 0
+
+range.addEventListener("input", function () {
+    realEstate.innerText = numberWithSpaces(range.value)
+    getInput.setAttribute('max', range.value)
+    updateMainValue()
+    mounthPay()
 });
-jQuery('.scrollup').click(function(){
-    jQuery("html, body").animate({ scrollTop: 0 }, 4000);
-    return false;
-});
+
+getInput.addEventListener('input', function () {
+    firstPayPrice.innerText = numberWithSpaces(getInput.value)
+    updateMainValue()
+    mounthPay()
+})
+dateRange.addEventListener('input', function () {
+    dateRangeValue.innerText = numberWithSpaces(dateRange.value)
+    updateMainValue()
+    mounthPay()
+})
+
+
+for (let i = 0; i < percents.length; i++) {
+    percents[i].addEventListener('click', function () {
+        let dataPercent = percents[i].dataset.percent
+        console.log(dataPercent);
+        firstPayPrice.innerText = +range.value * +dataPercent / 100
+        getInput.value = +range.value * +dataPercent / 100
+        updateMainValue()
+        mounthPay()
+        for (let j = 0; j < percents.length; j++) {
+            percents[j].classList.remove('percent__active')
+        }
+
+        percents[i].classList.add('percent__active')
+    })
+}
 
 
 
 
 
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+}
+
+
+function updateMainValue() {
+    mainValue = +range.value - +getInput.value
+    addNumber.innerText = numberWithSpaces(mainValue) + ' ₽'
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function mounthPay() {
+    let x = mainValue / (+dateRange.value * 12)
+    monthlyPayment.innerHTML = numberWithSpaces(x.toFixed(2)) + ' ₽'
+}
 
 
 
@@ -334,4 +416,20 @@ checkboxApartment.addEventListener('change', function () {
         document.getElementsByClassName('add-check__des')[0].classList.remove('remove-photo');
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

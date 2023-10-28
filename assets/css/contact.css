@@ -1,3 +1,13 @@
+#mapDiv .gm-style>div:nth-child(4)div {
+    display: none!important;
+    opacity: 1!important;
+}
+
+
+
+
+
+
 .contact__main{
     padding-top: 80px;
 }
