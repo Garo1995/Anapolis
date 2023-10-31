@@ -33,8 +33,9 @@ let chooseSwiper = new Swiper(".choose-apart__slider", {
 let designSwiper = new Swiper(".design__slider", {
     slidesPerView: 1,
     spaceBetween: 30,
-    speed: 800,
     loop: true,
+    speed: 500,
+    effect: 'fade',
     navigation: {
         nextEl: ".design-swiper-next",
         prevEl: ".design-swiper-prev",
@@ -46,7 +47,7 @@ let designSwiperTwo = new Swiper(".design__sliderTwo", {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
-
+    effect: "fade",
     loop: true,
     navigation: {
         nextEl: ".designTwo-swiper-next",
@@ -57,7 +58,7 @@ let designSwiperTyhree = new Swiper(".design__sliderThree", {
     slidesPerView: 1,
     spaceBetween: 30,
     speed: 800,
-
+    effect: "fade",
     loop: true,
     navigation: {
         nextEl: ".designThree-swiper-next",
@@ -256,17 +257,13 @@ let buildingsSwiper = new Swiper(".buildings__slider", {
 
 
 let locationSwiper = new Swiper(".location__slider", {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 105,
     loop: true,
     autoplay: {
-        delay: 1,
-        disableOnInteraction: false
+        delay: 3500,
+        disableOnInteraction: false,
     },
-    speed: 4000,
-    grabCursor: true,
-    mousewheelControl: true,
-    keyboardControl: true,
     pagination: {
         el: ".location-pag",
         type: "fraction",
@@ -275,17 +272,7 @@ let locationSwiper = new Swiper(".location__slider", {
         nextEl: ".loc-swiper-next",
         prevEl: ".loc-swiper-prev",
     },
-    on: {
-        init() {
-            this.el.addEventListener('mouseenter', () => {
-                this.autoplay.stop();
-            });
 
-            this.el.addEventListener('mouseleave', () => {
-                this.autoplay.start();
-            });
-        }
-    },
     breakpoints: {
         '1499': {
             slidesPerView: 4,

@@ -23,15 +23,16 @@
     display: block;
 }
 .maintained__main{
-    max-width: 1920px;
     width: 100%;
-    margin: 0 auto;
 }
 .maintained__box{
     display: flex;
     width: 100%;
     position: relative;
     min-height: 960px;
+}
+.maintained__box img{
+    width: 100%;
 }
 .maintained__info{
     position: absolute;
@@ -138,8 +139,6 @@
 
 .buildings__sec{
     margin: 240px auto 0;
-    max-width: 1920px;
-    width: 100%;
 }
 .buildings__cnt{
     display: flex;
@@ -148,11 +147,14 @@
 }
 .buildings__photo{
     display: flex;
-    max-width: 1280px;
+    max-width: 65%;
+    width: 100%;
+}
+.buildings__photo img{
     width: 100%;
 }
 .buildings__info{
-    max-width: 640px;
+    max-width: 35%;
     width: 100%;
     background: #ffffff;
     display: flex;

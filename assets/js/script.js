@@ -1,6 +1,16 @@
 
 
-
+jQuery(window).scroll(function(){
+    if (jQuery(this).scrollTop() > 1600) {
+        jQuery('.scrollup').fadeIn('slow');
+    } else {
+        jQuery('.scrollup').fadeOut('slow');
+    }
+});
+jQuery('.scrollup').click(function(){
+    jQuery("html, body").animate({ scrollTop: 0 }, 1500);
+    return false;
+});
 
 
 
@@ -10,17 +20,8 @@ $('html, body').animate({
     scrollTop: $('body').offset().top
 }, 1500);
 
-jQuery(window).scroll(function(){
-    if (jQuery(this).scrollTop() > 4000) {
-        jQuery('.scrollup').fadeIn('slow');
-    } else {
-        jQuery('.scrollup').fadeOut('slow');
-    }
-});
-jQuery('.scrollup').click(function(){
-    jQuery("html, body").animate({ scrollTop: 0 }, 4000);
-    return false;
-});
+
+
 
 $(document).ready(function () {
     $(".phone").mask('+7 (999)-999-99-99');
@@ -197,6 +198,16 @@ $(document).ready(function () {
             $countlessAnim.removeClass('infrast-sec-animation');
         }
 
+
+        let $invesTmentsAnim = $('.inves-an');
+        let $invesTmentsTop = $invesTmentsAnim.offset().top;
+        let $invesTmentsBottom = $invesTmentsTop + $invesTmentsAnim.height();
+
+        if ($invesTmentsTop + $invesTmentsAnim.height() / 2 < docViewBottom && docViewBottom  < $invesTmentsBottom + $invesTmentsAnim.height() ) {
+            $invesTmentsAnim.addClass('investments___active');
+        } else {
+            $invesTmentsAnim.removeClass('investments___active');
+        }
     });
 
 })
@@ -210,7 +221,8 @@ $(document).ready(function () {
         type: 'iframe',
         mainClass: 'mfp-fade',
         removalDelay: 160,
-        preloader: false,
+        preloader: true,
+        autoplay: true,
         fixedContentPos: false
     });
 });
