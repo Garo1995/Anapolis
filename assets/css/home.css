@@ -2508,7 +2508,7 @@ input:checked + .slider:before {
 }
 .countless__padd{
     margin-top: -1px;
-    padding: 205px 0 250px;
+    padding: 205px 0 0;
 }
 .countless__out{
     border: 1px solid rgba(16, 47, 92, 1);
@@ -2562,9 +2562,12 @@ input:checked + .slider:before {
     max-width: 150px;
     width: 100%;
 }
-.latest-awards{
-    margin-top: -20px;
+.latest-awards-sec{
+    background: #ffffff;
+    padding-bottom: 250px;
+    overflow: hidden;
 }
+
 .latest-awards h3{
     font-family: 'Spectral';
     font-size: 34px;
@@ -2590,7 +2593,29 @@ input:checked + .slider:before {
     justify-content: center;
     border: 1px solid rgba(16, 47, 92, 0.20);
 }
-
+.latest-awards__pic:nth-child(1){
+    transition: 0.8s;
+    transform: translateX(-55%);
+}
+.latest-awards__pic:nth-child(2){
+    transition: 1.2s;
+    transform: translateX(-35%);
+}
+.latest-awards__pic:nth-child(3){
+    transition: 1.0s;
+    transform: translateY(80%);
+}
+.latest-awards__pic:nth-child(4){
+    transition: 1.2s;
+    transform: translateX(35%);
+}
+.latest-awards__pic:nth-child(5){
+    transition: 0.8s;
+    transform: translateX(55%);
+}
+.latest-awards__act .latest-awards__pic{
+    transform: translate(0);
+}
 .latest-awards__text{
     margin-top: 75px;
     display: flex;
@@ -2604,8 +2629,17 @@ input:checked + .slider:before {
     color: rgba(16, 47, 92, 1);
     font-size: 22px;
     line-height: 28px;
+    transition: 0.8s;
 }
-
+.latest-awards__text p:nth-child(1){
+    transform: translateX(-30%);
+}
+.latest-awards__text p:nth-child(2){
+    transform: translateX(30%);
+}
+.latest-awards__act .latest-awards__text p{
+    transform: translate(0);
+}
 .answer-quest{
     padding-top: 240px;
 }
@@ -2645,6 +2679,11 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 1.3s;
+    transform: translateX(-40%);
+}
+.answer-quest__act .answer-quest__info{
+    transform: translateX(0);
 }
 .answer-send__mail{
     font-size: 24px;
@@ -2687,8 +2726,7 @@ input:checked + .slider:before {
     height: 63px;
 }
 .soc-set ul li a:hover{
-    background: rgba(16, 47, 92, 1);
-
+    background: #001f4b;
 }
 .answer-quest__address{
     margin-top: 20px;
@@ -2762,6 +2800,11 @@ input:checked + .slider:before {
     width: 100%;
     background: #ffffff;
     padding: 79px 47px 58px 56px;
+    transition: 1.3s;
+    transform: translateX(40%);
+}
+.answer-quest__act .answer-quest__form{
+    transform: translateX(0);
 }
 .answer-quest__form h2{
     color: rgba(16, 47, 92, 1);
@@ -3114,7 +3157,10 @@ input:checked + .slider:before {
         height: 430px;
     }
     .countless__padd {
-        padding: 130px 0 140px;
+        padding: 130px 0 0;
+    }
+    .latest-awards-sec{
+        padding-bottom: 140px;
     }
     .countless__data {
         max-width: 410px;
@@ -3831,7 +3877,10 @@ input:checked + .slider:before {
         margin-top: 40px;
     }
     .countless__padd {
-        padding: 80px 0 80px;
+        padding: 80px 0 10px;
+    }
+    .latest-awards-sec{
+        padding-bottom: 80px;
     }
     .answer-quest:before{
         display: none;

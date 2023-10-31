@@ -50,10 +50,7 @@ header{
     grid-gap: 5px;
 }
 .open-menu span{
-    width: 22px;
-    height: 2px;
-    display: block;
-    background: #174A94;
+    display: none;
 }
 
 .header__menu{
@@ -200,6 +197,9 @@ header{
     transform: rotate(-45deg);
 
 }
+.close-menu img{
+    display: none;
+}
 .head-fix__menu{
     max-width: 805px;
     width: 100%;
@@ -212,6 +212,8 @@ header{
 .head-fix__menu>ul>li{
     max-width: 400px;
     width: 100%;
+    transition: 0.4s;
+
 }
 .head-fix__menu>ul li + li{
     margin-top: 70px;
@@ -229,11 +231,14 @@ header{
     width: 100%;
     right: 0;
     top: 0;
-    display: none;
-
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
 }
-.head-fix__menu>ul> .submenu__active .submenu{
-    display: block;
+
+.head-fix__menu>ul>li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
 }
 .head-fix__menu>ul>li ul li a{
     font-size: 18px;
@@ -252,10 +257,14 @@ header{
     position: absolute;
     top: 0;
     right: -100px;
-    display: none;
+    transition: 0.4s;
+    opacity: 0;
+    visibility: hidden;
 }
-.submenu__active>a:after{
-    display: block;
+
+.head-fix__menu>ul>li:hover>a:after{
+    opacity: 1;
+    visibility: visible;
 }
 .head-fix__soc{
     max-width: 280px;

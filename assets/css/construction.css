@@ -73,19 +73,19 @@
     position: relative;
 }
 
-.construct__slider .swiper-pagination{
+.construct__cnt .swiper-pagination{
     color: rgba(16, 47, 92, 1);
     font-size: 24px;
     line-height: 34px;
     max-width: 90px;
     margin-left: auto;
 }
-.construct__slider .swiper-pagination-current{
+.construct__cnt .swiper-pagination-current{
     font-size: 54px;
     line-height: 52px;
     color: rgba(16, 47, 92, 1);
 }
-.construct__slider .swiper-pagination-total{
+.construct__cnt .swiper-pagination-total{
     color: rgba(16, 47, 92, 1);
     font-size: 24px;
     line-height: 34px;

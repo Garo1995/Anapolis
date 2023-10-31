@@ -79,8 +79,71 @@ let constructSwiper = new Swiper(".construct__slider", {
         nextEl: ".construct-swiper-next",
         prevEl: ".construct-swiper-prev",
     },
-
 });
+let constructTowSwiper = new Swiper(".constructTow__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct-swiper-next",
+        prevEl: ".construct-swiper-prev",
+    },
+});
+let constructThreeSwiper = new Swiper(".constructThree__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct-swiper-next",
+        prevEl: ".construct-swiper-prev",
+    },
+});
+
+let constructFourSwiper = new Swiper(".constructFour__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct-swiper-next",
+        prevEl: ".construct-swiper-prev",
+    },
+});
+
+let constructFiveSwiper = new Swiper(".constructFive__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct-swiper-next",
+        prevEl: ".construct-swiper-prev",
+    },
+});
+
+
+
+
+
+
+
+
+
+
 
 let purchaseSwiper = new Swiper(".purchase__slider", {
     slidesPerView: 4,

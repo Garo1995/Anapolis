@@ -192,7 +192,7 @@ $(document).ready(function () {
         let $countlessTop = $countlessAnim.offset().top;
         let $countlessBottom = $countlessTop + $countlessAnim.height();
 
-        if ($countlessTop + $countlessAnim.height() / 4 < docViewBottom && docViewBottom  < $countlessBottom + $countlessAnim.height() / 4) {
+        if ($countlessTop + $countlessAnim.height() / 2 < docViewBottom && docViewBottom  < $countlessBottom + $countlessAnim.height() / 2) {
             $countlessAnim.addClass('infrast-sec-animation');
         } else {
             $countlessAnim.removeClass('infrast-sec-animation');
@@ -208,8 +208,46 @@ $(document).ready(function () {
         } else {
             $invesTmentsAnim.removeClass('investments___active');
         }
-    });
 
+
+
+
+
+
+
+        let $latestAwardsAnim = $('.latest-awards-sec');
+        let $latestAwardsTop = $latestAwardsAnim.offset().top;
+        let $latestAwardsBottom = $latestAwardsTop + $latestAwardsAnim.height();
+
+        if ($latestAwardsTop + $latestAwardsAnim.height() / 2 < docViewBottom && docViewBottom  < $latestAwardsBottom + $latestAwardsAnim.height() / 2) {
+            $latestAwardsAnim.addClass('latest-awards__act');
+        } else {
+            $latestAwardsAnim.removeClass('latest-awards__act');
+        }
+
+
+
+        let $answerQuestAnim = $('.answer-quest');
+        let $answerQuestTop = $answerQuestAnim.offset().top;
+        let $answerQuestBottom = $answerQuestTop + $answerQuestAnim.height();
+
+        if ($answerQuestTop + $answerQuestAnim.height()  < docViewBottom && docViewBottom  < $answerQuestBottom + $answerQuestAnim.height() ) {
+            $answerQuestAnim.addClass('answer-quest__act');
+        } else {
+            $answerQuestAnim.removeClass('answer-quest__act');
+        }
+
+
+        let $footerAnim = $('.footer');
+        let $footerTop = $footerAnim.offset().top;
+        let $footerBottom = $footerTop + $answerQuestAnim.height();
+
+        if ($footerTop + $footerAnim.height() / 2 < docViewBottom && docViewBottom  < $footerBottom + $footerAnim.height() / 2 ) {
+            $footerAnim.addClass('footer__act');
+        } else {
+            $footerAnim.removeClass('footer__act');
+        }
+    });
 })
 
 
