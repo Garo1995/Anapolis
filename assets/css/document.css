@@ -16,7 +16,7 @@
 }
 .document-page__box{
     min-height: 160px;
-    transition: 0.3s;
+    transition: 1.2s;
     background: #ffffff;
     width: 48%;
     padding: 26px 30px;
@@ -40,11 +40,23 @@
     transition: 0.3s;
     visibility: hidden;
 }
+.document-page__box:hover{
+    transition: 0.4s;
+}
 .document-page__box:hover .document__download{
     opacity: 1;
     visibility: visible;
 }
+.document-page__box:nth-child(odd){
+    transform: translateX(-30%);
+}
+.document-page__box:nth-child(even){
+    transform: translateX(30%);
+}
 
+.document__act .document-page__box{
+    transform: translateX(0);
+}
 
 @media (max-width: 1200px) {
     .document-page {

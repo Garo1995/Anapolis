@@ -110,6 +110,18 @@
 .architectural__info{
     max-width: 545px;
     width: 100%;
+    transition: 1.2s;
+}
+
+
+.architectural__info:nth-child(1){
+    transform: translateX(-30%);
+}
+.architectural__info:nth-child(2){
+    transform: translateX(30%);
+}
+.architec__act .architectural__info{
+    transform: translateX(0);
 }
 .architectural__info span{
     font-family: 'Spectral';
@@ -129,8 +141,13 @@
     justify-content: space-between;
     padding: 33px 55px;
     border: 2px solid #15386B;
-
+    transition: 1.2s;
+    transform: translateX(-30%);
 }
+.architec__act .architectural__block{
+    transform: translateX(0);
+}
+
 .architectural__text{
     max-width: 744px;
     width: 100%;
@@ -156,6 +173,11 @@
     display: flex;
     max-width: 65%;
     width: 100%;
+    transition: 1.2s;
+    transform: translateX(20%);
+}
+.buildings__act .buildings__photo{
+    transform: translateX(0);
 }
 .buildings__photo img{
     width: 100%;
@@ -169,12 +191,15 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 95px 65px;
+    transition: 1.2s;
+    transform: translateX(-15%);
+}
+.buildings__act .buildings__info{
+    transform: translateX(0);
 }
 .buildings__info h2{
     color: rgba(16, 47, 92, 1);
-
 }
-
 .buildings__info .scape-swiper-next:before {
     content: url(../img/lin-lef-whit.svg);
 }
@@ -240,11 +265,23 @@
     width: 31%;
     display: flex;
     flex-direction: column;
+    transition: 1.2s;
 }
 .communications__box img{
     width: 100%;
 }
-
+.communications__box:nth-child(1){
+    transform: translateX(-35%);
+}
+.communications__box:nth-child(2){
+    transform: translateX(-45%);
+}
+.communications__box:nth-child(3){
+    transform: translateX(-55%);
+}
+.communic__act .communications__box{
+    transform: translateX(0);
+}
 .communications__text{
     width: 100%;
     height: 300px;
@@ -299,8 +336,11 @@
     width: 100%;
     margin-left: 45px;
 }
-.companies__marg{
-    margin-top: 120px;
+.comp__main{
+    background: #ffffff;
+}
+.companies__padd{
+    padding-top: 120px;
 }
 .companies__title h2{
     color: rgba(16, 47, 92, 1);
@@ -328,9 +368,21 @@
 .companies__box{
     max-width: 337px;
     width: 100%;
+    transition: 1.2s;
 }
 .companies__box:nth-child(1){
     padding-top: 20px;
+    transform: translateX(-30%);
+}
+.companies__box:nth-child(2){
+    transform: translateX(-40%);
+
+}
+.companies__box:nth-child(3){
+    transform: translateX(30%);
+}
+.comp__act .companies__box{
+    transform: translateX(0);
 }
 .companies__logo{
     width: 100%;

@@ -71,6 +71,7 @@
 .construct__info .location__arrows {
     margin-top: 41px;
     position: relative;
+    bottom: 0;
 }
 
 .construct__cnt .swiper-pagination{

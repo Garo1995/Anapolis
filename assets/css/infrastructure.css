@@ -78,6 +78,11 @@
     max-width: 349px;
     width: 100%;
     margin-bottom: 40px;
+    transition: 1.2s;
+    transform: translateX(-30%);
+}
+.product__act .product-apart__box{
+    transform: translateX(0);
 }
 .product-apart__photo{
     display: flex;
@@ -172,8 +177,12 @@
     max-width: 35%;
     width: 100%;
     padding: 67px 60px 90px;
+    transition: 1.2s;
+    transform: translateX(-20%);
 }
-
+.swimming__act .swimming__info{
+    transform: translateX(0);
+}
 .swimming__info>p{
     margin-top: 40px;
     color: rgba(16, 47, 92, 1);
@@ -222,6 +231,11 @@
     display: flex;
     max-width: 65%;
     width: 100%;
+    transition: 1.2s;
+    transform: translateX(-20%);
+}
+.swimming__act .swimming__photo{
+    transform: translateX(0);
 }
 .swimming__photo img{
     width: 100%;

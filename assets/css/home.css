@@ -2679,8 +2679,10 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.answer-quest__anim .answer-quest__info{
     transition: 1.3s;
-    transform: translateX(-40%);
+    transform: translateX(-30%);
 }
 .answer-quest__act .answer-quest__info{
     transform: translateX(0);
@@ -2800,8 +2802,11 @@ input:checked + .slider:before {
     width: 100%;
     background: #ffffff;
     padding: 79px 47px 58px 56px;
+
+}
+.answer-quest__anim .answer-quest__form{
     transition: 1.3s;
-    transform: translateX(40%);
+    transform: translateX(30%);
 }
 .answer-quest__act .answer-quest__form{
     transform: translateX(0);

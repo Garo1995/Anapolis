@@ -14,7 +14,20 @@
 .contact__main h2{
     font-size: 44px;
     line-height: 52px;
+    transition: 1.2s;
+    transform: translateX(-20%);
 }
+.contact__soc{
+    transition: 1.2s;
+    transform: translateX(-30%);
+}
+.contact__act .contact__soc{
+    transform: translateX(0);
+}
+.contact__act h2{
+    transform: translateX(0);
+}
+
 .contact__title {
     margin-bottom: -156px;
     margin-top: 80px;
@@ -31,6 +44,11 @@
     margin-top: 200px;
     position: relative;
     z-index: 1;
+    transition: 1.2s;
+    transform: translateX(-30%);
+}
+.contact__act .contact__info{
+    transform: translateX(0);
 }
 .contact__info span{
     font-size: 24px;
@@ -80,6 +98,11 @@
     margin-left: -29px;
     border-radius: 50%;
     overflow: hidden;
+    transition: 1.2s;
+    transform: translateX(30%);
+}
+.contact__act .contact__map{
+    transform: translateX(0);
 }
 .contact__map iframe{
     width: 100%;
@@ -135,6 +158,7 @@
     max-width: 430px;
     width: 100%;
     margin-bottom: 54px;
+    transition: 1.2s;
 }
 .contact__user img{
     max-width: 270px;
@@ -157,6 +181,25 @@
 .contact__user .button-liner{
     margin-top: 20px;
 }
+
+.contact__user:nth-child(1){
+    transform: translateX(-30%);
+}
+.contact__user:nth-child(2){
+    transform: translateX(30%);
+}
+.contact__user:nth-child(3){
+    transform: translateX(-30%);
+}
+
+.contact__user:nth-child(4){
+    transform: translateX(30%);
+}
+.contact__act .contact__user{
+    transform: translateX(0);
+}
+
+
 .perspective__main{
     margin-top: 120px;
 
@@ -190,6 +233,17 @@
     min-height: 63px;
 }
 
+.perspective__info:nth-child(1){
+    transform: translateX(-30%);
+    transition: 1.2s;
+}
+.perspective__info:nth-child(2){
+    transform: translateX(30%);
+    transition: 1.2s;
+}
+.perspective__act .perspective__info{
+    transform: translateX(0);
+}
 .perspective__iframe{
     max-width: 626px;
     width: 100%;

@@ -141,6 +141,29 @@
     margin-bottom: 40px;
     text-align: center;
 }
+
+.devTowHasClass{
+    overflow: hidden;
+}
+.developer__info{
+    transform: translateX(-30%);
+    transition: 1.2s;
+}
+.developer__number{
+    transform: translateX(30%);
+    transition: 1.2s;
+}
+
+
+.developer__act .developer__info{
+    transform: translate(0);
+}
+
+.developer__act .developer__number{
+    transform: translate(0);
+}
+
+
 @media (max-width: 1299px){
     .developer__block p {
         font-size: 20px;

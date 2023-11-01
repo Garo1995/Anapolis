@@ -12,6 +12,7 @@
     max-width: 560px;
     width: 100%;
     margin-bottom: 120px;
+    transition: 1.2s;
 }
 .news-page__block span{
     font-size: 18px;
@@ -32,6 +33,16 @@
 }
 .news-page__block p{
     margin-top: 30px;
+}
+.news-page__block:nth-child(odd){
+    transform: translateX(-30%);
+}
+.news-page__block:nth-child(even){
+    transform: translateX(30%);
+
+}
+.news__act .news-page__block{
+    transform: translateX(0);
 }
 .news-page__mor{
     display: none;
@@ -158,8 +169,7 @@
 }
 
 .next-article:hover:before{
-    transform: rotate(-45deg);
-    top: 12px;
+    left: -15px;
 
 }
 @media (max-width: 1200px){

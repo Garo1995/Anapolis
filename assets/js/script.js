@@ -114,13 +114,14 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
-    $(window).scroll(function () {
-        let $elemAdvantages = $('.location__main');
-        let $window = $(window);
-        let docViewTop = $window.scrollTop();
-        let docViewBottom = docViewTop + $window.height();
+$(window).scroll(function () {
+    let $elemAdvantages = $('.location__main');
+    let $window = $(window);
+    let docViewTop = $window.scrollTop();
+    let docViewBottom = docViewTop + $window.height();
 
+
+    if ($('.locationHasClass').hasClass('location__main')){
         let elemTop = $elemAdvantages.offset().top;
         let elemBottom = elemTop + $elemAdvantages.height();
 
@@ -129,8 +130,11 @@ $(document).ready(function () {
         } else {
             $elemAdvantages.removeClass('location-animation');
         }
+    }
 
-        let $chooseAnim = $('.choose-anim');
+    let $chooseAnim = $('.choose-anim');
+
+    if ($('.chooseHasClass').hasClass('choose-anim')){
         let $chooseAnimTop = $chooseAnim.offset().top;
         let $chooseAnimBottom = $chooseAnimTop + $chooseAnim.height();
 
@@ -140,10 +144,12 @@ $(document).ready(function () {
             $chooseAnim.removeClass('choose-animation');
         }
 
+    }
 
 
 
-        let $premisesAnim = $('.premises__main');
+    let $premisesAnim = $('.prem-for-anim');
+    if ($('.premises__main').hasClass('prem-for-anim')) {
         let $premisesAnimTop = $premisesAnim.offset().top;
         let $premisesAnimBottom = $premisesAnimTop + $premisesAnim.height();
 
@@ -152,9 +158,10 @@ $(document).ready(function () {
         } else {
             $premisesAnim.removeClass('premises-animation');
         }
+    }
 
-
-        let $designAnim = $('.design__main');
+    let $designAnim = $('.design__main');
+    if ($('.desingHasClass').hasClass('design__main')){
         let $designAnimTop = $designAnim.offset().top;
         let $designAnimBottom = $designAnimTop + $designAnim.height();
 
@@ -163,9 +170,11 @@ $(document).ready(function () {
         } else {
             $designAnim.removeClass('design-animation');
         }
+    }
 
 
-        let $desSerAnim = $('.design-series');
+    let $desSerAnim = $('.design-series');
+    if ($('.designHasClass').hasClass('design-series')){
         let $desSerAnimTop = $desSerAnim.offset().top;
         let $desSerAnimBottom = $desSerAnimTop + $desSerAnim.height();
 
@@ -174,32 +183,39 @@ $(document).ready(function () {
         } else {
             $desSerAnim.removeClass('deser-animation');
         }
+    }
 
 
 
-        let $infraSecAnim = $('.infrast-sec');
+
+    let $infraSecAnim = $('.infrast-sec');
+    if ($('.infrastHasClass').hasClass('infrast-sec')) {
         let $infraSecTop = $infraSecAnim.offset().top;
         let $infraSecBottom = $infraSecTop + $infraSecAnim.height();
 
-        if ($infraSecTop + $infraSecAnim.height() / 2 < docViewBottom && docViewBottom  < $infraSecBottom + $infraSecAnim.height() / 2) {
+        if ($infraSecTop + $infraSecAnim.height() / 2 < docViewBottom && docViewBottom < $infraSecBottom + $infraSecAnim.height() / 2) {
             $infraSecAnim.addClass('infrast-sec-animation');
         } else {
             $infraSecAnim.removeClass('infrast-sec-animation');
         }
+    }
 
-
-        let $countlessAnim = $('.countless__padd');
+    let $countlessAnim = $('.countless__padd');
+    if ($('.countHasClass').hasClass('countless__padd')) {
         let $countlessTop = $countlessAnim.offset().top;
         let $countlessBottom = $countlessTop + $countlessAnim.height();
 
-        if ($countlessTop + $countlessAnim.height() / 2 < docViewBottom && docViewBottom  < $countlessBottom + $countlessAnim.height() / 2) {
+        if ($countlessTop + $countlessAnim.height() / 2 < docViewBottom && docViewBottom < $countlessBottom + $countlessAnim.height() / 2) {
             $countlessAnim.addClass('infrast-sec-animation');
         } else {
             $countlessAnim.removeClass('infrast-sec-animation');
         }
+    }
 
 
-        let $invesTmentsAnim = $('.inves-an');
+    let $invesTmentsAnim = $('.inves-an');
+
+    if ($('.investments__main').hasClass('inves-an')){
         let $invesTmentsTop = $invesTmentsAnim.offset().top;
         let $invesTmentsBottom = $invesTmentsTop + $invesTmentsAnim.height();
 
@@ -208,6 +224,7 @@ $(document).ready(function () {
         } else {
             $invesTmentsAnim.removeClass('investments___active');
         }
+    }
 
 
 
@@ -215,7 +232,9 @@ $(document).ready(function () {
 
 
 
-        let $latestAwardsAnim = $('.latest-awards-sec');
+    let $latestAwardsAnim = $('.latest-awards-sec');
+
+    if ($('.latestHasClass').hasClass('latest-awards-sec')){
         let $latestAwardsTop = $latestAwardsAnim.offset().top;
         let $latestAwardsBottom = $latestAwardsTop + $latestAwardsAnim.height();
 
@@ -224,10 +243,13 @@ $(document).ready(function () {
         } else {
             $latestAwardsAnim.removeClass('latest-awards__act');
         }
+    }
 
 
 
-        let $answerQuestAnim = $('.answer-quest');
+    let $answerQuestAnim = $('.answer-quest__anim');
+
+    if ($('.answer-quest').hasClass('answer-quest__anim')){
         let $answerQuestTop = $answerQuestAnim.offset().top;
         let $answerQuestBottom = $answerQuestTop + $answerQuestAnim.height();
 
@@ -236,9 +258,12 @@ $(document).ready(function () {
         } else {
             $answerQuestAnim.removeClass('answer-quest__act');
         }
+    }
 
 
-        let $footerAnim = $('.footer');
+    let $footerAnim = $('.footer__anim');
+
+    if ($('footer').hasClass('footer__anim')){
         let $footerTop = $footerAnim.offset().top;
         let $footerBottom = $footerTop + $answerQuestAnim.height();
 
@@ -247,8 +272,210 @@ $(document).ready(function () {
         } else {
             $footerAnim.removeClass('footer__act');
         }
-    });
-})
+    }
+
+    let $developerAnim = $('.developer__main');
+
+    if ($('.developerHasClass').hasClass('developer__main')){
+
+        let $developerTop = $developerAnim.offset().top;
+        let $developerBottom = $developerTop + $developerAnim.height();
+
+        if ($developerTop + $developerAnim.height() / 2 < docViewBottom && docViewBottom  < $developerBottom + $developerAnim.height() / 2 ) {
+            $developerAnim.addClass('developer__act');
+        } else {
+            $developerAnim.removeClass('developer__act');
+        }
+    }
+
+
+    let $devTowAnim = $('.devTowAnim');
+
+    if ($('.devTowHasClass').hasClass('devTowAnim')){
+
+        let $devTowTop = $devTowAnim.offset().top;
+        let $devTowBottom = $devTowTop + $devTowAnim.height();
+
+        if ($devTowTop + $devTowAnim.height() / 2 < docViewBottom && docViewBottom  < $devTowBottom + $devTowAnim.height() / 2 ) {
+            $devTowAnim.addClass('developer__act');
+        } else {
+            $devTowAnim.removeClass('developer__act');
+        }
+    }
+
+
+    let $perspecAnim = $('.perspective__anim');
+
+    if ($('.perspectiveHasClass').hasClass('perspective__anim')){
+
+        let $perspecTop = $perspecAnim.offset().top;
+        let $perspecBottom = $perspecTop + $perspecAnim.height();
+
+        if ($perspecTop + $perspecAnim.height() / 2 < docViewBottom && docViewBottom  < $perspecBottom + $perspecAnim.height() / 2 ) {
+            $perspecAnim.addClass('perspective__act');
+        } else {
+            $perspecAnim.removeClass('perspective__act');
+        }
+    }
+
+    let $architeAnim = $('.architectural__main');
+
+    if ($('.architecHasClass').hasClass('architectural__main')){
+
+        let $architeTop = $architeAnim.offset().top;
+        let $architeBottom = $architeTop + $architeAnim.height();
+
+        if ($architeTop + $architeAnim.height() < docViewBottom && docViewBottom  < $architeBottom + $architeAnim.height() ) {
+            $architeAnim.addClass('architec__act');
+        } else {
+            $architeAnim.removeClass('architec__act');
+        }
+    }
+
+
+
+    let $buildingsAnim = $('.buildings__sec');
+
+    if ($('.buildingsHasClass').hasClass('buildings__sec')){
+
+        let $buildingsTop = $buildingsAnim.offset().top;
+        let $buildingsBottom = $buildingsTop + $buildingsAnim.height();
+
+        if ($buildingsTop + $buildingsAnim.height() / 2 < docViewBottom && docViewBottom  < $buildingsBottom + $buildingsAnim.height() / 2 ) {
+            $buildingsAnim.addClass('buildings__act');
+        } else {
+            $buildingsAnim.removeClass('buildings__act');
+        }
+    }
+
+    let $communicAnim = $('.communications__main');
+
+    if ($('.communicHasClass').hasClass('communications__main')){
+
+        let $communicTop = $communicAnim.offset().top;
+        let $communicBottom = $communicTop + $communicAnim.height();
+
+        if ($communicTop + $communicAnim.height() / 2 < docViewBottom && docViewBottom  < $communicBottom + $communicAnim.height() / 2 ) {
+            $communicAnim.addClass('communic__act');
+        } else {
+            $communicAnim.removeClass('communic__act');
+        }
+    }
+
+
+
+
+
+    let $compAnim = $('.comp__main');
+
+    if ($('.compHasClass').hasClass('comp__main')){
+
+        let $compTop = $compAnim.offset().top;
+        let $compBottom = $compTop + $compAnim.height();
+
+        if ($compTop + $compAnim.height()  < docViewBottom && docViewBottom  < $compBottom + $compAnim.height() ) {
+            $compAnim.addClass('comp__act');
+        } else {
+            $compAnim.removeClass('comp__act');
+        }
+    }
+
+
+    let $contactAnim = $('.contact__main');
+
+    if ($('.contactHasClass').hasClass('contact__main')){
+
+        let $contactTop = $contactAnim.offset().top;
+        let $contactBottom = $contactTop + $contactAnim.height();
+
+        if ($contactTop + $contactAnim.height() / 2 < docViewBottom && docViewBottom  < $contactBottom + $contactAnim.height() / 2 ) {
+            $contactAnim.addClass('contact__act');
+        } else {
+            $contactAnim.removeClass('contact__act');
+        }
+    }
+
+
+
+    let $contsecHasAnim = $('.contact__sec');
+
+    if ($('.contsecHasClass').hasClass('contact__sec')){
+
+        let $contsecHasTop = $contsecHasAnim.offset().top;
+        let $contsecHasBottom = $contsecHasTop + $contsecHasAnim.height();
+
+        if ($contsecHasTop + $contsecHasAnim.height() / 2 < docViewBottom && docViewBottom  < $contsecHasBottom + $contsecHasAnim.height() / 2 ) {
+            $contsecHasAnim.addClass('contact__act');
+        } else {
+            $contsecHasAnim.removeClass('contact__act');
+        }
+    }
+
+
+    let $documentAnim = $('.document-page');
+
+    if ($('.documentHasClass').hasClass('document-page')){
+
+        let $documentTop = $documentAnim.offset().top;
+        let $documentBottom = $documentTop + $documentAnim.height();
+
+        if ($documentTop + $documentAnim.height() / 2 < docViewBottom && docViewBottom  < $documentBottom + $documentAnim.height() / 2 ) {
+            $documentAnim.addClass('document__act');
+        } else {
+            $documentAnim.removeClass('document__act');
+        }
+    }
+
+
+    let $productAnim = $('.product-apart');
+
+    if ($('.productHasClass').hasClass('product-apart')){
+
+        let $productTop = $productAnim.offset().top;
+        let $productBottom = $productTop + $productAnim.height();
+
+
+        if ($productTop + $productAnim.height() / 2 < docViewBottom && docViewBottom  < $productBottom + $productAnim.height() / 2 ) {
+            $productAnim.addClass('product__act');
+        } else {
+            $productAnim.removeClass('product__act');
+        }
+    }
+
+
+
+    let $swimmingAnim = $('.swimming__anim');
+
+    if ($('.swimmingHasClass').hasClass('swimming__anim')){
+
+        let $swimmingTop = $swimmingAnim.offset().top;
+        let $swimmingBottom = $swimmingTop + $swimmingAnim.height();
+
+        if ($swimmingTop + $swimmingAnim.height() / 2 < docViewBottom && docViewBottom  < $swimmingBottom + $swimmingAnim.height() ) {
+            $swimmingAnim.addClass('swimming__act');
+        } else {
+            $swimmingAnim.removeClass('swimming__act');
+        }
+    }
+
+
+    let $newsAnim = $('.news-page');
+
+    if ($('.newsHasClass').hasClass('news-page')){
+
+        let $newsTop = $newsAnim.offset().top;
+        let $newsBottom = $newsTop + $newsAnim.height();
+
+        if ($newsTop + $newsAnim.height() / 3 < docViewBottom && docViewBottom  < $newsBottom + $newsAnim.height() / 2) {
+            $newsAnim.addClass('news__act');
+        } else {
+            $newsAnim.removeClass('news__act');
+        }
+    }
+
+
+
+});
 
 
 
@@ -378,94 +605,11 @@ $('.more-news-info').on('click',function () {
 
 
 
-//  CALCULATION
-
-
-let addNumber = document.getElementsByClassName('amount-credit')[0];
-let range = document.getElementsByClassName("getValue")[0];
-let firstPayPrice = document.getElementsByClassName("first-pay-price")[0];
-let getInput = document.getElementsByClassName("getInput")[0];
-let realEstate = document.getElementsByClassName('real-estate-js')[0]
-let dateRange = document.getElementsByClassName('date-range')[0]
-let dateRangeValue = document.getElementsByClassName('date-range-value')[0]
-let monthlyPayment = document.getElementsByClassName('monthly-payment')[0]
-let percents = document.getElementsByClassName('percent__number')
-
-
-let mainValue = 0
-
-range.addEventListener("input", function () {
-    realEstate.innerText = numberWithSpaces(range.value)
-    getInput.setAttribute('max', range.value)
-    updateMainValue()
-    mounthPay()
-});
-
-getInput.addEventListener('input', function () {
-    firstPayPrice.innerText = numberWithSpaces(getInput.value)
-    updateMainValue()
-    mounthPay()
-})
-dateRange.addEventListener('input', function () {
-    dateRangeValue.innerText = numberWithSpaces(dateRange.value)
-    updateMainValue()
-    mounthPay()
-})
-
-
-for (let i = 0; i < percents.length; i++) {
-    percents[i].addEventListener('click', function () {
-        let dataPercent = percents[i].dataset.percent
-        console.log(dataPercent);
-        firstPayPrice.innerText = +range.value * +dataPercent / 100
-        getInput.value = +range.value * +dataPercent / 100
-        updateMainValue()
-        mounthPay()
-        for (let j = 0; j < percents.length; j++) {
-            percents[j].classList.remove('percent__active')
-        }
-        percents[i].classList.add('percent__active')
-    })
-}
 
 
 
 
 
-function numberWithSpaces(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-
-}
-
-
-function updateMainValue() {
-    mainValue = +range.value - +getInput.value
-    addNumber.innerText = numberWithSpaces(mainValue) + ' ₽'
-}
-
-
-
-function mounthPay() {
-    let x = mainValue / (+dateRange.value * 12)
-    monthlyPayment.innerHTML = numberWithSpaces(x.toFixed(2)) + ' ₽'
-}
-
-
-
-
-
-
-
-
-let checkboxApartment = document.getElementsByClassName('checkbox-js')[0];
-checkboxApartment.addEventListener('change', function () {
-    if(checkboxApartment.checked){
-        document.getElementsByClassName('add-check__des')[0].classList.add('remove-photo');
-    }
-    else{
-        document.getElementsByClassName('add-check__des')[0].classList.remove('remove-photo');
-    }
-});
 
 
 
