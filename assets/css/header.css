@@ -450,6 +450,11 @@ header{
         right: 0;
         top: 0;
         margin-top: 25px;
+        display: none;
+        opacity: 1;
+    }
+    .head-fix__menu>ul> .submenu__active .submenu{
+        display: block;
     }
     .head-fix__menu>ul>li ul li a {
         display: block;
