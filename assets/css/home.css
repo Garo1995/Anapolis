@@ -417,8 +417,8 @@ html,body{
 .swiper-button-prev:before, .swiper-button-next:before{
     content: "";
     position: absolute;
-    border-top: 2px solid rgba(16, 47, 91, 1);
-    border-right: 2px solid rgba(16, 47, 91, 1);
+    border-top: 2px solid rgba(245, 131, 87, 1);
+    border-right: 2px solid rgba(245, 131, 87, 1);
     width: 8px;
     height: 8px;
     transition: 0.3s;
