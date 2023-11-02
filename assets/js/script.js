@@ -121,29 +121,28 @@ $(window).scroll(function () {
     let docViewBottom = docViewTop + $window.height();
 
 
+
     if ($('.locationHasClass').hasClass('location__main')){
+
         let elemTop = $elemAdvantages.offset().top;
         let elemBottom = elemTop + $elemAdvantages.height();
 
-        if (elemTop + $elemAdvantages.height() / 4 <= docViewBottom && docViewBottom  < elemBottom + $elemAdvantages.height()) {
+        if (elemTop + $elemAdvantages.height() / 3 < docViewBottom && docViewBottom < elemBottom + $elemAdvantages.height()) {
             $elemAdvantages.addClass('location-animation');
         } else {
-            $elemAdvantages.removeClass('location-animation');
         }
+
     }
 
     let $chooseAnim = $('.choose-anim');
 
     if ($('.chooseHasClass').hasClass('choose-anim')){
         let $chooseAnimTop = $chooseAnim.offset().top;
-        let $chooseAnimBottom = $chooseAnimTop + $chooseAnim.height();
-
-        if ($chooseAnimTop + $chooseAnim.height() / 4 <= docViewBottom && docViewBottom  < $chooseAnimBottom + $chooseAnim.height()) {
+        let $chooseBottom = $chooseAnimTop + $chooseAnim.height();
+        if ($chooseAnimTop + $chooseAnim.height() / 3 < docViewBottom && docViewBottom < $chooseBottom + $chooseAnim.height()) {
             $chooseAnim.addClass('choose-animation');
         } else {
-            $chooseAnim.removeClass('choose-animation');
         }
-
     }
 
 
@@ -156,7 +155,6 @@ $(window).scroll(function () {
         if ($premisesAnimTop + $premisesAnim.height() / 2 < docViewBottom && docViewBottom / 6 < $premisesAnimBottom + $premisesAnim.height()) {
             $premisesAnim.addClass('premises-animation');
         } else {
-            $premisesAnim.removeClass('premises-animation');
         }
     }
 
@@ -168,7 +166,6 @@ $(window).scroll(function () {
         if ($designAnimTop + $designAnim.height() / 4 < docViewBottom && docViewBottom  < $designAnimBottom + $designAnim.height()) {
             $designAnim.addClass('design-animation');
         } else {
-            $designAnim.removeClass('design-animation');
         }
     }
 
@@ -181,7 +178,6 @@ $(window).scroll(function () {
         if ($desSerAnimTop + $desSerAnim.height() / 4 < docViewBottom && docViewBottom  < $desSerAnimBottom + $desSerAnim.height() / 4) {
             $desSerAnim.addClass('deser-animation');
         } else {
-            $desSerAnim.removeClass('deser-animation');
         }
     }
 
@@ -196,7 +192,6 @@ $(window).scroll(function () {
         if ($infraSecTop + $infraSecAnim.height() / 2 < docViewBottom && docViewBottom < $infraSecBottom + $infraSecAnim.height() / 2) {
             $infraSecAnim.addClass('infrast-sec-animation');
         } else {
-            $infraSecAnim.removeClass('infrast-sec-animation');
         }
     }
 
@@ -208,7 +203,6 @@ $(window).scroll(function () {
         if ($countlessTop + $countlessAnim.height() / 2 < docViewBottom && docViewBottom < $countlessBottom + $countlessAnim.height() / 2) {
             $countlessAnim.addClass('infrast-sec-animation');
         } else {
-            $countlessAnim.removeClass('infrast-sec-animation');
         }
     }
 
@@ -222,7 +216,6 @@ $(window).scroll(function () {
         if ($invesTmentsTop + $invesTmentsAnim.height() / 2 < docViewBottom && docViewBottom  < $invesTmentsBottom + $invesTmentsAnim.height() ) {
             $invesTmentsAnim.addClass('investments___active');
         } else {
-            $invesTmentsAnim.removeClass('investments___active');
         }
     }
 
@@ -241,7 +234,6 @@ $(window).scroll(function () {
         if ($latestAwardsTop + $latestAwardsAnim.height() / 2 < docViewBottom && docViewBottom  < $latestAwardsBottom + $latestAwardsAnim.height() / 2) {
             $latestAwardsAnim.addClass('latest-awards__act');
         } else {
-            $latestAwardsAnim.removeClass('latest-awards__act');
         }
     }
 
@@ -256,7 +248,6 @@ $(window).scroll(function () {
         if ($answerQuestTop + $answerQuestAnim.height()  < docViewBottom && docViewBottom  < $answerQuestBottom + $answerQuestAnim.height() ) {
             $answerQuestAnim.addClass('answer-quest__act');
         } else {
-            $answerQuestAnim.removeClass('answer-quest__act');
         }
     }
 
@@ -270,7 +261,6 @@ $(window).scroll(function () {
         if ($footerTop + $footerAnim.height() / 2 < docViewBottom && docViewBottom  < $footerBottom + $footerAnim.height() / 2 ) {
             $footerAnim.addClass('footer__act');
         } else {
-            $footerAnim.removeClass('footer__act');
         }
     }
 
@@ -284,7 +274,6 @@ $(window).scroll(function () {
         if ($developerTop + $developerAnim.height() / 2 < docViewBottom && docViewBottom  < $developerBottom + $developerAnim.height() / 2 ) {
             $developerAnim.addClass('developer__act');
         } else {
-            $developerAnim.removeClass('developer__act');
         }
     }
 
@@ -299,7 +288,6 @@ $(window).scroll(function () {
         if ($devTowTop + $devTowAnim.height() / 2 < docViewBottom && docViewBottom  < $devTowBottom + $devTowAnim.height() / 2 ) {
             $devTowAnim.addClass('developer__act');
         } else {
-            $devTowAnim.removeClass('developer__act');
         }
     }
 
@@ -314,7 +302,6 @@ $(window).scroll(function () {
         if ($perspecTop + $perspecAnim.height() / 2 < docViewBottom && docViewBottom  < $perspecBottom + $perspecAnim.height() / 2 ) {
             $perspecAnim.addClass('perspective__act');
         } else {
-            $perspecAnim.removeClass('perspective__act');
         }
     }
 
@@ -328,7 +315,6 @@ $(window).scroll(function () {
         if ($architeTop + $architeAnim.height() < docViewBottom && docViewBottom  < $architeBottom + $architeAnim.height() ) {
             $architeAnim.addClass('architec__act');
         } else {
-            $architeAnim.removeClass('architec__act');
         }
     }
 
@@ -344,7 +330,6 @@ $(window).scroll(function () {
         if ($buildingsTop + $buildingsAnim.height() / 2 < docViewBottom && docViewBottom  < $buildingsBottom + $buildingsAnim.height() / 2 ) {
             $buildingsAnim.addClass('buildings__act');
         } else {
-            $buildingsAnim.removeClass('buildings__act');
         }
     }
 
@@ -358,7 +343,6 @@ $(window).scroll(function () {
         if ($communicTop + $communicAnim.height() / 2 < docViewBottom && docViewBottom  < $communicBottom + $communicAnim.height() / 2 ) {
             $communicAnim.addClass('communic__act');
         } else {
-            $communicAnim.removeClass('communic__act');
         }
     }
 
@@ -376,7 +360,6 @@ $(window).scroll(function () {
         if ($compTop + $compAnim.height()  < docViewBottom && docViewBottom  < $compBottom + $compAnim.height() ) {
             $compAnim.addClass('comp__act');
         } else {
-            $compAnim.removeClass('comp__act');
         }
     }
 
@@ -391,7 +374,6 @@ $(window).scroll(function () {
         if ($contactTop + $contactAnim.height() / 2 < docViewBottom && docViewBottom  < $contactBottom + $contactAnim.height() / 2 ) {
             $contactAnim.addClass('contact__act');
         } else {
-            $contactAnim.removeClass('contact__act');
         }
     }
 
@@ -407,7 +389,6 @@ $(window).scroll(function () {
         if ($contsecHasTop + $contsecHasAnim.height() / 2 < docViewBottom && docViewBottom  < $contsecHasBottom + $contsecHasAnim.height() / 2 ) {
             $contsecHasAnim.addClass('contact__act');
         } else {
-            $contsecHasAnim.removeClass('contact__act');
         }
     }
 
@@ -422,7 +403,6 @@ $(window).scroll(function () {
         if ($documentTop + $documentAnim.height() / 2 < docViewBottom && docViewBottom  < $documentBottom + $documentAnim.height() / 2 ) {
             $documentAnim.addClass('document__act');
         } else {
-            $documentAnim.removeClass('document__act');
         }
     }
 
@@ -438,7 +418,6 @@ $(window).scroll(function () {
         if ($productTop + $productAnim.height() / 2 < docViewBottom && docViewBottom  < $productBottom + $productAnim.height() / 2 ) {
             $productAnim.addClass('product__act');
         } else {
-            $productAnim.removeClass('product__act');
         }
     }
 
@@ -454,7 +433,6 @@ $(window).scroll(function () {
         if ($swimmingTop + $swimmingAnim.height() / 2 < docViewBottom && docViewBottom  < $swimmingBottom + $swimmingAnim.height() ) {
             $swimmingAnim.addClass('swimming__act');
         } else {
-            $swimmingAnim.removeClass('swimming__act');
         }
     }
 
@@ -469,10 +447,8 @@ $(window).scroll(function () {
         if ($newsTop + $newsAnim.height() / 3 < docViewBottom && docViewBottom  < $newsBottom + $newsAnim.height() / 2) {
             $newsAnim.addClass('news__act');
         } else {
-            $newsAnim.removeClass('news__act');
         }
     }
-
 
 
 });
