@@ -48,6 +48,10 @@ header{
     cursor: pointer;
     margin-left: 75px;
     grid-gap: 5px;
+    border: 1px solid rgba(22, 63, 123, 1);
+}
+.onle-home{
+    border: 1px solid transparent;
 }
 .open-menu span{
     display: none;
@@ -227,7 +231,7 @@ header{
 }
 .head-fix__menu>ul>li .submenu{
     position: absolute;
-    max-width: 250px;
+    max-width: 340px;
     width: 100%;
     right: 0;
     top: 0;
@@ -235,7 +239,10 @@ header{
     opacity: 0;
     transition: 0.4s;
 }
-
+.head-fix__menu>ul>.submenu__active .submenu{
+    visibility: visible;
+    opacity: 1;
+}
 .head-fix__menu>ul>li:hover .submenu{
     visibility: visible;
     opacity: 1;
@@ -252,17 +259,22 @@ header{
     position: relative;
     width: 100%;
 }
-.submenu__block>a:after{
+.submenu>li {
+    position: relative;
+    width: max-content;
+    margin-left: auto;
+}
+.submenu>li:after{
     content: url("../img/arrow-liner.svg");
     position: absolute;
-    top: 0;
-    right: -100px;
+    top: 3px;
+    left: -99px;
     transition: 0.4s;
     opacity: 0;
     visibility: hidden;
 }
 
-.head-fix__menu>ul>li:hover>a:after{
+.submenu>li:hover:after{
     opacity: 1;
     visibility: visible;
 }
@@ -386,7 +398,7 @@ header{
         margin-top: 35px;
     }
     .head-fix__menu {
-        max-width: 590px;
+        max-width: 660px;
         margin-left: 0;
     }
 
@@ -468,10 +480,15 @@ header{
     .head-fix__menu>ul li + li {
         margin-top: 28px;
     }
-
+    .submenu>li {
+        margin-left: 0;
+    }
 }
 @media (max-width: 760px){
    .header__main .header__soc{
+        display: none;
+    }
+    .submenu>li:after{
         display: none;
     }
     .open-menu {
@@ -503,5 +520,12 @@ header{
         top: -44px;
         width: 157px;
         height: 93px;
+    }
+    .head-fix__menu>ul>li>a {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .head-fix__menu>ul li + li {
+        margin-top: 22px;
     }
 }

@@ -76,12 +76,14 @@
 .acquisitions__main .purchase__info h2{
     color: #ffffff;
 }
-
+.acquisitions__main{
+    padding-bottom: 440px;
+}
 .calculator__acquis{
-    padding: 420px 0 220px;
+    padding: 120px 0 220px;
 }
 .acuis__secs .investments__block{
-    margin-bottom: -280px;
+    margin-top: -409px;
     z-index: 1;
 }
 @media (max-width: 1599px){
@@ -162,7 +164,7 @@
         z-index: 1;
     }
     .calculator__acquis {
-        padding: 90px 0;
+        padding: 100px 0 140px;
     }
     .acquisitions__flex {
         margin-top: 60px;
@@ -196,4 +198,23 @@
     .finish-opt .design__item .design__cnt {
         margin: 20px auto 0;
     }
+    .acuis__secs {
+        background: linear-gradient(213.75deg, #174A94 11.27%, #15386B 86.16%);
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .acuis__secs .container{
+        padding: 0;
+    }
+    .acquisitions__main {
+        padding-bottom: 120px;
+    }
+    .acuis__secs .investments__block {
+        margin-top: 0;
+    }
+    .acquisitions__main .swiper-button-prev:before, .acquisitions__main .swiper-button-next:before{
+        border-top: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
+    }
+
 }

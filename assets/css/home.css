@@ -192,7 +192,7 @@ html,body{
     align-items: center;
     max-width: 390px;
     width: 100%;
-    transition: 0.4s;
+    transition: 1.1s;
     cursor: pointer;
 }
 .btn-liner span {
@@ -201,7 +201,7 @@ html,body{
     line-height: 31px;
     text-align: left;
     color: #ffffff;
-    transition: 0.4s;
+    transition: 1.1s;
     position: relative;
 }
 .anim-liner{
@@ -211,24 +211,34 @@ html,body{
     width: 100%;
     height: 110px;
     border-radius: 50%;
-    transition: 0.4s;
+    transition: 1.1s;
     margin-right: 26px;
     position: relative;
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
 .anim-liner:before{
     content: url("../img/arrow-liner.svg");
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -18px;
-    transition: 0.6s;
+    transition: 1.1s;
+    left: -20px;
 }
 .btn-liner:hover .anim-liner:before{
-    left: 0;
-}
+    animation: anim-kran 1.1s infinite alternate;
 
+}
+@keyframes anim-kran {
+    0% {
+        transform: translateX(0em);
+        transition: 1.1s;
+    }
+    100% {
+        transform: translateX(-1.4em);
+        transition: 1.1s;
+    }
+
+}
 .apartments__pay{
     display: flex;
     flex-direction: column;
@@ -346,13 +356,24 @@ html,body{
     width: 11px;
     height: 11px;
     transform: rotate(45deg);
-    transition: 0.5s;
+    transition: 0.8s;
 }
+
 .get-cat:hover:before{
-    top: 17px;
+    animation: get-cat 0.8s infinite alternate;
     border-top: 2px solid #ffffff;
     border-right: 2px solid #ffffff;
-    transform: rotate(135deg);
+}
+@keyframes get-cat {
+    0% {
+        transform: translateX(0em) rotate(45deg);
+        transition: 0.8s;
+    }
+    100% {
+        transform: translateX(-0.6em) rotate(45deg);
+        transition: 0.8s;
+    }
+
 }
 .get-cat span{
     margin-left: 27px;
@@ -387,7 +408,10 @@ html,body{
     margin-top: 85px;
 
 }
+.choose-apart__foot .swiper-button-prev, .choose-apart__foot .swiper-button-next{
+    background: #ffffff;
 
+}
 .swiper-button-prev, .swiper-button-next{
     width: 100%;
     max-width: 72px;
@@ -417,8 +441,9 @@ html,body{
 .swiper-button-prev:before, .swiper-button-next:before{
     content: "";
     position: absolute;
-    border-top: 2px solid rgba(245, 131, 87, 1);
-    border-right: 2px solid rgba(245, 131, 87, 1);
+
+    border-top: 2px solid rgba(16, 47, 91, 1);
+    border-right: 2px solid rgba(16, 47, 91, 1);
     width: 8px;
     height: 8px;
     transition: 0.3s;
@@ -675,13 +700,14 @@ html,body{
 }
 .options-arrow{
     transition: 0.3s;
-    display: block;
     margin-bottom: 21px;
     width: 110px;
     height: 110px;
     border: 1px solid rgba(245, 131, 87, 1);
     border-radius: 50%;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .btn-options:hover .options-arrow{
     background: rgba(245, 131, 87, 1);
@@ -690,12 +716,21 @@ html,body{
     content: url("../img/arr-lin-bot.svg");
     position: absolute;
     top: -13px;
-    left: 50%;
-    transform: translateX(-50%);
     transition: 0.4s;
 }
 .btn-options:hover .options-arrow:before{
-    top: -30px;
+    animation: btn-options 0.8s infinite alternate;
+}
+@keyframes btn-options {
+    0% {
+        transform: translateY(0em);
+        transition: 0.8s;
+    }
+    100% {
+        transform: translateY(-0.8em);
+        transition: 0.8s;
+    }
+
 }
 .btn-options span{
     font-size: 18px;
@@ -1838,7 +1873,6 @@ input:checked + .slider:before {
 }
 .infrastructure__cnt ul{
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
     border-bottom: 1px solid rgba(16, 47, 92, 0.40);
 }
@@ -1892,7 +1926,8 @@ input:checked + .slider:before {
 .button-details{
     display: flex;
     align-items: center;
-    transition: 0.3s;
+    transition: 1.1s;
+
     position: relative;
     border-radius: 50%;
     border: 1px solid rgba(245, 131, 87, 1);
@@ -1907,12 +1942,21 @@ input:checked + .slider:before {
     content: url("../img/lin-lef-whit.svg");
     position: absolute;
     left: -39px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: 0.4s;
+    transition: 1.1s;
 }
 .button-details:hover:before{
-    left: -60px;
+    animation: button-details 1.1s infinite alternate;
+}
+@keyframes button-details {
+    0% {
+        transform: translateX(0em);
+        transition: 1.1s;
+    }
+    100% {
+        transform: translateX(-1.5em);
+        transition: 1.1s;
+    }
+
 }
 .button-details small{
     font-size: 18px;
@@ -1921,13 +1965,23 @@ input:checked + .slider:before {
     text-align: left;
     color: rgba(16, 47, 92, 1);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     right: -43px;
-    transition: 0.4s;
+    transition: 1.1s;
 }
+
 .button-details:hover small{
-    right: -65px;
+    animation: button-small 1.1s infinite alternate;
+}
+@keyframes button-small {
+    0% {
+        transform: translateX(0em);
+        transition: 1.1s;
+    }
+    100% {
+        transform: translateX(1.5em);
+        transition: 1.1s;
+    }
+
 }
 .infrastructure__info{
     margin: 108px auto 0;
@@ -1936,7 +1990,6 @@ input:checked + .slider:before {
 }
 .infrastructure__wrap{
     display: flex;
-    justify-content: center;
     padding-bottom: 233px;
 }
 .infrastructure__box{
@@ -2291,7 +2344,7 @@ input:checked + .slider:before {
 }
 
 .calculator__flex{
-    margin-top: 64px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -2361,7 +2414,7 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 45px;
+    margin-top: 30px;
 }
 .calculator__price span{
     font-size: 22px;
@@ -2372,19 +2425,19 @@ input:checked + .slider:before {
 
 }
 .calculator__value + .calculator__value{
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .calculator__percent{
     display: flex;
-    margin-top: 56px;
+    margin-top: 35px;
     justify-content: space-between;
     align-items: center;
 }
 .percent__number{
     border: 1.26px solid rgba(30, 62, 137, 1);
-    max-width: 78px;
+    max-width: 65px;
     width: 100%;
-    height: 78px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2393,9 +2446,9 @@ input:checked + .slider:before {
 }
 .percent__number span{
     font-family: 'Spectral';
-    font-size: 34px;
+    font-size: 27px;
     font-weight: 400;
-    line-height: 44px;
+    line-height: 35px;
     text-align: left;
     color: rgba(30, 62, 137, 1);
 }
@@ -2411,8 +2464,8 @@ input:checked + .slider:before {
 
 }
 .calc-original{
-    margin-top: 42px;
-    margin-bottom: 74px;
+    margin-top: 19px;
+    margin-bottom: 40px;
 }
 .calc-original p{
     color: rgba(16, 47, 92, 1);
@@ -3401,10 +3454,17 @@ input:checked + .slider:before {
         display: none;
     }
 }
-@media (max-width: 1299px){
-    .purchase__info {
-        max-width: 1180px;
+@media (max-width: 1315px){
+    .purchase__auto{
+        padding-left: 20px;
     }
+    .purchase__info{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 1299px){
+
     .investments__photo {
         max-width: 308px;
     }
@@ -3536,9 +3596,7 @@ input:checked + .slider:before {
     .design__cnt {
         margin-top: 40px;
     }
-    .purchase__info {
-        padding-left: 15px;
-    }
+
     .purchase__bid span {
         font-size: 22px;
         line-height: 26px;
@@ -3931,6 +3989,10 @@ input:checked + .slider:before {
     .apartments__pay {
         margin: 445px auto 0;
     }
+
+    .premises__title img {
+        margin-top: 30px;
+    }
     .apartments__block {
         bottom: 374px;
     }
@@ -4096,7 +4158,7 @@ input:checked + .slider:before {
         line-height: 34px;
     }
     .investments__block {
-        padding: 40px 45px;
+        padding: 40px 25px;
     }
     .bg-white {
         background: #ffffff;
@@ -4111,15 +4173,20 @@ input:checked + .slider:before {
         line-height: 30px;
     }
     .calculator__percent {
-        margin-top: 45px;
+        margin-top: 30px;
         justify-content: flex-start;
         align-items: center;
-        grid-gap: 11px;
+        grid-gap: 7px;
+    }
+    .calculator__price {
+        margin-top: 15px;
     }
     .calculator-pay__info h2 {
-        font-size: 32px;
+        font-size: 25px;
         margin-top: 12px;
+        line-height: 32px;
     }
+
     .calculator-pay__info h3 {
         font-size: 16px;
         line-height: 22px;
@@ -4203,6 +4270,17 @@ input:checked + .slider:before {
 
 
 @media (max-width: 570px){
+    .purchase__box .button-details {
+        margin: 0 auto;
+    }
+    .button-details {
+        max-width: 95px;
+        height: 95px;
+    }
+    .calculator__price span {
+        font-size: 18px;
+        line-height: 24px;
+    }
     .get-cat span {
         margin-left: 20px;
     }
@@ -4306,6 +4384,18 @@ input:checked + .slider:before {
         font-size: 20px;
         line-height: 26px;
     }
+    .calculator__payment .btn {
+        height: 83px;
+        max-width: 316px;
+        font-size: 18px;
+    }
+    .answer-quest__info {
+        padding: 70px 25px;
+    }
+    .acquisitions__box h2 {
+        font-size: 42px;
+        line-height: 48px;
+    }
     .purchase__bid {
         margin-bottom: 18px;
         flex-direction: column;
@@ -4319,7 +4409,7 @@ input:checked + .slider:before {
         margin-bottom: 20px;
     }
     .investments__block {
-        padding: 40px 25px;
+        padding: 32px 20px;
     }
     .select-bank .jq-selectbox__select-text {
         font-size: 16px;
@@ -4328,6 +4418,11 @@ input:checked + .slider:before {
     }
     .select-bank {
         max-width: 157px;
+    }
+    .investments__info h3 {
+        margin-top: 125px;
+        font-size: 24px;
+        line-height: 32px;
     }
     .select-bank .jq-selectbox:after {
         top: 18px;
