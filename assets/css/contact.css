@@ -15,11 +15,11 @@
     font-size: 44px;
     line-height: 52px;
     transition: 1.2s;
-    transform: translateX(-20%);
+    transform: translateX(-10%);
 }
 .contact__soc{
     transition: 1.2s;
-    transform: translateX(-30%);
+    transform: translateX(-20%);
 }
 .contact__act .contact__soc{
     transform: translateX(0);
@@ -260,8 +260,14 @@
 .perspective__soc{
     margin-top: 51px;
 }
-.perspective__soc h3{
+.perspect-phone{
     margin: 20px 0;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 41px;
+    text-align: left;
+    color: #ffffff;
+    display: block;
 }
 .cont-map-mob{
     display: none;
@@ -303,6 +309,21 @@
         line-height: 27px;
         padding: 12px 25px;
         height: 60px;
+    }
+}
+@media (max-width: 1024px){
+    body .perspective__info {
+        transform: translateX(0);
+        transition: 0.6s;
+    }
+    .perspect-phone {
+        margin: 15px 0;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .answer-send__mail {
+        font-size: 20px;
+        line-height: 26px;
     }
 }
 @media (max-width: 991px){

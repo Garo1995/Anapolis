@@ -191,9 +191,12 @@ footer{
         max-width: 1325px;
     }
 }
-@media (max-width: 1099px){
+@media (max-width: 1024px){
     .scrollup{
         display: none!important;
+    }
+    .footer .container-foot {
+        transform: unset;
     }
 }
 @media (max-width: 991px){

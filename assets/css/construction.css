@@ -202,4 +202,11 @@
         color: rgba(16, 47, 92, 1);
         background: rgba(16, 47, 92, 0.40);
     }
+    .construct__det ul li:hover{
+        color: rgba(16, 47, 92, 1);
+    }
+    .construct__det ul .active-moved{
+        color: rgba(16, 47, 92, 1);
+        background: rgba(16, 47, 92, 0.40);
+    }
 }

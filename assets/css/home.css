@@ -219,7 +219,12 @@ html,body{
     align-items: center;
 }
 .anim-liner:before{
-    content: url("../img/arrow-liner.svg");
+    content: "";
+    background-image: url("../img/arrow-liner.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 81px;
+    height: 15px;
     position: absolute;
     transition: 1.1s;
     left: -20px;
@@ -271,17 +276,18 @@ html,body{
     width: 100%;
     margin: 435px auto 0;
 }
-.location__main:before{
+
+.location__main:before {
     content: "";
     position: absolute;
-    top: -403px;
+    top: -291px;
     left: 0;
     background-image: url("../img/terev.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 244px;
+    max-width: 199px;
     width: 100%;
-    height: 757px;
+    height: 627px;
 }
 .location__main:after{
     content: "";
@@ -2140,17 +2146,12 @@ input:checked + .slider:before {
     margin-left: auto;
 
 }
-.purchase__cnt{
-    overflow: hidden;
-}
+
 .purchase__slider{
     width: 2070px;
     padding-bottom: 15px;
 }
-.purchase__info{
-    width: calc(-100px + 95%);
-    margin-left: auto;
-}
+
 .bg-white{
     background: #ffffff;
     padding-top: 140px;
@@ -2619,6 +2620,7 @@ input:checked + .slider:before {
     background: #ffffff;
     padding-bottom: 250px;
     overflow: hidden;
+    margin-top: -2px;
 }
 
 .latest-awards h3{
@@ -3281,9 +3283,7 @@ input:checked + .slider:before {
         padding: 0 10px 27px 31px;
         top: 45px!important;
     }
-    .purchase__info {
-        width: calc(-30px + 96%);
-    }
+
     .btn-options {
         right: 20px;
         bottom: 20px;
@@ -3441,9 +3441,7 @@ input:checked + .slider:before {
         max-width: 300px;
         height: 237px;
     }
-    .purchase__info {
-        max-width: 1280px;
-    }
+
     .design__slider {
         margin-left: -218px;
         max-width: 678px;
@@ -3454,15 +3452,7 @@ input:checked + .slider:before {
         display: none;
     }
 }
-@media (max-width: 1315px){
-    .purchase__auto{
-        padding-left: 20px;
-    }
-    .purchase__info{
-        width: 100%;
-        max-width: 100%;
-    }
-}
+
 @media (max-width: 1299px){
 
     .investments__photo {
@@ -3490,7 +3480,7 @@ input:checked + .slider:before {
         max-width: 465px;
         width: 100%;
     }
-    .location__arrows {
+   .location__main  .location__arrows {
         margin-top: 60px;
         position: absolute;
         bottom: -600px;
@@ -3652,8 +3642,11 @@ input:checked + .slider:before {
         margin: 20px 0;
     }
     .soc-set ul li a {
-        width: 53px;
-        height: 53px;
+        width: 57px;
+        height: 57px;
+    }
+    .soc-set ul li a img{
+        width: 26px;
     }
     .answer-quest__inp input {
         font-size: 20px;
@@ -3670,7 +3663,96 @@ input:checked + .slider:before {
         position: relative;
     }
 }
+@media (max-width: 1024px){
+    .answer-quest__info{
+        transform: unset;
+    }
+    .answer-quest__anim .answer-quest__form {
+        transform: unset;
+    }
+    .answer-quest__anim .answer-quest__info{
+        transform: translateX(0);
 
+    }
+    .choose-apart {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .choose-apart__left, .choose-apart__right {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .prem-for-anim .premises__title h3 {
+        transition: 0.6s;
+        transform: translateX(0);
+    }
+    .premises__title h3{
+        transform: translateX(0);
+    }
+    .premises__title img {
+        transform: translateX(0);
+        transition: 0.6s;
+    }
+    .location__block .location__info {
+        transform: translateX(0);
+    }
+    .prem-for-anim .premises__box h2 {
+        transform: translateX(0);
+    }
+    .prem-for-anim .btn-liner {
+        transform: translateX(0);
+        transition: 0.5s;
+    }
+    .design__href {
+        transition: 0.5s;
+        transform: translateX(0);
+    }
+    .add-check__des .design__slider {
+        transition: 0.9s;
+        transform: translateX(0);
+    }
+    .choose-apart__info .design__left {
+        transition: 0.9s;
+        transform: translateX(0);
+    }
+   .series-moved__wrap .series-moved__box{
+        transform: translateX(0);
+    }
+    .infrastHasClass .infrastructure__box{
+        transform: translateX(0)!important;
+    }
+    .investments__info span {
+        transform: translateX(0);
+    }
+   .inves-an .investments__info h3 {
+        transform: translateX(0);
+    }
+
+    .inves-an .investments__photo {
+        transform: translateX(0);
+    }
+  .countless__main h2 {
+        transform: translateX(0);
+    }
+
+     .countless__data, .countless__out, .countless__develop{
+         transform: translateX(0);
+     }
+    .latest-awards__pic {
+        transform: translate(0);
+    }
+     .latest-awards__text p {
+        transform: translate(0);
+    }
+    .answer-quest__cnt p {
+        line-height: 24px;
+    }
+    .apartments-bg {
+        padding-top: 140px;
+        min-height: 743px;
+        background-position: center;
+    }
+}
 @media (max-width: 991px) {
     .design__parent ul li, .choose-apart__link ul li a {
         margin: 0 6px;
@@ -3693,7 +3775,7 @@ input:checked + .slider:before {
         padding-left: 0;
         flex-direction: column;
         align-items: flex-start;
-        padding-bottom: 25px;
+        padding-bottom: 65px;
     }
 
     .premises__apart__text p {
@@ -3712,56 +3794,8 @@ input:checked + .slider:before {
         line-height: 36px;
     }
 
-    .apartments__circle {
-        max-width: 100px;
-        height: 100px;
-    }
-
-    .apartments__item:nth-child(1) {
-        margin-top: 0;
-        top: 0;
-    }
-
-    .apartments__item:nth-child(2) {
-        top: 0;
-        left: 0;
-        max-width: 275px;
-        margin: 0;
-        margin-top: 76px;
-    }
-
-    .apartments__item:nth-child(3) {
-        margin-top: 25px;
-        top: 0;
-        left: 0;
-        max-width: 300px;
-        width: 100%;
-    }
-
-    .apartments__flex {
-        flex-direction: column;
-        bottom: -300px;
-    }
-
     .apartments__block {
-        flex-direction: row;
-        align-items: flex-start;
-        position: relative;
-        bottom: 344px;
-        max-width: 750px;
-        width: 100%;
         flex-wrap: wrap;
-    }
-
-    .apartments__main {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .apartments-bg {
-        padding-top: 240px;
-        height: 743px;
-        background-position: center;
     }
 
     .apartments__main h1 {
@@ -3773,18 +3807,17 @@ input:checked + .slider:before {
         display: none;
     }
 
-    .location__main {
-        margin-top: 825px;
-        padding-bottom: 125px;
+    .apartments__item:nth-child(3) {
+        top: 103px;
+        left: 210px;
+        max-width: 240px;
+        width: 100%;
     }
 
     .location__main:after {
         display: none;
     }
 
-    .apartments__pay {
-        margin-top: 420px;
-    }
 
     .design__main:before {
         display: none;
@@ -4019,14 +4052,22 @@ input:checked + .slider:before {
         font-size: 38px;
         line-height: 44px;
     }
-
+    .design-series {
+        margin-top: 125px;
+    }
     .choose-apart h2 {
         text-align: left;
     }
     .choose-apart__href, .choose-apart__link {
         margin-top: 33px;
     }
-
+    .video-click__icon img {
+        transition: 0.5s;
+        width: 46px;
+    }
+    .apartments__pay {
+        margin-top: 420px;
+    }
     .choose-apart__sec {
         margin: 33px auto 0;
         background: #fff;
@@ -4140,6 +4181,10 @@ input:checked + .slider:before {
     }
     .purchase__cnt {
         margin-top: 30px;
+    }
+    .location__main {
+        margin-top: 825px;
+        padding-bottom: 125px;
     }
     .purchase__main:before {
         bottom: auto;
@@ -4258,7 +4303,7 @@ input:checked + .slider:before {
         padding: 70px 35px;
     }
     .answer-quest__cnt .button-details {
-        margin: 15px auto 0;
+        margin: 30px auto 0;
     }
     .section-margin {
         margin-top: 60px;
@@ -4304,15 +4349,53 @@ input:checked + .slider:before {
     h1 {
         font-size: 40px;
     }
-    .apartments__block {
-        bottom: 334px;
+    .apartments__circle {
+        max-width: 100px;
+        height: 100px;
     }
-    .apartments__flex {
-        bottom: -344px;
+
+    .apartments__item:nth-child(1) {
+        margin-top: 0;
+        top: 0;
     }
+
     .apartments__item:nth-child(2) {
-        margin-top: 48px;
+        top: 0;
+        left: 0;
+        max-width: 275px;
+        margin: 0;
+        margin-top: 45px;
     }
+
+    .apartments__item:nth-child(3) {
+        margin-top: 25px;
+        top: 0;
+        left: 0;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .apartments__flex {
+        flex-direction: column;
+        bottom: -344px;
+
+    }
+
+    .apartments__block {
+        flex-direction: row;
+        align-items: flex-start;
+        position: relative;
+        bottom: 344px;
+        max-width: 750px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .apartments__main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .location__main {
         margin-top: 959px;
         padding-bottom: 125px;
@@ -4390,7 +4473,7 @@ input:checked + .slider:before {
         font-size: 18px;
     }
     .answer-quest__info {
-        padding: 70px 25px;
+        padding: 110px 25px;
     }
     .acquisitions__box h2 {
         font-size: 42px;
@@ -4476,7 +4559,7 @@ input:checked + .slider:before {
     }
     .answer-quest__form {
         max-width: 100%;
-        padding: 70px 20px 40px;
+        padding: 70px 20px 60px;
     }
     .select-bank .jq-selectbox li {
         margin-top: 12px;
@@ -4497,6 +4580,29 @@ input:checked + .slider:before {
         font-size: 34px;
         line-height: 42px;
     }
+    .anim-liner {
+        max-width: 90px;
+        height: 90px;
+        margin-right: 14px;
+    }
+    .btn-liner span {
+        font-size: 17px;
+    }
+}
+@media (max-width: 420px){
+    .premises__box h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    .anim-liner:before {
+        background-size: contain;
+        width: 71px;
+        height: 13px;
+        left: -15px;
+    }
 }
 @media (max-width: 370px){
     .answer-quest__phone {
@@ -4513,6 +4619,5 @@ input:checked + .slider:before {
         max-width: 300px;
         text-align: left;
     }
-
 
 }

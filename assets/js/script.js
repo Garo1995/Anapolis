@@ -345,7 +345,9 @@ $(window).scroll(function () {
         } else {
         }
     }
-
+    $('.queue-close').on('click',function () {
+        $(this).parent().addClass('queue-modal__close')
+    })
 
 
 
@@ -371,9 +373,10 @@ $(window).scroll(function () {
         let $contactTop = $contactAnim.offset().top;
         let $contactBottom = $contactTop + $contactAnim.height();
 
-        if ($contactTop + $contactAnim.height() / 2 < docViewBottom && docViewBottom  < $contactBottom + $contactAnim.height() / 2 ) {
+        if ($contactTop + $contactAnim.height()  < docViewBottom && docViewBottom  < $contactBottom + $contactAnim.height() ) {
             $contactAnim.addClass('contact__act');
         } else {
+
         }
     }
 
@@ -386,7 +389,7 @@ $(window).scroll(function () {
         let $contsecHasTop = $contsecHasAnim.offset().top;
         let $contsecHasBottom = $contsecHasTop + $contsecHasAnim.height();
 
-        if ($contsecHasTop + $contsecHasAnim.height() / 2 < docViewBottom && docViewBottom  < $contsecHasBottom + $contsecHasAnim.height() / 2 ) {
+        if ($contsecHasTop + $contsecHasAnim.height() / 4 < docViewBottom && docViewBottom  < $contsecHasBottom + $contsecHasAnim.height() ) {
             $contsecHasAnim.addClass('contact__act');
         } else {
         }

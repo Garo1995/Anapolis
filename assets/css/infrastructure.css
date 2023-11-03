@@ -73,6 +73,8 @@
     justify-content: space-between;
     position: relative;
     z-index: 1;
+    grid-gap: 20px;
+
 }
 .product-apart__box{
     max-width: 349px;
@@ -167,6 +169,7 @@
     margin-top: 0;
     max-width: 305px;
     width: 100%;
+    bottom: 0;
 }
 .swimming__flex{
     display: flex;
@@ -179,6 +182,10 @@
     padding: 67px 60px 90px;
     transition: 1.2s;
     transform: translateX(-20%);
+}
+.swimming__info h1, .swimming__info h2, .swimming__info h3{
+    color: rgba(16, 47, 92, 1);
+
 }
 .swimming__act .swimming__info{
     transform: translateX(0);
@@ -239,6 +246,7 @@
 }
 .swimming__photo img{
     width: 100%;
+    object-fit: cover;
 }
 .meters-sea__cnt{
     overflow: hidden;
@@ -390,6 +398,10 @@
     max-width: 700px;
     width: 100%;
 }
+.scape__photo img{
+    width: 100%;
+    object-fit: cover;
+}
 .scape__arrows{
     max-width: 280px;
     width: 100%;
@@ -421,20 +433,35 @@
     left: 0;
     right: auto;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .scape-swiper-next:before{
     content: url(../img/arrow-liner.svg);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    transform: rotate(0);
     left: -30px;
     border: unset;
+    width: auto;
+    height: auto;
 }
 .scape-swiper-next:hover:before{
     border: unset;
 }
-
+.scape-swiper-next:hover:before{
+    animation: scape-swip 1.1s infinite alternate;
+}
+@keyframes scape-swip {
+    0% {
+        transform: translateX(0em);
+        transition: 1.1s;
+    }
+    100% {
+        transform: translateX(-1.4em);
+        transition: 1.1s;
+    }
+}
 .construction__item{
     border: 2px solid #15386B;
     padding: 40px 50px 0;
@@ -463,7 +490,9 @@
     padding: 0 10px;
 }
 
-
+.territory__info .swiper-button-prev:before, .territory__info .swiper-button-next:before{
+    display: none;
+}
 
 @media (max-width: 1800px){
     .meters-sea__slider {
@@ -602,6 +631,39 @@
         margin-top: -67px;
     }
 }
+@media (max-width: 1024px){
+    .swimming__photo {
+        max-width: 100%;
+        transform: unset;
+    }
+    .swimming__info {
+        transform: unset;
+    }
+    .product-apart__box {
+        transition: 0.4s;
+        transform: unset;
+    }
+    .buildings__cnt .scape__arrows {
+        margin-top: 0;
+        margin-left: 0;
+        bottom: 0;
+    }
+    .territory__section .container{
+        padding: 0;
+    }
+    .territory__info{
+        padding: 0 20px;
+    }
+    .territory__pic {
+        width: 100%;
+        height: 500px;
+    }
+    .territory__pic img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
 @media (max-width: 991px){
     .anapolis__main img {
         width: 100%;
@@ -704,13 +766,20 @@
         align-items: flex-end;
         margin-top: 0;
         margin-left: 25px;
-        bottom: 310px;
+        bottom: 390px;
         left: 50%;
         transform: translateX(-50%);
     }
     .construction__item {
         padding: 34px 25px 0;
         margin-top: 70px;
+    }
+    .scape__photo {
+        max-width: 100%;
+    }
+
+    .swimming__photo {
+        height: 570px;
     }
 }
 @media (max-width: 760px){
@@ -725,9 +794,7 @@
     .construction__flex img {
         margin-top: 25px;
     }
-    .scape__arrows {
-        bottom: 454px;
-    }
+
     .anapolis__main {
         flex-direction: column;
     }
@@ -751,6 +818,9 @@
         padding: 20px 30px;
         margin: 25px auto 0;
     }
+    .product-apart__box {
+        margin-bottom: 20px;
+    }
     .scape__main {
         margin-top: -49px;
     }
@@ -766,6 +836,11 @@
         align-items: flex-start;
     }
 
+}
+@media (max-width: 630px){
+    .scape__arrows {
+        bottom: 444px;
+    }
 }
 @media (max-width: 570px){
     .scape__cnt h1 {
@@ -799,8 +874,9 @@
         margin-left: 17px;
     }
     .swimming__just {
-        max-width: 157px;
+        max-width: 138px;
         margin-top: 45px;
+        align-items: flex-start;
     }
     .meters-sea__info {
         right: 21px;
@@ -809,11 +885,15 @@
         padding: 22px 23px 29px;
     }
     .scape__arrows {
-        bottom: 566px;
+        bottom: 552px;
     }
     .scape__block {
         max-width: 350px;
         width: 100%;
+    }
+    .scape-swiper-prev, .scape-swiper-next {
+        max-width: 90px;
+        height: 90px;
     }
 }
 @media (max-width: 370px){

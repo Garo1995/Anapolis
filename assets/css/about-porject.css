@@ -181,6 +181,7 @@
 }
 .buildings__photo img{
     width: 100%;
+    object-fit: cover;
 }
 .buildings__info{
     max-width: 35%;
@@ -435,7 +436,6 @@
 }
 @media (max-width: 1499px){
     .buildings__info {
-        max-width: 500px;
         padding: 70px 29px;
     }
     .maintained__info {
@@ -461,6 +461,11 @@
     .architectural__main:after {
         max-width: 368px;
         height: 710px;
+    }
+    .maintained__box img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }
 @media (max-width: 1199px){
@@ -491,7 +496,6 @@
         padding: 26px 30px;
     }
     .buildings__info {
-        max-width: 400px;
         padding: 55px 25px;
     }
     .communications__text {
@@ -527,13 +531,35 @@
     .abot-proj__sec {
         padding-top: 120px;
     }
-    .maintained__box {
-        min-height: auto;
-        flex-direction: column;
+
+}
+@media (max-width: 1024px){
+    body .architecHasClass .architectural__info {
+        transform: translateX(0);
+    }
+    .architectural__main {
+        padding-top: 100px;
+    }
+    body .architecHasClass .architectural__block {
+        transform: translateX(0);
+    }
+    body .buildings__photo {
+        transform: translateX(0);
+    }
+    body .communicHasClass .buildings__info {
+        transform: translateX(0);
+    }
+    body .communicHasClass .communications__box {
+        transform: translateX(0);
+    }
+    body .compHasClass .companies__box {
+        transform: translateX(0);
     }
 }
-
 @media (max-width: 991px){
+    .buildings__photo {
+        max-width: 100%;
+    }
     .maintained__info {
         max-width: 876px;
         padding: 30px;
@@ -588,7 +614,7 @@
         position: relative;
         min-height: 460px;
     }
-    .scape__arrows {
+    .maintained__info  .scape__arrows {
         max-width: 280px;
         align-items: flex-end;
         margin-top: 0;
@@ -638,6 +664,16 @@
     .maintained__info .scape__arrows {
         margin: 33px auto 0;
     }
+    .maintained__box {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .maintained__box img {
+        height: 453px;
+    }
+    .maintained__info .scape__arrows {
+        align-items: center;
+    }
 }
 @media (max-width: 570px){
     .about-proj-tit span {
@@ -674,7 +710,5 @@
     .buildings__photo {
         height: 379px;
     }
-    .buildings__photo img{
-        object-fit: cover;
-    }
+
 }

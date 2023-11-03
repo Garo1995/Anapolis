@@ -239,6 +239,181 @@ let constructTwelfSwiper = new Swiper(".constructTwelf__slider", {
 
 
 
+let construct1Swiper = new Swiper(".construct1__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct1-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct1-swiper-next",
+        prevEl: ".construct1-swiper-prev",
+    },
+});
+
+
+let construct2Swiper = new Swiper(".construct2__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct2-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct2-swiper-next",
+        prevEl: ".construct2-swiper-prev",
+    },
+});
+
+
+let construct3Swiper = new Swiper(".construct3__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct3-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct3-swiper-next",
+        prevEl: ".construct3-swiper-prev",
+    },
+});
+
+let construct4Swiper = new Swiper(".construct4__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct4-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct4-swiper-next",
+        prevEl: ".construct4-swiper-prev",
+    },
+});
+
+let construct5Swiper = new Swiper(".construct5__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct5-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct5-swiper-next",
+        prevEl: ".construct5-swiper-prev",
+    },
+});
+
+let construct6Swiper = new Swiper(".construct6__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct6-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct6-swiper-next",
+        prevEl: ".construct6-swiper-prev",
+    },
+});
+
+let construct7Swiper = new Swiper(".construct7__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct7-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct7-swiper-next",
+        prevEl: ".construct7-swiper-prev",
+    },
+});
+
+let construct8Swiper = new Swiper(".construct8__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct8-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct8-swiper-next",
+        prevEl: ".construct8-swiper-prev",
+    },
+});
+
+let construct9Swiper = new Swiper(".construct9__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct9-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct9-swiper-next",
+        prevEl: ".construct9-swiper-prev",
+    },
+});
+
+let construct10Swiper = new Swiper(".construct10__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct10-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct10-swiper-next",
+        prevEl: ".construct10-swiper-prev",
+    },
+});
+
+let construct11Swiper = new Swiper(".construct11__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct11-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct11-swiper-next",
+        prevEl: ".construct11-swiper-prev",
+    },
+});
+
+let construct12Swiper = new Swiper(".construct12__slider", {
+    slidesPerView: 1,
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".construct12-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".construct12-swiper-next",
+        prevEl: ".construct12-swiper-prev",
+    },
+});
+
+
+
+
+
+
 
 
 
@@ -337,7 +512,6 @@ let metersSwiper = new Swiper(".meters-sea__slider", {
 
 let maintainedSwiper = new Swiper(".maintained__slider", {
     slidesPerView: 1,
-    spaceBetween: 5,
     loop: true,
     pagination: {
         el: ".scape-pag",
@@ -385,7 +559,6 @@ let buildTwoSwiper = new Swiper(".buildings__two", {
 
 let buildingsSwiper = new Swiper(".buildings__slider", {
     slidesPerView: 1,
-    spaceBetween: 5,
     loop: true,
     pagination: {
         el: ".buildings-pag",
