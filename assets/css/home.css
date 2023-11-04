@@ -4019,9 +4019,6 @@ input:checked + .slider:before {
     .apartments__info .btn-liner span + span{
         max-width: 140px;
     }
-    .apartments__pay {
-        margin: 445px auto 0;
-    }
 
     .premises__title img {
         margin-top: 30px;
@@ -4065,9 +4062,7 @@ input:checked + .slider:before {
         transition: 0.5s;
         width: 46px;
     }
-    .apartments__pay {
-        margin-top: 420px;
-    }
+
     .choose-apart__sec {
         margin: 33px auto 0;
         background: #fff;
@@ -4183,7 +4178,7 @@ input:checked + .slider:before {
         margin-top: 30px;
     }
     .location__main {
-        margin-top: 825px;
+        margin-top: 220px;
         padding-bottom: 125px;
     }
     .purchase__main:before {
@@ -4311,8 +4306,45 @@ input:checked + .slider:before {
     .choose-apart__sec .choose-apart__arrows{
         display: none;
     }
-}
+    .apartments__item:nth-child(3) {
+        left: 0px;
+        max-width: 233px;
+        margin-left: 50px;
+    }
+    .apartments__item:nth-child(2) {
+        top: 107px;
+        left: 10px;
+        max-width: 327px;
+        margin: 0;
+    }
+    .apartments__item:nth-child(1) .apartments__text {
+        top: 0px;
+    }
+    .apartments__text {
+        margin-left: -30px;
+    }
 
+}
+@media (max-width: 640px){
+    .apartments__item:nth-child(2) {
+        top: 90px;
+        left: 0;
+        max-width: 254px;
+    }
+    .apartments__item:nth-child(3) {
+        left: 0px;
+        max-width: 225px;
+        margin-left: 28px;
+    }
+    .apartments__pay {
+        position: absolute;
+        bottom: -290px;
+        left: 20%;
+    }
+    .location__main {
+        margin-top: 450px;
+    }
+}
 
 @media (max-width: 570px){
     .purchase__box .button-details {
@@ -4396,10 +4428,6 @@ input:checked + .slider:before {
         flex-direction: column-reverse;
     }
 
-    .location__main {
-        margin-top: 959px;
-        padding-bottom: 125px;
-    }
     .location__info h2{
         font-size: 34px;
         line-height: 40px;
