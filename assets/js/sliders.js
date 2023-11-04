@@ -813,6 +813,13 @@ pspath.mouseover(function(event){
 });
 
 
+
+
+
+
+
+
+
 var pfree =  $('[data-free]');
 
 pfree.mousemove(function(e){
@@ -831,7 +838,7 @@ pfree.mouseover(function(){
 
     var plansInfo = $('.plans-free');
     plansInfo.css({'top' : 0, 'left' : 0, 'display': 'none'});
-
+    console.log(plansInfo)
     var el = $(this),
         av = el.data('free');
 
