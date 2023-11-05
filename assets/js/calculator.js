@@ -74,13 +74,3 @@ function mounthPay() {
 
 
 
-
-let checkboxApartment = document.getElementsByClassName('checkbox-js')[0];
-checkboxApartment.addEventListener('change', function () {
-    if(checkboxApartment.checked){
-        document.getElementsByClassName('add-check__des')[0].classList.add('remove-photo');
-    }
-    else{
-        document.getElementsByClassName('add-check__des')[0].classList.remove('remove-photo');
-    }
-});

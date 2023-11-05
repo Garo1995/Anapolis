@@ -226,13 +226,7 @@ footer{
     .container-foot {
         padding: 0 20px 60px;
     }
-    .countless__data span, .countless__out span, .countless__develop span {
-        font-size: 17px;
-        line-height: 22px;
-    }
-    .countless__out span {
-        max-width: 250px;
-    }
+
 }
 @media (max-width: 760px){
     .container-main {

@@ -80,6 +80,7 @@ html,body{
 .apartments__block{
     display: flex;
     align-items: flex-start;
+    position: relative;
 }
 
 .apartments__item{
@@ -311,8 +312,8 @@ html,body{
     background: rgba(16, 47, 92, 1);
     z-index: 11;
     position: absolute;
-    min-height: 774px;
-    left: -40px;
+    min-height: 810px;
+    left: 0;
     top: -1px;
     transform: translateX(-150px);
     transition: 1.7s;
@@ -396,9 +397,11 @@ html,body{
 
 .location__slider {
     width: 2635px;
-    transform: translateX(-320px);
+    transform: translateX(-380px);
 }
-
+.location__slider .swiper-slide-next{
+    opacity: 0;
+}
 .location__photo{
     display: flex;
 
@@ -1612,7 +1615,6 @@ input:checked + .slider:before {
 }
 .queue-modal__name small{
     font-family: 'Spectral';
-    font-size: 0.938vw;
     font-weight: 300;
     line-height: 1.563vw;
     text-align: left;
@@ -1892,10 +1894,10 @@ input:checked + .slider:before {
 .infrastructure__cnt ul li:after{
     content: "";
     position: absolute;
-    bottom: -4px;
+    bottom: -2px;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 4px;
     background: rgba(16, 47, 92, 1);
     transition: 0.3s;
     opacity: 0;
@@ -1996,6 +1998,7 @@ input:checked + .slider:before {
 }
 .infrastructure__wrap{
     display: flex;
+    justify-content: center;
     padding-bottom: 233px;
 }
 .infrastructure__box{
@@ -2620,13 +2623,11 @@ input:checked + .slider:before {
     background: #ffffff;
     padding-bottom: 250px;
     overflow: hidden;
-    margin-top: -2px;
 }
-
 .latest-awards h3{
     font-family: 'Spectral';
     font-size: 34px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 62px;
     text-align: left;
     color: rgba(16, 47, 92, 1);
@@ -2918,7 +2919,8 @@ input:checked + .slider:before {
     }
 
     .location__slider {
-        width: 2350px;
+        width: 2287px;
+        transform: translateX(-400px);
     }
     .location__info {
         min-height: 706px;
@@ -2928,6 +2930,19 @@ input:checked + .slider:before {
         max-width: 562px;
         width: 100%;
     }
+    .location__info {
+        max-width: 560px;
+        padding: 0 15px 0 30px;
+    }
+    h2 {
+        font-size: 50px;
+        line-height: 54px;
+    }
+    h3 {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
 }
 @media (max-width: 1660px){
 
@@ -3040,10 +3055,10 @@ input:checked + .slider:before {
         line-height: 25px;
     }
     .location__info {
-        max-width: 540px;
+        max-width: 550px;
         padding: 0 30px 0 40px;
+        left: 60px;
     }
-
     h3 {
         font-size: 30px;
         line-height: 36px;
@@ -3335,10 +3350,10 @@ input:checked + .slider:before {
         height: 8px;
     }
     .location__info {
-        max-width: 480px;
+        max-width: 500px;
         padding: 0 30px 0 30px;
         min-height: 593px;
-        left: 15px;
+        left: 56px;
         top: -1px;
     }
     .location__main:after {
@@ -3465,6 +3480,9 @@ input:checked + .slider:before {
         position: unset;
         padding-bottom: 44px;
     }
+    .infrastructure__wrap {
+        justify-content: flex-start;
+    }
     .calculator-pay__info h3 {
         font-size: 20px;
         line-height: 26px;
@@ -3508,6 +3526,11 @@ input:checked + .slider:before {
         max-width: 320px;
         width: 100%;
     }
+    .apartments__text strong small {
+        font-size: 28px;
+        line-height: 34px;
+        margin-left: 5px;
+    }
     .apartments__text strong {
         font-size: 38px;
         line-height: 40px;
@@ -3516,8 +3539,11 @@ input:checked + .slider:before {
         font-size: 18px;
         line-height: 24px;
     }
+    .location__slider .swiper-slide-next {
+        opacity: 1;
+    }
     .location__slider {
-        width: 1080px;
+        width: 1100px;
         transform: translateX(0);
     }
     .apartments-bg {
@@ -4023,9 +4049,7 @@ input:checked + .slider:before {
     .premises__title img {
         margin-top: 30px;
     }
-    .apartments__block {
-        bottom: 374px;
-    }
+
     .apartments__text {
         margin-left: -20px;
         max-width: 210px;
@@ -4085,7 +4109,7 @@ input:checked + .slider:before {
         z-index: 2;
     }
     .countless__flex {
-        max-width: 435px;
+        max-width: 495px;
         width: 100%;
     }
 
@@ -4204,6 +4228,10 @@ input:checked + .slider:before {
         background: #ffffff;
         padding-top: 80px;
     }
+    .latest-awards h3 {
+        font-size: 32px;
+        line-height: 36px;
+    }
     .percent__number {
         max-width: 60px;
         height: 60px;
@@ -4261,7 +4289,8 @@ input:checked + .slider:before {
     .countless__out {
         max-width: 255px;
         height: 255px;
-        margin-left: 20px;
+        margin-left: -72px;
+        margin-top: 80px;
     }
     .countless__data span, .countless__out span, .countless__develop span {
         font-size: 14px;
@@ -4274,7 +4303,9 @@ input:checked + .slider:before {
     .countless__develop {
         max-width: 180px;
         height: 180px;
-        margin: -30px auto 0;
+        margin: -40px 0 0 25px;
+        right: auto;
+        left: 0;
     }
     .latest-awards {
         margin-top: 75px;
@@ -4323,7 +4354,13 @@ input:checked + .slider:before {
     .apartments__text {
         margin-left: -30px;
     }
-
+    .countless__data span, .countless__out span, .countless__develop span {
+        font-size: 17px;
+        line-height: 22px;
+    }
+    .countless__out span {
+        max-width: 250px;
+    }
 }
 @media (max-width: 640px){
     .apartments__item:nth-child(2) {
@@ -4343,6 +4380,10 @@ input:checked + .slider:before {
     }
     .location__main {
         margin-top: 450px;
+    }
+    .apartments__circle {
+        max-width: 90px;
+        height: 90px;
     }
 }
 
@@ -4369,6 +4410,7 @@ input:checked + .slider:before {
         padding: 8px 25px;
         text-align: left;
     }
+
     .premises__main .get-cat:before {
         top: 33px;
         left: 17px;
@@ -4381,10 +4423,7 @@ input:checked + .slider:before {
     h1 {
         font-size: 40px;
     }
-    .apartments__circle {
-        max-width: 100px;
-        height: 100px;
-    }
+
 
     .apartments__item:nth-child(1) {
         margin-top: 0;
@@ -4400,34 +4439,34 @@ input:checked + .slider:before {
     }
 
     .apartments__item:nth-child(3) {
-        margin-top: 25px;
+        margin-top: 35px;
         top: 0;
         left: 0;
         max-width: 300px;
         width: 100%;
+        margin-left: auto;
     }
 
     .apartments__flex {
         flex-direction: column;
-        bottom: -344px;
-
+        bottom: -100px;
     }
-
     .apartments__block {
-        flex-direction: row;
-        align-items: flex-start;
-        position: relative;
-        bottom: 344px;
-        max-width: 750px;
-        width: 100%;
-        flex-wrap: wrap;
+        bottom: -35px;
     }
-
     .apartments__main {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
-
+    .apartments__circle {
+        max-width: 75px;
+        height: 75px;
+    }
+    .apartments__text {
+        margin-left: -10px;
+        max-width: 255px;
+        width: 100%;
+    }
     .location__info h2{
         font-size: 34px;
         line-height: 40px;
@@ -4438,7 +4477,10 @@ input:checked + .slider:before {
     .get-cat {
         font-size: 16px;
     }
-
+    .apartments__text strong {
+        font-size: 30px;
+        line-height: 34px;
+    }
     .premises__box h2 {
         font-size: 34px;
         line-height: 40px;
@@ -4453,6 +4495,10 @@ input:checked + .slider:before {
         font-size: 18px;
         line-height: 22px;
     }
+    .apartments__text span {
+        font-size: 16px;
+        line-height: 22px;
+    }
     .premises__apart__text p {
         font-size: 18px;
         line-height: 23px;
@@ -4462,7 +4508,7 @@ input:checked + .slider:before {
         display: none;
     }
     .design__main{
-        margin-top: 140px;
+        margin-top: 70px;
     }
     .design__info strong {
         font-size: 62px;
@@ -4487,9 +4533,28 @@ input:checked + .slider:before {
     }
     .series-moved__box small {
         margin-top: 3px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
     }
     .section-padding {
         padding-top: 75px;
+    }
+    .series-moved__photo {
+        margin-bottom: 10px;
+    }
+    .series-moved__title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .button-details small {
+        font-size: 16px;
+        line-height: 21px;
+        right: -48px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 22px;
     }
     .infrastructure__box p {
         font-size: 20px;
@@ -4563,9 +4628,7 @@ input:checked + .slider:before {
     .countless__develop {
         max-width: 132px;
         height: 132px;
-        margin: -60px auto 0;
-        margin-left: 0;
-        right: -16px;
+
     }
     .investments__block:before {
         left: 43px;
@@ -4573,14 +4636,23 @@ input:checked + .slider:before {
         width: 100%;
         height: 155px;
     }
+    .countless__flex {
+        max-width: 396px;
+    }
     .countless__out {
         margin-left: 72px;
         margin-top: -80px;
+        padding: 15px;
     }
     .latest-awards__pic {
         max-width: 150px;
         height: 150px;
         padding: 20px;
+    }
+    .countless__data strong {
+        max-width: 72px;
+        line-height: 33px;
+        font-size: 38px;
     }
     .answer-quest__cnt {
         margin-top: 50px;
@@ -4616,6 +4688,39 @@ input:checked + .slider:before {
     .btn-liner span {
         font-size: 17px;
     }
+    .apartments__item:nth-child(2) {
+        max-width: 234px;
+        margin-top: 54px;
+        margin-left: 30px;
+    }
+    .apartments__pay {
+        bottom: -290px;
+        left: 10px;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .latest-awards h3 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .answer-quest__inp input {
+        font-size: 18px;
+        padding: 0 0 15px;
+        height: 34px;
+    }
+    .answer-quest__inp {
+        margin-bottom: 30px;
+    }
+    .answer-quest__form h2 {
+        font-size: 38px;
+    }
+    .purchase__main:before {
+        top: 223px;
+        max-width: 214px;
+        height: 137px;
+    }
 }
 @media (max-width: 420px){
     .premises__box h2 {
@@ -4630,6 +4735,9 @@ input:checked + .slider:before {
         width: 71px;
         height: 13px;
         left: -15px;
+    }
+    .countless__out {
+        margin-left: 31px;
     }
 }
 @media (max-width: 370px){

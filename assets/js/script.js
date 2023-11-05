@@ -245,7 +245,7 @@ $(window).scroll(function () {
         let $answerQuestTop = $answerQuestAnim.offset().top;
         let $answerQuestBottom = $answerQuestTop + $answerQuestAnim.height();
 
-        if ($answerQuestTop + $answerQuestAnim.height()  < docViewBottom && docViewBottom  < $answerQuestBottom + $answerQuestAnim.height() ) {
+        if ($answerQuestTop + $answerQuestAnim.height() / 3 < docViewBottom && docViewBottom  < $answerQuestBottom + $answerQuestAnim.height() ) {
             $answerQuestAnim.addClass('answer-quest__act');
         } else {
         }
@@ -271,7 +271,7 @@ $(window).scroll(function () {
         let $developerTop = $developerAnim.offset().top;
         let $developerBottom = $developerTop + $developerAnim.height();
 
-        if ($developerTop + $developerAnim.height() / 2 < docViewBottom && docViewBottom  < $developerBottom + $developerAnim.height() / 2 ) {
+        if ($developerTop + $developerAnim.height() / 3 < docViewBottom && docViewBottom  < $developerBottom + $developerAnim.height() / 2 ) {
             $developerAnim.addClass('developer__act');
         } else {
         }
@@ -285,7 +285,7 @@ $(window).scroll(function () {
         let $devTowTop = $devTowAnim.offset().top;
         let $devTowBottom = $devTowTop + $devTowAnim.height();
 
-        if ($devTowTop + $devTowAnim.height() / 2 < docViewBottom && docViewBottom  < $devTowBottom + $devTowAnim.height() / 2 ) {
+        if ($devTowTop + $devTowAnim.height() / 3 < docViewBottom && docViewBottom  < $devTowBottom + $devTowAnim.height() / 2 ) {
             $devTowAnim.addClass('developer__act');
         } else {
         }
@@ -299,7 +299,7 @@ $(window).scroll(function () {
         let $perspecTop = $perspecAnim.offset().top;
         let $perspecBottom = $perspecTop + $perspecAnim.height();
 
-        if ($perspecTop + $perspecAnim.height() / 2 < docViewBottom && docViewBottom  < $perspecBottom + $perspecAnim.height() / 2 ) {
+        if ($perspecTop + $perspecAnim.height() / 3 < docViewBottom && docViewBottom  < $perspecBottom + $perspecAnim.height() / 2 ) {
             $perspecAnim.addClass('perspective__act');
         } else {
         }
@@ -373,7 +373,7 @@ $(window).scroll(function () {
         let $contactTop = $contactAnim.offset().top;
         let $contactBottom = $contactTop + $contactAnim.height();
 
-        if ($contactTop + $contactAnim.height()  < docViewBottom && docViewBottom  < $contactBottom + $contactAnim.height() ) {
+        if ($contactTop + $contactAnim.height() / 3 < docViewBottom && docViewBottom  < $contactBottom + $contactAnim.height() ) {
             $contactAnim.addClass('contact__act');
         } else {
 
@@ -389,7 +389,7 @@ $(window).scroll(function () {
         let $contsecHasTop = $contsecHasAnim.offset().top;
         let $contsecHasBottom = $contsecHasTop + $contsecHasAnim.height();
 
-        if ($contsecHasTop + $contsecHasAnim.height() / 4 < docViewBottom && docViewBottom  < $contsecHasBottom + $contsecHasAnim.height() ) {
+        if ($contsecHasTop + $contsecHasAnim.height() / 3 < docViewBottom && docViewBottom  < $contsecHasBottom + $contsecHasAnim.height() ) {
             $contsecHasAnim.addClass('contact__act');
         } else {
         }
@@ -403,7 +403,7 @@ $(window).scroll(function () {
         let $documentTop = $documentAnim.offset().top;
         let $documentBottom = $documentTop + $documentAnim.height();
 
-        if ($documentTop + $documentAnim.height() / 2 < docViewBottom && docViewBottom  < $documentBottom + $documentAnim.height() / 2 ) {
+        if ($documentTop + $documentAnim.height() / 3 < docViewBottom && docViewBottom  < $documentBottom + $documentAnim.height() / 2 ) {
             $documentAnim.addClass('document__act');
         } else {
         }
@@ -616,4 +616,16 @@ $('.more-news-info').on('click',function () {
 
 
 
+
+
+
+let checkboxApartment = document.getElementsByClassName('checkbox-js')[0];
+checkboxApartment.addEventListener('change', function () {
+    if(checkboxApartment.checked){
+        document.getElementsByClassName('add-check__des')[0].classList.add('remove-photo');
+    }
+    else{
+        document.getElementsByClassName('add-check__des')[0].classList.remove('remove-photo');
+    }
+});
 

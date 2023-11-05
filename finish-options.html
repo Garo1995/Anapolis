@@ -203,7 +203,7 @@
                     <div class="check-radius">
                         <p>C мебелью </p>
                         <label class="switch">
-                            <input type="checkbox" class="checkbox-js">
+                            <input type="checkbox" class="checkbox-js-two">
                             <span class="slider round"></span>
                         </label>
                         <p>Без мебели</p>
@@ -258,7 +258,7 @@
                     <div class="check-radius">
                         <p>C мебелью </p>
                         <label class="switch">
-                            <input type="checkbox" class="checkbox-js-two">
+                            <input type="checkbox" class="checkbox-js-three">
                             <span class="slider round"></span>
                         </label>
                         <p>Без мебели</p>
@@ -312,7 +312,7 @@
                     <div class="check-radius">
                         <p>C мебелью </p>
                         <label class="switch">
-                            <input type="checkbox" class="checkbox-js-three">
+                            <input type="checkbox" class="checkbox-js-four">
                             <span class="slider round"></span>
                         </label>
                         <p>Без мебели</p>
@@ -466,7 +466,37 @@
 <script src="assets/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/sliders.js"></script>
-<script src="assets/js/calculator.js"></script>
 <script src="assets/js/script.js"></script>
+<script>
+
+    let checkboxApartmentTow = document.getElementsByClassName('checkbox-js-two')[0];
+    checkboxApartmentTow.addEventListener('change', function () {
+        if(checkboxApartmentTow.checked){
+            document.getElementsByClassName('add-check__des')[0].classList.add('remove-photo');
+        }
+        else{
+            document.getElementsByClassName('add-check__des')[0].classList.remove('remove-photo');
+        }
+    });
+    let checkboxApartmentThree = document.getElementsByClassName('checkbox-js-three')[0];
+    checkboxApartmentThree.addEventListener('change', function () {
+        if(checkboxApartmentThree.checked){
+            document.getElementsByClassName('add-check__two')[0].classList.add('remove-photo');
+        }
+        else{
+            document.getElementsByClassName('add-check__two')[0].classList.remove('remove-photo');
+        }
+    });
+    let checkboxApartmentFour = document.getElementsByClassName('checkbox-js-four')[0];
+    checkboxApartmentFour.addEventListener('change', function () {
+        if(checkboxApartmentFour.checked){
+            document.getElementsByClassName('add-check__three')[0].classList.add('remove-photo');
+        }
+        else{
+            document.getElementsByClassName('add-check__three')[0].classList.remove('remove-photo');
+        }
+    });
+
+</script>
 </body>
 </html>

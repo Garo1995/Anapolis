@@ -662,7 +662,10 @@
         width: 100%;
         object-fit: cover;
     }
-
+    .scape-swiper-prev, .scape-swiper-next {
+        max-width: 100px;
+        height: 100px;
+    }
 }
 @media (max-width: 991px){
     .anapolis__main img {

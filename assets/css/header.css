@@ -508,6 +508,9 @@ header{
         align-items: center;
         margin-top: 35px;
     }
+    .head-fix__link a {
+        margin-left: 0;
+    }
 }
 @media (max-width: 570px){
     .header__logo img {

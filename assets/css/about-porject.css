@@ -415,6 +415,9 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.remove-transforms .location__info{
+    transform: unset;
+}
 @media (max-width: 1650px){
     .maintained__info {
         max-width: 557px;
@@ -530,6 +533,13 @@
     }
     .abot-proj__sec {
         padding-top: 120px;
+    }
+    .remove-transforms .location__main .location__arrows {
+        bottom: 0;
+    }
+    .architectural__main:after {
+        max-width: 305px;
+        height: 593px;
     }
 
 }
