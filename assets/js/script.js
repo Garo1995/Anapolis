@@ -28,31 +28,29 @@ $(document).ready(function () {
     $('select').styler();
 })
 
-$(document).ready(function () {
-    let openMenu = document.getElementsByClassName('open-menu')[0];
-    let closeMenu = document.getElementsByClassName('close-menu')[0];
-    let headerFix = document.getElementsByClassName('header__fix')[0];
+let openMenu = document.getElementsByClassName('open-menu')[0];
+let closeMenu = document.getElementsByClassName('close-menu')[0];
+let headerFix = document.getElementsByClassName('header__fix')[0];
 
-    openMenu.addEventListener('click', function () {
-        headerFix.classList.add('header__act');
-    });
-    closeMenu.addEventListener('click', function () {
-        headerFix.classList.remove('header__act');
-    });
+openMenu.addEventListener('click', function () {
+    headerFix.classList.add('header__act');
+});
+closeMenu.addEventListener('click', function () {
+    headerFix.classList.remove('header__act');
+});
 
-    if ($('.head-fix__menu ul li').find('submenu')){
-        $('.submenu').parent().addClass('submenu__block')
+if ($('.head-fix__menu ul li').find('submenu')){
+    $('.submenu').parent().addClass('submenu__block')
+}
+$('.head-fix__menu>ul>li>a').on('click',function () {
+    if (!$('.head-fix__menu>ul>li').hasClass('submenu__active')){
+        $(this).parent().addClass('submenu__active');
     }
-    $('.head-fix__menu>ul>li>a').on('click',function () {
-        if (!$('.head-fix__menu>ul>li').hasClass('submenu__active')){
-            $(this).parent().addClass('submenu__active');
-        }
-        else{
-            $('.head-fix__menu>ul>li').removeClass('submenu__active')
-        }
-    });
+    else{
+        $('.head-fix__menu>ul>li').removeClass('submenu__active')
+    }
+});
 
-})
 
 
 
