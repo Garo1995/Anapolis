@@ -435,6 +435,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    transition: 1.1s;
+
 }
 
 .scape-swiper-next:before{
@@ -445,23 +447,28 @@
     border: unset;
     width: auto;
     height: auto;
+    transition: 1.1s;
+
 }
 .scape-swiper-next:hover:before{
     border: unset;
 }
 .scape-swiper-next:hover:before{
-    animation: scape-swip 1.1s infinite alternate;
+    animation: scape-swip 2s forwards alternate;
+    transition: 1.1s;
 }
 @keyframes scape-swip {
     0% {
         transform: translateX(0em);
-        transition: 1.1s;
+    }
+    50% {
+        transform: translateX(-1.1em);
     }
     100% {
-        transform: translateX(-1.4em);
-        transition: 1.1s;
+        transform: translateX(0em);
     }
 }
+
 .construction__item{
     border: 2px solid #15386B;
     padding: 40px 50px 0;
