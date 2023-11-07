@@ -595,7 +595,7 @@ let buildingsSwiper = new Swiper(".buildings__slider", {
 
 
 let locationSwiper = new Swiper(".location__slider", {
-    slidesPerView: 1,
+    slidesPerView: 4,
     spaceBetween: 105,
     loop: true,
     autoplay: {

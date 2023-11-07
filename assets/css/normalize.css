@@ -155,6 +155,16 @@ body {
     padding: 0;
     background: rgba(16, 47, 92, 1);
 }
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0; 
+    background: unset;
+}
+body::-webkit-scrollbar-thumb {
+    width: 0;
+    height: 0;
+    background: unset;
+}
 .container{
     max-width: 1325px;
     width: 100%;

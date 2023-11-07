@@ -43,6 +43,9 @@
 .construct__info p{
     margin-top: 80px;
 }
+.construct-page .design__parent ul li{
+    margin-left: 0;
+}
 .construct__video{
     display: flex;
     justify-content: center;

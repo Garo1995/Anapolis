@@ -534,7 +534,7 @@
     .abot-proj__sec {
         padding-top: 120px;
     }
-    .remove-transforms .location__main .location__arrows {
+    .remove-transforms .location__arrows {
         bottom: 0;
     }
     .architectural__main:after {
@@ -622,7 +622,10 @@
         max-width: 100%;
         padding: 55px 25px;
         position: relative;
-        min-height: 460px;
+        min-height: auto;
+    }
+   .buildings__cnt .scape__arrows {
+        margin-top: 90px;
     }
     .maintained__info  .scape__arrows {
         max-width: 280px;

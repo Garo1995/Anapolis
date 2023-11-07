@@ -26,18 +26,19 @@ $('html, body').animate({
 $(document).ready(function () {
     $(".phone").mask('+7 (999)-999-99-99');
     $('select').styler();
+
+
+    $('.open-menu').on('click', function () {
+        $('.header__fix').addClass('header__act');
+        $('body').addClass('body__fix');
+    });
+    $('.close-menu').on('click', function () {
+        $('.header__fix').removeClass('header__act');
+        $('body').removeClass('body__fix');
+    });
 })
 
-let openMenu = document.getElementsByClassName('open-menu')[0];
-let closeMenu = document.getElementsByClassName('close-menu')[0];
-let headerFix = document.getElementsByClassName('header__fix')[0];
 
-openMenu.addEventListener('click', function () {
-    headerFix.classList.add('header__act');
-});
-closeMenu.addEventListener('click', function () {
-    headerFix.classList.remove('header__act');
-});
 
 if ($('.head-fix__menu ul li').find('submenu')){
     $('.submenu').parent().addClass('submenu__block')
@@ -106,9 +107,11 @@ $(window).on('click', function (event) {
 $(document).ready(function () {
     setTimeout(function () {
         $(".animate__style").addClass("in-viewport");
+        $('.contact__main').addClass("contact__act");
+        $('.news-page').addClass("news__act");
+
     }, 500);
 });
-
 
 
 
@@ -310,7 +313,7 @@ $(window).scroll(function () {
         let $architeTop = $architeAnim.offset().top;
         let $architeBottom = $architeTop + $architeAnim.height();
 
-        if ($architeTop + $architeAnim.height() < docViewBottom && docViewBottom  < $architeBottom + $architeAnim.height() ) {
+        if ($architeTop + $architeAnim.height() / 3 < docViewBottom && docViewBottom  < $architeBottom + $architeAnim.height() ) {
             $architeAnim.addClass('architec__act');
         } else {
         }
@@ -364,19 +367,7 @@ $(window).scroll(function () {
     }
 
 
-    let $contactAnim = $('.contact__main');
 
-    if ($('.contactHasClass').hasClass('contact__main')){
-
-        let $contactTop = $contactAnim.offset().top;
-        let $contactBottom = $contactTop + $contactAnim.height();
-
-        if ($contactTop + $contactAnim.height() / 3 < docViewBottom && docViewBottom  < $contactBottom + $contactAnim.height() ) {
-            $contactAnim.addClass('contact__act');
-        } else {
-
-        }
-    }
 
 
 
@@ -438,22 +429,9 @@ $(window).scroll(function () {
     }
 
 
-    let $newsAnim = $('.news-page');
-
-    if ($('.newsHasClass').hasClass('news-page')){
-
-        let $newsTop = $newsAnim.offset().top;
-        let $newsBottom = $newsTop + $newsAnim.height();
-
-        if ($newsTop + $newsAnim.height() / 3 < docViewBottom && docViewBottom  < $newsBottom + $newsAnim.height() / 2) {
-            $newsAnim.addClass('news__act');
-        } else {
-        }
-    }
 
 
 });
-
 
 
 
