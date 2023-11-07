@@ -110,6 +110,21 @@ header{
     color: rgba(23, 74, 148, 1);
     display: block;
     margin-right: 22px;
+    position: relative;
+}
+.aeroporama__block span:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: rgba(23, 74, 148, 1);
+    transition: 0.3s;
+}
+.aeroporama__block:hover span:before{
+    width: 100%;
 }
 .header__icon{
     margin-right: 30px;

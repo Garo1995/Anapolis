@@ -540,6 +540,12 @@
     .scape__main {
         margin-top: -76px;
     }
+    .global__head {
+        height: 580px;
+    }
+    .news-single__cnt {
+        padding-top: 130px;
+    }
 }
 @media (max-width: 1599px){
     .global__head {
@@ -548,6 +554,7 @@
         padding-top: 100px;
         padding-bottom: 60px;
     }
+
 }
 @media (max-width: 1399px){
     .global__head {
@@ -568,6 +575,12 @@
     .territory__flex .location__arrows {
         max-width: 358px;
     }
+    .swimming__just:nth-child(1) {
+        max-width: 206px;
+        flex-direction: column;
+        align-items: center;
+    }
+
 
 }
 @media (max-width: 1199px){

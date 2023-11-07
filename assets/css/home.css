@@ -2432,6 +2432,7 @@ input:checked+.slider:before {
 .purchase__slider {
     width: 2070px;
     padding-bottom: 15px;
+    margin: 0;
 }
 
 .bg-white {
@@ -3540,7 +3541,9 @@ input:checked+.slider:before {
     }
 
     .design__photo {
-        max-width: 669px;
+        max-width: 695px;
+        border-radius: 50%;
+        margin: 0 auto;
     }
 
     .design__parent ul li,
@@ -4276,6 +4279,9 @@ input:checked+.slider:before {
     }
     .queue-modal__auto{
         width: 1920px;
+    }
+    .infrastructure__cnt ul {
+        width: 660px;
     }
 }
 
