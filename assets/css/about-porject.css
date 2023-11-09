@@ -29,8 +29,18 @@
     margin-bottom: 30px;
     display: block;
 }
+.maintained__ani{
+    background: #ffffff;
+}
 .maintained__main{
     width: 100%;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1.4s;
+}
+.maintained__acts{
+    opacity: 1;
+    transform: translateY(0);
 }
 .maintained__box{
     display: flex;
@@ -110,7 +120,9 @@
 .architectural__info{
     max-width: 545px;
     width: 100%;
-    transition: 1.2s;
+    transition: 1.5s;
+    opacity: 0;
+
 }
 
 
@@ -118,10 +130,11 @@
     transform: translateX(-30%);
 }
 .architectural__info:nth-child(2){
-    transform: translateX(30%);
+    transform: translateX(-30%);
 }
 .architec__act .architectural__info{
     transform: translateX(0);
+    opacity: 1;
 }
 .architectural__info span{
     font-family: 'Spectral';
@@ -141,11 +154,14 @@
     justify-content: space-between;
     padding: 33px 55px;
     border: 2px solid #15386B;
-    transition: 1.2s;
+    transition: 1.5s;
     transform: translateX(-30%);
+    opacity: 0;
 }
 .architec__act .architectural__block{
     transform: translateX(0);
+    opacity: 1;
+
 }
 
 .architectural__text{
@@ -173,15 +189,21 @@
     display: flex;
     max-width: 65%;
     width: 100%;
-    transition: 1.2s;
-    transform: translateX(20%);
+
 }
-.buildings__act .buildings__photo{
-    transform: translateX(0);
-}
+
 .buildings__photo img{
     width: 100%;
     object-fit: cover;
+}
+.buildingsHasClass{
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateX(-20%);
+}
+.buildings__act {
+    transform: translateX(0);
+    opacity: 1;
 }
 .buildings__info{
     max-width: 35%;
@@ -192,12 +214,10 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 95px 65px;
-    transition: 1.2s;
-    transform: translateX(-15%);
+    transition: 1.5s;
+
 }
-.buildings__act .buildings__info{
-    transform: translateX(0);
-}
+
 .buildings__info h2{
     color: rgba(16, 47, 92, 1);
 }
@@ -369,7 +389,8 @@
 .companies__box{
     max-width: 337px;
     width: 100%;
-    transition: 1.2s;
+    transition: 1.5s;
+    opacity: 0;
 }
 .companies__box:nth-child(1){
     padding-top: 20px;
@@ -377,13 +398,13 @@
 }
 .companies__box:nth-child(2){
     transform: translateX(-40%);
-
 }
 .companies__box:nth-child(3){
-    transform: translateX(30%);
+    transform: translateX(-50%);
 }
 .comp__act .companies__box{
     transform: translateX(0);
+    opacity: 1;
 }
 .companies__logo{
     width: 100%;
@@ -544,26 +565,9 @@
 
 }
 @media (max-width: 1024px){
-    body .architecHasClass .architectural__info {
-        transform: translateX(0);
-    }
+
     .architectural__main {
         padding-top: 100px;
-    }
-    body .architecHasClass .architectural__block {
-        transform: translateX(0);
-    }
-    body .buildings__photo {
-        transform: translateX(0);
-    }
-    body .communicHasClass .buildings__info {
-        transform: translateX(0);
-    }
-    body .communicHasClass .communications__box {
-        transform: translateX(0);
-    }
-    body .compHasClass .companies__box {
-        transform: translateX(0);
     }
 }
 @media (max-width: 991px){

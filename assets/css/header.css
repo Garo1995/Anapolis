@@ -535,6 +535,13 @@ header{
     .head-fix__link a {
         margin-left: 0;
     }
+    .head-fix__menu>ul>li ul li a {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .head-fix__menu>ul li ul li + li {
+        margin-top: 16px;
+    }
 }
 @media (max-width: 570px){
     .header__logo img {

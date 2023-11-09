@@ -36,6 +36,13 @@
 .acquisitions__cnt {
     padding-top: 45px;
     margin-bottom: 200px;
+    transition: 1.5s;
+    transform: translateX(-30%);
+    opacity: 0;
+}
+.acquisitions__acts .acquisitions__cnt{
+    transform: translateX(0);
+    opacity: 1;
 }
 .acquisitions__cnt>p{
     max-width: 676px;

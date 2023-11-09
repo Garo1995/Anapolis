@@ -80,10 +80,12 @@
     max-width: 349px;
     width: 100%;
     margin-bottom: 40px;
-    transition: 1.2s;
+    transition: 1.5s;
+    opacity: 0;
     transform: translateX(-30%);
 }
 .product__act .product-apart__box{
+    opacity: 1;
     transform: translateX(0);
 }
 .product-apart__photo{
@@ -180,15 +182,19 @@
     max-width: 35%;
     width: 100%;
     padding: 67px 60px 90px;
-    transition: 1.2s;
-    transform: translateX(-20%);
+
 }
 .swimming__info h1, .swimming__info h2, .swimming__info h3{
     color: rgba(16, 47, 92, 1);
-
 }
-.swimming__act .swimming__info{
+.swimming__flex{
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateX(-20%);
+}
+.swimming__act .swimming__flex{
     transform: translateX(0);
+    opacity: 1;
 }
 .swimming__info>p{
     margin-top: 40px;
@@ -238,12 +244,9 @@
     display: flex;
     max-width: 65%;
     width: 100%;
-    transition: 1.2s;
-    transform: translateX(-20%);
+    transition: 0.5s;
 }
-.swimming__act .swimming__photo{
-    transform: translateX(0);
-}
+
 .swimming__photo img{
     width: 100%;
     object-fit: cover;
@@ -657,14 +660,6 @@
 @media (max-width: 1024px){
     .swimming__photo {
         max-width: 100%;
-        transform: unset;
-    }
-    .swimming__info {
-        transform: unset;
-    }
-    .product-apart__box {
-        transition: 0.4s;
-        transform: unset;
     }
     .buildings__cnt .scape__arrows {
         margin-top: 0;

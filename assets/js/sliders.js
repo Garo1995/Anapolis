@@ -645,10 +645,10 @@ let locationSwiper = new Swiper(".location__slider", {
         '420': {
             slidesPerView: 3,
             slidesPerGroup: 1,
-            spaceBetween: 20,
+            spaceBetween: 10,
         },
         '300': {
-            slidesPerView: 3,
+            slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: 5,
         },
@@ -837,11 +837,10 @@ pfree.mouseover(function(){
     var counter = 0;
 
     var plansInfo = $('.plans-free');
-    plansInfo.css({'top' : 0, 'left' : 0, 'display': 'none'});
+    // plansInfo.css({'top' : 0, 'left' : 0, 'display': 'none'});
     console.log(plansInfo)
     var el = $(this),
         av = el.data('free');
-
     /*if (av) {*/
     el.css({'opacity': .6, 'fill': '#283B80'});
     var studiosNum = el.data('studios');
@@ -854,30 +853,25 @@ pfree.mouseover(function(){
     }
     else {
         plansInfo.find('.room_counter-studio').next().show()
-
     }
     if (oneNum <= 0) {
         plansInfo.find('.room_counter-one').next().hide()
     }
     else {
         plansInfo.find('.room_counter-one').next().show()
-
     }
     if (twoNum <= 0) {
         plansInfo.find('.room_counter-two').next().hide()
     }
     else {
         plansInfo.find('.room_counter-twox').next().show()
-
     }
     if (merchantNum <= 0) {
         plansInfo.find('.room_counter-merchant').next().hide()
     }
     else {
         plansInfo.find('.room_counter-merchant').next().show()
-
     }
-
     plansInfo
         .find('.plans-free__head-num').text(av).end()
         .find('.room_counter-studio').text(studiosNum).end()

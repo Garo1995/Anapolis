@@ -101,19 +101,15 @@ $(window).on('click', function (event) {
 
 var $animation_element = $('.anim-newSing');
 var $window = $(window);
-
 function check_if_in_view() {
-
     var window_height = $window.height();
     var window_top_position = $window.scrollTop();
     var window_bottom_position = ( window_height + window_top_position );
-
     $.each($animation_element, function() {
         var $element = $(this);
         var element_height = $element.outerHeight();
         var element_top_position = $element.offset().top;
         var element_bottom_position = (element_height + element_top_position);
-
         if((element_bottom_position >= window_top_position) &&
             (element_top_position <= window_bottom_position)) {
             $element.addClass('in-view');
@@ -121,8 +117,7 @@ function check_if_in_view() {
             $element.removeClass('in-view');
         }
     });
-};
-
+}
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
 
@@ -135,7 +130,8 @@ $(document).ready(function () {
         $('.contact__main').addClass("contact__act");
         $('.news-page').addClass("news__act");
         $('.news-single').addClass("news-single__act");
-
+        $('.maintained__main').addClass("maintained__acts");
+        $('.animate-brt').addClass("animate-brt__acts");
     }, 500);
 });
 
@@ -190,7 +186,7 @@ $(window).scroll(function () {
         let $designAnimTop = $designAnim.offset().top;
         let $designAnimBottom = $designAnimTop + $designAnim.height();
 
-        if ($designAnimTop + $designAnim.height() / 4 < docViewBottom && docViewBottom  < $designAnimBottom + $designAnim.height()) {
+        if ($designAnimTop + $designAnim.height() / 3 < docViewBottom && docViewBottom  < $designAnimBottom + $designAnim.height()) {
             $designAnim.addClass('design-animation');
         } else {
         }
@@ -202,7 +198,7 @@ $(window).scroll(function () {
         let $desSerAnimTop = $desSerAnim.offset().top;
         let $desSerAnimBottom = $desSerAnimTop + $desSerAnim.height();
 
-        if ($desSerAnimTop + $desSerAnim.height() / 4 < docViewBottom && docViewBottom  < $desSerAnimBottom + $desSerAnim.height() / 4) {
+        if ($desSerAnimTop + $desSerAnim.height() / 3 < docViewBottom && docViewBottom  < $desSerAnimBottom + $desSerAnim.height()) {
             $desSerAnim.addClass('deser-animation');
         } else {
         }
@@ -210,24 +206,12 @@ $(window).scroll(function () {
 
 
 
-
-    let $infraSecAnim = $('.infrast-sec');
-    if ($('.infrastHasClass').hasClass('infrast-sec')) {
-        let $infraSecTop = $infraSecAnim.offset().top;
-        let $infraSecBottom = $infraSecTop + $infraSecAnim.height();
-
-        if ($infraSecTop + $infraSecAnim.height() / 2 < docViewBottom && docViewBottom < $infraSecBottom + $infraSecAnim.height() / 2) {
-            $infraSecAnim.addClass('infrast-sec-animation');
-        } else {
-        }
-    }
-
     let $countlessAnim = $('.countless__padd');
     if ($('.countHasClass').hasClass('countless__padd')) {
         let $countlessTop = $countlessAnim.offset().top;
         let $countlessBottom = $countlessTop + $countlessAnim.height();
 
-        if ($countlessTop + $countlessAnim.height() / 2 < docViewBottom && docViewBottom < $countlessBottom + $countlessAnim.height() / 2) {
+        if ($countlessTop + $countlessAnim.height() / 3 < docViewBottom && docViewBottom < $countlessBottom + $countlessAnim.height()) {
             $countlessAnim.addClass('infrast-sec-animation');
         } else {
         }
@@ -240,7 +224,7 @@ $(window).scroll(function () {
         let $invesTmentsTop = $invesTmentsAnim.offset().top;
         let $invesTmentsBottom = $invesTmentsTop + $invesTmentsAnim.height();
 
-        if ($invesTmentsTop + $invesTmentsAnim.height() / 2 < docViewBottom && docViewBottom  < $invesTmentsBottom + $invesTmentsAnim.height() ) {
+        if ($invesTmentsTop + $invesTmentsAnim.height() / 3 < docViewBottom && docViewBottom  < $invesTmentsBottom + $invesTmentsAnim.height() ) {
             $invesTmentsAnim.addClass('investments___active');
         } else {
         }
@@ -451,6 +435,19 @@ $(window).scroll(function () {
         if ($swimmingTop + $swimmingAnim.height() / 2 < docViewBottom && docViewBottom  < $swimmingBottom + $swimmingAnim.height() ) {
             $swimmingAnim.addClass('swimming__act');
         } else {
+        }
+    }
+
+
+
+    let $acquisitAnim = $('.acquisitions__main');
+
+    if ($('.acquisitionsHasClass').hasClass('acquisitions__main')){
+        let $acquisitTop = $acquisitAnim.offset().top;
+        let $acquisitBottom = $acquisitTop + $acquisitAnim.height();
+
+        if ($acquisitTop + $acquisitAnim.height() / 3 < docViewBottom && docViewBottom  < $acquisitBottom + $acquisitAnim.height() ) {
+            $acquisitAnim.addClass('acquisitions__acts');
         }
     }
 
