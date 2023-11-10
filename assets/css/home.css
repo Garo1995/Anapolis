@@ -3960,20 +3960,237 @@ input:checked+.slider:before {
     .investments__photo {
         max-width: 308px;
     }
-    .main {
-        display: block;
-        overflow-x: auto;
+    .scroll-apartment{
+        overflow-x: scroll;
     }
-    .main-plan {
-        overflow: unset;
-        width: 1920px;
+    .scroll-apartment::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: unset;
+    }
+    .scroll-apartment::-webkit-scrollbar-thumb {
+        width: 0;
+        height: 0;
+        background: unset;
+    }
+    .scroll-width{
+        width: 1360px;
+        height: 760px;
     }
     .main-plan-wrp {
-        height: 960px;
+        height: 760px;
+    }
+    .plan-labels .ic_1 {
+        left: 91px;
+        bottom: 305px;
+    }
+    .plan-labels .ic_2 {
+        left: 284px;
+        bottom: 313px;
+    }
+    .plan-labels .ic_3 {
+        left: 423px;
+        bottom: 324px;
+    }
+    .plan-labels .ic_4 {
+        left: 549px;
+        bottom: 293px;
+    }
+    .plan-labels .ic_5 {
+        left: 705px;
+        bottom: 268px;
+    }
+    .plan-labels .ic_6 {
+        left: 857px;
+        bottom: 249px;
+    }
+    .plan-labels .ic_7 {
+        left: auto;
+        bottom: 211px;
+        right: 249px;
+    }
+    .plan-labels .ic_8 {
+        left: auto;
+        bottom: 208px;
+        right: 78px;
+    }
+    .plan-labels .ic_9 {
+        left: auto;
+        bottom: 282px;
+        right: 156px;
+    }
+    .plan-labels .ic_10 {
+        left: 801px;
+        bottom: 309px;
+    }
+    .plan-labels .ic_11 {
+        left: 678px;
+        bottom: 341px;
+    }
+    .plan-labels .ic_12 {
+        left: 533px;
+        bottom: 370px;
+    }
+    .plan-labels .ic_13 {
+        left: 391px;
+        bottom: 377px;
+    }
+    .plan-labels .ic_14 {
+        left: 311px;
+        bottom: 406px;
+    }
+    .plan-labels .ic_15 {
+        left: 201px;
+        bottom: 365px;
+    }
+    .plan-labels .ic_16 {
+        left: 107px;
+        bottom: 371px;
+    }
+    .plan-labels .ic_17 {
+        left: 233px;
+        bottom: 443px;
+    }
+    .plan-labels .ic_18 {
+        left: 342px;
+        bottom: 456px;
+    }
+    .plan-labels .ic_19 {
+        left: 491px;
+        bottom: 409px;
+    }
+    .plan-labels .ic_20 {
+        left: 624px;
+        bottom: 401px;
+    }
+    .plan-labels .ic_21 {
+        left: 769px;
+        bottom: 371px;
+    }
+    .plan-labels .ic_22 {
+        left: auto;
+        bottom: 334px;
+        right: 405px;
+    }
+    .plan-labels .ic_23 {
+        left: auto;
+        bottom: 324px;
+        right: 253px;
+    }
+    .plan-labels .ic_24 {
+        left: auto;
+        bottom: 325px;
+        right: 116px;
+    }
+    .plan-labels .ic_25 {
+        left: auto;
+        bottom: 393px;
+        right: 465px;
+    }
+    .plan-labels .ic_26 {
+        left: auto;
+        bottom: 415px;
+        right: 566px;
+    }
+    .plan-labels .ic_27 {
+        left: 611px;
+        bottom: 442px;
+    }
+    .plan-labels .ic_28 {
+        left: 539px;
+        bottom: 454px;
+    }
+    .plan-labels .ic_29 {
+        left: 451px;
+        bottom: 467px;
+    }
+
+    .plan-labels .ic {
+        padding: 5px 9px;
+        height: 23px;
+        font-size: 12px;
+        margin-right: 0;
+        line-height: normal;
+    }
+
+    .main-plan .ic_r {
+        padding: 4px 5px !important;
+    }
+
+
+    .plan-labels li span {
+        margin-left: 3px;
+        font-size: 11px;
+        line-height: 12px;
+        width: 17px;
+        height: 17px;
+    }
+
+
+
+    .plans-free {
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 173px;
+        padding: 16px 13px 25px;
+    }
+    .plans-free__head-num {
+        font-size: 29px;
+    }
+    .queue-modal__name small {
+        line-height: 15px;
+        font-size: 13px;
+    }
+    .queue-modal__name span {
+        font-size: 15px;
+        line-height: 15px;
+        display: block;
+    }
+    .plans-free__head {
+        padding: 0;
+    }
+    .plans-free__body {
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .plans-free__body-tx {
+        font-size: 14px;
+        margin-bottom: 0;
+        line-height: 16px;
+    }
+    .plans-free__list li {
+        font-size: 13px;
+        margin: 7px 0 0;
+    }
+    .plans-free__list li .room_counter-studio {
+        font-size: 13px;
     }
 }
 
 @media (max-width: 1199px) {
+    .apart-queue__cnt {
+        max-width: 345px;
+        padding: 12px 14px;
+    }
+    .apart-queue__number small {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .apart-queue__number strong {
+        font-size: 46px;
+        line-height: 53px;
+    }
+    .apart-queue__number {
+        margin-right: 14px;
+    }
+    .apart-queue__cnt .btn-bord {
+        max-width: 190px;
+        height: 46px;
+        padding: 9px 19px;
+        font-size: 16px;
+        line-height: 21px;
+    }
     .location__block {
         position: unset;
         padding-bottom: 44px;
@@ -4092,9 +4309,6 @@ input:checked+.slider:before {
 
     }
 
-    .main-plan {
-        width: 1300px;
-    }
     .location__info {
         max-width: 980px;
         padding: 0;
