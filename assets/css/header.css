@@ -465,8 +465,7 @@ header{
     }
     .header__fix {
         overflow-y: scroll;
-        padding-bottom: 30px;
-
+        padding-bottom: 65px;
     }
     .header__flex{
         height: auto;

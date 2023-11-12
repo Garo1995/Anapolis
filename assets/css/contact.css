@@ -452,20 +452,18 @@
         max-width: 434px;
         height: 434px;
     }
-    .contact__map iframe {
-        width: 100%;
-        height: 100%;
-        border-radius: 160px;
+    .perspective__iframe {
+        max-width: 430px;
+        height: 430px;
+    }
+}
+@media (max-width: 460px){
+    .contact__map {
+        max-width: 320px;
+        height: 320px;
     }
     .perspective__iframe {
-        border-radius: 160px;
-    }
-    .perspective__iframe iframe {
-        width: 113%;
-        height: 110%;
-        border-radius: 160px;
-    }
-    .contact__map{
-        border-radius: 160px;
+        max-width: 320px;
+        height: 320px;
     }
 }

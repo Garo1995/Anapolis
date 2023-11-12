@@ -113,14 +113,11 @@ function check_if_in_view() {
         if((element_bottom_position >= window_top_position) &&
             (element_top_position <= window_bottom_position)) {
             $element.addClass('in-view');
-        } else {
-            $element.removeClass('in-view');
         }
     });
 }
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
-
 
 
 
@@ -136,14 +133,11 @@ $(document).ready(function () {
 });
 
 
-
 $(window).scroll(function () {
     let $elemAdvantages = $('.location__main');
     let $window = $(window);
     let docViewTop = $window.scrollTop();
     let docViewBottom = docViewTop + $window.height();
-
-
 
     if ($('.locationHasClass').hasClass('location__main')){
 
@@ -250,30 +244,7 @@ $(window).scroll(function () {
 
 
 
-    let $answerQuestAnim = $('.answer-quest__anim');
 
-    if ($('.answer-quest').hasClass('answer-quest__anim')){
-        let $answerQuestTop = $answerQuestAnim.offset().top;
-        let $answerQuestBottom = $answerQuestTop + $answerQuestAnim.height();
-
-        if ($answerQuestTop + $answerQuestAnim.height() / 3 < docViewBottom && docViewBottom  < $answerQuestBottom + $answerQuestAnim.height() ) {
-            $answerQuestAnim.addClass('answer-quest__act');
-        } else {
-        }
-    }
-
-
-    let $footerAnim = $('.footer__anim');
-
-    if ($('footer').hasClass('footer__anim')){
-        let $footerTop = $footerAnim.offset().top;
-        let $footerBottom = $footerTop + $answerQuestAnim.height();
-
-        if ($footerTop + $footerAnim.height() / 2 < docViewBottom && docViewBottom  < $footerBottom + $footerAnim.height() / 2 ) {
-            $footerAnim.addClass('footer__act');
-        } else {
-        }
-    }
 
     let $developerAnim = $('.developer__main');
 
@@ -356,9 +327,6 @@ $(window).scroll(function () {
         } else {
         }
     }
-    $('.queue-close').on('click',function () {
-        $(this).parent().addClass('queue-modal__close')
-    })
 
 
 
@@ -457,7 +425,6 @@ $(window).scroll(function () {
 });
 
 
-
 $(document).ready(function () {
     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
         disableOn: 280,
@@ -471,6 +438,16 @@ $(document).ready(function () {
 });
 
 
+$('.queue-close').on('click',function () {
+    $(this).parent().addClass('queue-modal__close')
+})
+
+$('.click-row-reverse').on('click',function () {
+    $(this).parent().addClass('click-reverse__part')
+})
+$('.click-none-reverse').on('click',function () {
+    $(this).parent().removeClass('click-reverse__part')
+})
 
 
 
@@ -577,43 +554,6 @@ $('.more-news-info').on('click',function () {
     $(this).addClass('more-news__none')
     $('.news-page__flex').addClass('news-block__act')
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

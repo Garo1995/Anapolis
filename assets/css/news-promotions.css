@@ -25,12 +25,12 @@
     margin-top: 32px;
     max-width: 480px;
     width: 100%;
-    transition: 0.3s;
+    transition: 0.4s;
     cursor: pointer;
+    opacity: 0.25;
 }
 .news-page__block:hover h3{
-    font-weight: 400;
-    transition: 0.3s;
+    opacity: 1;
 
 }
 .news-page__picture{
@@ -124,7 +124,7 @@
     transform: translateY(0);
 }
 .anim-newSing{
-    transform: translateY(40%);
+    transform: translateY(35%);
     transition: 1.4s;
     opacity: 0;
 }
