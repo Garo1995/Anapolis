@@ -14,7 +14,7 @@
         <a href="#" class="header__logo">
             <img src="assets/img/logo.svg" alt="logo">
         </a>
-        <div class="open-menu">
+        <div class="open-menu onle-home">
             <img src="assets/img/open-menu.svg" alt="icon">
             <span></span>
             <span></span>
@@ -48,7 +48,7 @@
             </a>
             <div class="request-call">
                 <a href="tel:8 800 511 48 91" class="header__phone">8 800 511 48 91</a>
-                <a href="#" class="request-call__back">Заказать обратный звонок</a>
+                <a href="javascript:;" data-val="modal" class="open_modal request-call__back">Заказать обратный звонок</a>
             </div>
         </div>
     </div>
@@ -507,7 +507,43 @@
 </footer>
 <div class="scrollup"></div>
 
-
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-reg">
+            <div class="close"></div>
+            <div class="modal-reg__title">
+                <p>Квартиры в 1 и 2 втором строении проданы. </p>
+                <h3>Свяжитесь со мной</h3>
+                <p>Оставьте контакты и узнайте первыми</p>
+            </div>
+            <form>
+                <div class="modal-form">
+                    <div class="modal__inp">
+                        <small>Имя</small>
+                        <label>
+                            <input type="text" name="name">
+                        </label>
+                    </div>
+                    <div class="modal__inp">
+                        <small>Телефон</small>
+                        <label>
+                            <input type="text" name='tel' placeholder="+7" pattern="\+7 \(\d{3}\)-\d{3}-\d{2}-\d{2}"
+                                   class="phone">
+                        </label>
+                    </div>
+                    <div class="modal__checked">
+                        <label class="checkcontainer">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <small>Согласен с правилами обработки <a href="#">персональных данных</a></small>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <script src="assets/js/jquery-3.6.4.js"></script>
 <script src="assets/js/jquery.fancybox.js"></script>
