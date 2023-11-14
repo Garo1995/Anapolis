@@ -774,26 +774,90 @@ let partnersSwiper = new Swiper(".dev-partners__slider", {
 
 
 
+var pspath =  $('[data-perc]'),
+    zn = 0;
+
+pspath.mousemove(function(e){
+    $('.plans-percent').css({'top' : e.pageY, 'left' : e.pageX, 'display': 'block'});
+});
+
+
+pspath.mouseout(function(){
+    $('.plans-percent').hide();
+    $(this).css({'opacity': 0, 'fill': 'transparent'});
+});
+
+
+pspath.mouseover(function(event){
+    var plansInfo = $('.plans-percent');
+    plansInfo.css({'top' : 0, 'left' : 0, 'display': 'none'});
+
+    $(this).css({'opacity': .6, 'fill': '#283B80'});
+
+    var circle = Circles.create({
+        id: 'circles-1',
+        radius: getRadius(),
+        width: getWidth(),
+        colors: ['transparent', '#283B80'],
+        value: $(this).data('percent'),
+        maxValue: 100,
+        styleText: false,
+        text: function(value){return value + '%' + '<span>Готовность</span>';},
+    });
+
+    window.onresize = function(e) {
+        circle.updateRadius(getRadius());
+        circle.updateWidth(getWidth());
+    };
+    function getRadius() {
+        return window.innerWidth / 30;
+    }
+    function getWidth() {
+        return window.innerWidth / 190;
+    }
+
+});
+
+
+
+
+
+
 
 
 
 var pfree =  $('[data-free]');
 
-pfree.on('click', function(e){
+pfree.on('click',function(e){
     var plansInfo = $('.plans-free');
-    plansInfo.css({'top' : e.pageY, 'left' : e.pageX, 'display': 'block'});
+    let x =    e.pageY - $('.main-plan-js').offset().top;
+    let y =    e.pageX - $('.main-plan-js').offset().left;
+    plansInfo.css({'top' : x, 'left' : y, 'display': 'block'});
 });
 
-pfree.on('click', function(){
+// pfree.on('mouseout',function(){
+//     var plansInfo = $('.plans-free');
+//     plansInfo.hide();
+//     $(this).css({'opacity': 0});
+// });
+$(window).on('click',function (){
     var plansInfo = $('.plans-free');
-    plansInfo.hide();
-    $(this).css({'opacity': 0});
-});
+    pfree.each(function (){
+        plansInfo.hide();
+        $(this).css({'opacity': 0});
+    })
+})
 
-pfree.on('click', function(){
+pfree.on('click',function(e){
+    e.stopPropagation()
+    var plansInfo = $('.plans-free');
+
     var counter = 0;
-
-    var plansInfo = $('.plans-free');
+    // console.log(pfree)
+    pfree.each(function (){
+        plansInfo.hide();
+        $(this).css({'opacity': 0});
+    })
     // plansInfo.css({'top' : 0, 'left' : 0, 'display': 'none'});
     console.log(plansInfo)
     var el = $(this),
@@ -836,6 +900,5 @@ pfree.on('click', function(){
         .find('.room_counter-two').text(twoNum).end()
         .find('.room_counter-merchant').text(merchantNum).end()
         .show();
-    /*}*/
 });
 
