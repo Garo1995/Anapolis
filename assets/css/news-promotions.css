@@ -125,7 +125,7 @@
 }
 .anim-newSing{
     transform: translateY(35%);
-    transition: 1.4s;
+    transition: 1.2s;
     opacity: 0;
 }
 .in-view{
@@ -293,6 +293,12 @@
     }
     .news-page__block h3 {
         margin-top: 20px;
+    }
+    .anim-newSing{
+        transform: translateY(25%);
+    }
+    .in-view{
+        transform: translateY(0);
     }
 }
 @media (max-width: 760px){
