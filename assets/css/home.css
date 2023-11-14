@@ -87,6 +87,7 @@ body {
     margin-top: -124px;
     padding-top: 221px;
     min-height: 1080px;
+    z-index: 1;
 }
 
 .apartments__main h1 {
@@ -239,7 +240,7 @@ body {
     content: "";
     background-image: url("../img/arrow-liner.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 81px;
     height: 15px;
     position: absolute;
@@ -2250,7 +2251,7 @@ input:checked+.slider:before {
 }
 
 .infrastructure__info {
-    margin: 108px auto 0;
+    margin: 70px auto 0;
     max-width: 1920px;
     width: 100%;
 }
@@ -2416,10 +2417,6 @@ input:checked+.slider:before {
 .bg-white {
     background: #ffffff;
     padding-top: 140px;
-}
-
-.investments__main {
-    margin-top: -1px;
 }
 
 .investments__block {
@@ -2681,7 +2678,9 @@ input:checked+.slider:before {
     cursor: ew-resize;
     transition: background .3s ease-in-out;
 }
-
+.calculator__main{
+    padding-bottom: 120px;
+}
 .calculator__main:after {
     content: "";
     position: absolute;
@@ -3960,7 +3959,12 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 1299px) {
-
+    .plans-free__body .btn {
+        max-width: 120px;
+        height: 30px;
+        font-size: 12px;
+        margin: 15px auto 0;
+    }
     .investments__photo {
         max-width: 308px;
     }
@@ -4994,7 +4998,7 @@ input:checked+.slider:before {
         line-height: 34px;
     }
     .answer-quest {
-        padding-top: 80px;
+        padding-top: 0;
     }
     .investments__block {
         padding: 40px 25px;
@@ -5621,20 +5625,36 @@ input:checked+.slider:before {
     }
 
     .infrastructure__cnt ul {
-        width: 459px;
+        width: 530px;
     }
+
     .infrastructure__cnt ul li {
-        width: 225px;
+        width: 285px;
         display: flex;
         align-items: flex-end;
+        padding-bottom: 16px;
+
+    }
+    .infrastructure__cnt ul .click-none-reverse{
+        width: 285px;
     }
     .premises__apartment .btn-liner {
         max-width: 305px;
+    }
+
+    .infrastructure__cnt ul li h2 {
+        font-size: 27px;
+        line-height: 32px;
     }
     .infrastructure__box h2 {
         font-size: 38px;
         line-height: 44px;
     }
+    .infrastructure__cnt ul li:nth-child(2) h2 {
+        font-size: 25px;
+        line-height: 34px;
+    }
+
     .btn-options {
         margin: 92px auto 50px;
         bottom: -4px;
@@ -5649,6 +5669,9 @@ input:checked+.slider:before {
 
     .infrastructure__cnt .click-reverse__part{
         flex-direction: row-reverse;
+    }
+    .calculator__main{
+        padding-bottom: 80px;
     }
 }
 

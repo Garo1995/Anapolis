@@ -590,9 +590,13 @@ let buildingsSwiper = new Swiper(".buildings__slider", {
 
 
 
-
-
-
+let locationInfoSwiper = new Swiper(".location-info__slid", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 1,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
 
 let locationSwiper = new Swiper(".location__slider", {
     slidesPerView: 4,
@@ -610,7 +614,6 @@ let locationSwiper = new Swiper(".location__slider", {
         nextEl: ".loc-swiper-next",
         prevEl: ".loc-swiper-prev",
     },
-
     breakpoints: {
         '1499': {
             slidesPerView: 4,
@@ -652,6 +655,9 @@ let locationSwiper = new Swiper(".location__slider", {
             slidesPerGroup: 1,
             spaceBetween: 5,
         },
+    },
+    thumbs: {
+        swiper: locationInfoSwiper,
     },
 });
 
@@ -768,72 +774,23 @@ let partnersSwiper = new Swiper(".dev-partners__slider", {
 
 
 
-var pspath =  $('[data-perc]'),
-    zn = 0;
-
-pspath.mousemove(function(e){
-    $('.plans-percent').css({'top' : e.pageY, 'left' : e.pageX, 'display': 'block'});
-});
-
-
-pspath.mouseout(function(){
-    $('.plans-percent').hide();
-    $(this).css({'opacity': 0, 'fill': 'transparent'});
-});
-
-
-pspath.mouseover(function(event){
-    var plansInfo = $('.plans-percent');
-    plansInfo.css({'top' : 0, 'left' : 0, 'display': 'none'});
-
-    $(this).css({'opacity': .6, 'fill': '#283B80'});
-
-    var circle = Circles.create({
-        id: 'circles-1',
-        radius: getRadius(),
-        width: getWidth(),
-        colors: ['transparent', '#283B80'],
-        value: $(this).data('percent'),
-        maxValue: 100,
-        styleText: false,
-        text: function(value){return value + '%' + '<span>Готовность</span>';},
-    });
-
-    window.onresize = function(e) {
-        circle.updateRadius(getRadius());
-        circle.updateWidth(getWidth());
-    };
-    function getRadius() {
-        return window.innerWidth / 30;
-    }
-    function getWidth() {
-        return window.innerWidth / 190;
-    }
-
-});
-
-
-
-
-
-
 
 
 
 var pfree =  $('[data-free]');
 
-pfree.mousemove(function(e){
+pfree.on('click', function(e){
     var plansInfo = $('.plans-free');
     plansInfo.css({'top' : e.pageY, 'left' : e.pageX, 'display': 'block'});
 });
 
-pfree.mouseout(function(){
+pfree.on('click', function(){
     var plansInfo = $('.plans-free');
     plansInfo.hide();
     $(this).css({'opacity': 0});
 });
 
-pfree.mouseover(function(){
+pfree.on('click', function(){
     var counter = 0;
 
     var plansInfo = $('.plans-free');
