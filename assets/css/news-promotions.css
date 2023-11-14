@@ -27,7 +27,7 @@
     width: 100%;
     transition: 0.4s;
     cursor: pointer;
-    opacity: 0.25;
+    opacity: 0.8;
 }
 .news-page__block:hover h3{
     opacity: 1;
@@ -124,7 +124,7 @@
     transform: translateY(0);
 }
 .anim-newSing{
-    transform: translateY(35%);
+    transform: translateY(25%);
     transition: 1.2s;
     opacity: 0;
 }
@@ -324,5 +324,11 @@
         top: 8px;
         width: 10px;
         height: 10px;
+    }
+    .anim-newSing{
+        transform: translateY(12%);
+    }
+    .in-view{
+        transform: translateY(0);
     }
 }

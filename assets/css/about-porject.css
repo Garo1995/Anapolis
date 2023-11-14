@@ -42,6 +42,9 @@
     opacity: 1;
     transform: translateY(0);
 }
+.rem-marg{
+    margin-top: 200px;
+}
 .maintained__box{
     display: flex;
     width: 100%;
@@ -90,6 +93,7 @@
 
 .architectural__main{
     padding-top: 134px;
+    padding-bottom: 140px;
 }
 .architectural__main:after{
     content: "";
@@ -178,7 +182,7 @@
 }
 
 .buildings__sec{
-    margin: 240px auto 0;
+    margin: 0 auto;
 }
 .buildings__cnt{
     display: flex;
@@ -389,23 +393,11 @@
 .companies__box{
     max-width: 337px;
     width: 100%;
-    transition: 1.5s;
-    opacity: 0;
 }
 .companies__box:nth-child(1){
     padding-top: 20px;
-    transform: translateX(-30%);
 }
-.companies__box:nth-child(2){
-    transform: translateX(-40%);
-}
-.companies__box:nth-child(3){
-    transform: translateX(-50%);
-}
-.comp__act .companies__box{
-    transform: translateX(0);
-    opacity: 1;
-}
+
 .companies__logo{
     width: 100%;
     padding-bottom: 47px;
@@ -512,9 +504,7 @@
     .maintained__box {
         min-height: 680px;
     }
-    .buildings__sec {
-        margin: 140px auto 0;
-    }
+
     .architectural__block {
         margin-top: 40px;
         padding: 26px 30px;
@@ -566,8 +556,10 @@
 }
 @media (max-width: 1024px){
 
-    .architectural__main {
+
+    .architectural__main{
         padding-top: 100px;
+        padding-bottom: 100px;
     }
 }
 @media (max-width: 991px){

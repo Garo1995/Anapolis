@@ -169,7 +169,7 @@
                                 <p>
                                     Здесь уединение и умиротворение, подаренные природой, сочетаются с комфортом бизнес-класса.
                                 </p>
-                                <button class="btn">Записаться на просмотр</button>
+                                <button  data-val="modal" class="open_modal btn" >Записаться на просмотр</button>
                             </div>
                             <div class="scape__arrows location__arrows">
                                 <div class="scape-swiper-prev swiper-button-prev" ></div>
@@ -376,7 +376,7 @@
         </div>
     </div>
 </section>
-<section class="locationHasClass location__main">
+<section class="locationHasClass rem-marg  location__main">
     <div class="container">
         <div class="location__block">
             <div class="location__info">
@@ -684,7 +684,7 @@
         </div>
         <div class="choose-apart-js" data-catalog="estate">
             <div class="infrastructure__wrap">
-                <div class="infrastructure__box anim-newSing">
+                <div class="infrastructure__box ">
                     <h2>Квартиры</h2>
                     <div class="infrastructure__image">
                         <img src="assets/img/garmonia.svg" alt="icon">
@@ -694,7 +694,7 @@
                     </p>
                 </div>
 
-                <div class="infrastructure__box anim-newSing infrastructure__blue">
+                <div class="infrastructure__box  infrastructure__blue">
                     <h2>Аренда</h2>
 
                     <div class="infrastructure__image">
@@ -706,7 +706,7 @@
                     </p>
                 </div>
 
-                <div class="infrastructure__box anim-newSing infrastructure__blue">
+                <div class="infrastructure__box  infrastructure__blue">
                     <h2>Коммерция</h2>
                     <div class="infrastructure__image">
                         <img src="assets/img/rest.svg" alt="icon">
@@ -720,10 +720,10 @@
         </div>
     </div>
 </section>
-<section class="compHasClass comp__main">
+<section class="comp__main">
     <div class="companies__padd ">
         <div class="container">
-            <div class="companies__title">
+            <div class="companies__title anim-newSing">
                 <h2>Участники и партнеры проекта –
                     компании с мировыми именами
                 </h2>
@@ -920,9 +920,9 @@
         </div>
     </div>
 </section>
-<footer class="section-margin">
-    <div class="container-foot anim-newSing">
-        <div class="container-main">
+<footer>
+    <div class="container-foot ">
+        <div class="container-main anim-newSing">
             <div class="footer__logo">
                 <a href="#"><img src="assets/img/logo.svg" alt="iamge"></a>
                 <span>© 2023 ООО СЗ "Новый Лазурит",</span>
@@ -945,7 +945,7 @@
                 </ul>
             </div>
         </div>
-        <div class="footer__text">
+        <div class="footer__text anim-newSing">
             <p>
                 Общие положения: Настоящая политика обработки персональных данных составлена в соответствии с
                 требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» (далее - Закон о
@@ -964,7 +964,7 @@
                 данных.
             </p>
         </div>
-        <div class="footer__under">
+        <div class="footer__under anim-newSing">
             <div class="footer__politic">
                 <p>
                     <b>© 2008 – 2023 ЖК Анаполис</b>, все права защищены <br>
@@ -978,6 +978,45 @@
 </footer>
 <div class="scrollup"></div>
 
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-reg">
+            <div class="close"></div>
+            <div class="modal-reg__title">
+                <p>Квартиры в 1 и 2 втором строении проданы. </p>
+                <h3>Свяжитесь со мной</h3>
+                <p>Оставьте контакты и узнайте первыми</p>
+            </div>
+            <form>
+                <div class="modal-form">
+                    <div class="modal__inp">
+                        <small>Имя</small>
+                        <label>
+                            <input type="text" name="name">
+                        </label>
+                    </div>
+                    <div class="modal__inp">
+                        <small>Телефон</small>
+                        <label>
+                            <input type="text" name='tel' placeholder="+7" pattern="\+7 \(\d{3}\)-\d{3}-\d{2}-\d{2}"
+                                   class="phone">
+                        </label>
+                    </div>
+                    <div class="modal__checked">
+                        <label class="checkcontainer">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <small>Согласен с правилами обработки <a href="#">персональных данных</a></small>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <script src="assets/js/jquery-3.6.4.js"></script>

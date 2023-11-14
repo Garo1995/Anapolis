@@ -290,7 +290,7 @@
 }
 
 .landscaping__main{
-    margin-top: 215px;
+    padding-top: 180px;
 
 }
 
@@ -658,7 +658,7 @@
         transform: translateX(-392px);
     }
     .landscaping__main {
-        margin-top: 110px;
+        padding-top: 100px;
     }
     .landscaping__flex {
         margin-top: 60px;

@@ -331,21 +331,6 @@ $(window).scroll(function () {
 
 
 
-    let $compAnim = $('.comp__main');
-
-    if ($('.compHasClass').hasClass('comp__main')){
-
-        let $compTop = $compAnim.offset().top;
-        let $compBottom = $compTop + $compAnim.height();
-
-        if ($compTop + $compAnim.height()  < docViewBottom && docViewBottom  < $compBottom + $compAnim.height() ) {
-            $compAnim.addClass('comp__act');
-        } else {
-        }
-    }
-
-
-
 
 
 

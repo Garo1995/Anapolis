@@ -184,9 +184,14 @@ body {
     position: relative;
     bottom: -221px;
     z-index: 11;
-
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateY(10%);
 }
-
+.in-viewport .apartments__flex{
+    transform: translateY(0);
+    opacity: 1;
+}
 .apartments__info {
     max-width: 995px;
     width: 100%;
@@ -2536,6 +2541,8 @@ input:checked + .slider:before {
 .calculator__link {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .select-bank {
@@ -2581,7 +2588,7 @@ input:checked + .slider:before {
 
 .select-bank .opened .jq-selectbox__select-text {
     border-radius: 35px 35px 0 0;
-    border-bottom: unset;
+    border-bottom: 1px solid transparent;
 }
 
 .select-bank .jq-selectbox__dropdown {
@@ -2653,6 +2660,8 @@ input:checked + .slider:before {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;
 }
 
 .calculator__property {
@@ -3505,7 +3514,7 @@ input:checked + .slider:before {
     }
 
     .choose-apart__foot {
-        padding: 17px;
+        padding: 17px 0 35px 15px;
     }
 
     .options-arrow {
@@ -3786,7 +3795,7 @@ input:checked + .slider:before {
 
     .btn-options {
         right: 20px;
-        bottom: 20px;
+        bottom: 38px;
     }
 }
 
@@ -5650,7 +5659,8 @@ input:checked + .slider:before {
 
     .select-bank .opened .jq-selectbox__select-text {
         border-radius: 20px 20px 0 0;
-        border-bottom: unset;
+        border-bottom: 1px solid transparent;
+
     }
 
     h2 {
