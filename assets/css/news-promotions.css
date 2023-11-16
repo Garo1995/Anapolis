@@ -273,6 +273,15 @@
     body .newsHasClass .news-page__block {
         transform: translateX(0);
     }
+    .newsHasClass .design__parent{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .newsHasClass .choose-apart__info{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
 }
 @media (max-width: 991px){
     .news-single__cnt {

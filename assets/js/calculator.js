@@ -36,6 +36,7 @@ dateRange.addEventListener('input', function () {
 })
 
 
+
 for (let i = 0; i < percents.length; i++) {
     percents[i].addEventListener('click', function () {
         let dataPercent = percents[i].dataset.percent
@@ -72,5 +73,27 @@ function mounthPay() {
 
 
 
+$('.basic-program-js').on('click', function () {
+    $('.interest-rate').removeClass('state-support-block')
+    $('.state-support-none').removeClass('state-support-act')
+    $('.family-mortgage-none').removeClass('family-mortgage-act')
+
+})
+
+$('.state-support-js').on('click', function () {
+    $('.interest-rate').addClass('state-support-block')
+    $('.state-support-none').toggleClass('state-support-act')
+    $('.family-mortgage-none').removeClass('family-mortgage-act')
+
+})
+
+
+
+
+$('.family-mortgage-js').on('click', function () {
+    $('.interest-rate').addClass('state-support-block')
+    $('.state-support-none').removeClass('state-support-act')
+    $('.family-mortgage-none').toggleClass('family-mortgage-act')
+})
 
 

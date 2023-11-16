@@ -2644,6 +2644,8 @@ input:checked + .slider:before {
     color: rgba(16, 47, 92, 1);
     transition: 0.3s;
     white-space: nowrap;
+    background: #ffffff;
+
 }
 
 .calculator__href:hover {
@@ -2825,7 +2827,22 @@ input:checked + .slider:before {
     width: max-content;
     margin-bottom: 70px;
 }
+.calculator-pay__info .state-support-none{
+    display: none;
+}
 
+.calculator-pay__info .family-mortgage-none{
+    display: none;
+}
+.calculator-pay__info .state-support-block{
+    display: none;
+}
+.calculator-pay__info .state-support-act{
+    display: block;
+}
+.calculator-pay__info .family-mortgage-act{
+    display: block;
+}
 .calculator-pay__info h3 {
     font-size: 24px;
     font-weight: 300;
@@ -4595,7 +4612,7 @@ input:checked + .slider:before {
         padding-left: 0;
         flex-direction: column;
         align-items: flex-start;
-        padding-bottom: 55px;
+        padding-bottom: 130px;
     }
 
     .premises__apart__text p {
@@ -5325,7 +5342,9 @@ input:checked + .slider:before {
         max-width: 95px;
         height: 95px;
     }
-
+    .premises__apartment {
+        padding-bottom: 110px;
+    }
     .calculator__price span {
         font-size: 18px;
         line-height: 24px;
@@ -5763,7 +5782,7 @@ input:checked + .slider:before {
     }
 
     .btn-options {
-        margin: 92px auto 50px;
+        margin: 92px auto 70px;
         bottom: -4px;
     }
 

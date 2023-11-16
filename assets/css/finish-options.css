@@ -142,6 +142,10 @@
         margin-left: 0;
         margin-right: -160px;
     }
+    .acquisitions__cnt {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 @media (max-width: 991px){
 

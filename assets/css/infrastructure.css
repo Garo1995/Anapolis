@@ -499,7 +499,9 @@
     margin-bottom: -54px;
     padding: 0 10px;
 }
-
+.meters-sea__cnt .swiper-button-prev:before, .meters-sea__cnt .swiper-button-next:before{
+    display: none;
+}
 .territory__info .swiper-button-prev:before, .territory__info .swiper-button-next:before{
     display: none;
 }
@@ -647,11 +649,19 @@
     .swimming__info {
         padding: 25px 24px 56px;
     }
+    .product-apart__box {
+        opacity: 1;
+        transform: translateX(0);
+    }
     .swimming__photo img{
         object-fit: cover;
     }
     .meters-sea__box {
         max-width: 524px;
+    }
+    .swimming__flex {
+        opacity: 1;
+        transform: translateX(0);
     }
     .meters-sea__slider {
         width: 1874px;
@@ -819,7 +829,7 @@
     .construction__item {
         padding: 34px 25px 0;
         margin-top: 70px;
-        margin-bottom: 100px;
+        margin-bottom: 230px;
     }
     .scape__photo {
         max-width: 100%;
@@ -924,6 +934,9 @@
         max-width: 138px;
         margin-top: 45px;
         align-items: flex-start;
+    }
+    .construction__item {
+        margin-bottom: 190px;
     }
     .meters-sea__info {
         right: 21px;

@@ -354,6 +354,14 @@
         height: 460px;
         border-radius: 50%;
     }
+    .contact__sec .contact__wrap{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .perspective__info:nth-child(1) {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 @media (max-width: 991px){
     .perspective__iframe {

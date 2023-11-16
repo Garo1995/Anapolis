@@ -220,14 +220,21 @@
         font-size: 466px;
         line-height: 363px;
     }
+    .developer__info {
+        transform: translateX(0);
+        transition: 1.5s;
+        opacity: 1;
+    }
 }
-
 @media (max-width: 991px){
     .dev-partners__box {
         max-width: 220px;
         width: 100%;
     }
-
+    .developer__number {
+        transform: translateX(0);
+        opacity: 1;
+    }
     .dev-partners__photo {
         max-width: 220px;
         height: 220px;
