@@ -339,7 +339,7 @@ header{
     margin-top: 33px;
 }
 .header__apartment{
-    margin-top: 89px;
+    margin-top: 50px;
 }
 .header__apartment a{
     display: flex;
@@ -369,6 +369,21 @@ header{
     display: flex;
     align-items: center;
 }
+.head-fix__soc .aeroporama__block {
+    margin-right: 0;
+    margin-top: 25px;
+    display: flex;
+
+}
+.head-fix__soc .aeroporama__block span {
+    color: #fff;
+}
+.head-fix__link {
+    margin-top: 34px;
+}
+.head-fix__soc .aeroporama__block span:before{
+    background: #ffffff;
+}
 @media (max-width: 1699px){
     .header__menu ul li {
         margin-left: 23px;
@@ -388,9 +403,7 @@ header{
     }
 }
 @media (max-width: 1599px){
-    .aeroporama__block{
-        display: none;
-    }
+
     .open-menu {
         margin-right: auto;
     }
@@ -411,6 +424,12 @@ header{
         width: 65px;
         height: 13px;
     }
+}
+@media (max-width: 1499px){
+    .aeroporama__block{
+        display: none;
+    }
+
 }
 @media (max-width: 1399px){
     .header__menu{

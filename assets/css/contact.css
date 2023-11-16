@@ -137,7 +137,7 @@
 
 }
 .contact__sec{
-    margin-top: 120px;
+    padding-top: 120px;
     margin-bottom: 110px;
 }
 .contact__sec:after{
@@ -166,15 +166,9 @@
     width: 100%;
     margin-bottom: 54px;
     transition: 1.5s;
-    transform: translateX(-30%);
-    opacity: 0;
-}
-
-.contact__act .contact__user{
-    transform: translateX(0);
-    opacity: 1;
 
 }
+
 
 .contact__user img{
     max-width: 270px;
@@ -455,6 +449,10 @@
     .perspective__iframe {
         max-width: 430px;
         height: 430px;
+    }
+    .contact__sec{
+        padding-top: 60px;
+        margin-bottom: 60px;
     }
 }
 @media (max-width: 460px){

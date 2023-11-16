@@ -232,6 +232,9 @@ footer{
         width: 47%;
         margin-bottom: 20px;
     }
+    .container-main {
+        padding-top: 15px;
+    }
 }
 @media (max-width: 570px){
     .footer__menu ul li a {

@@ -819,7 +819,7 @@
     .construction__item {
         padding: 34px 25px 0;
         margin-top: 70px;
-        margin-bottom: 180px;
+        margin-bottom: 100px;
     }
     .scape__photo {
         max-width: 100%;
@@ -942,7 +942,21 @@
         max-width: 90px;
         height: 90px;
     }
+    .swimming__wrap {
+        max-width: 450px;
+    }
 }
+@media (max-width: 420px){
+    .swimming__just:nth-child(1) {
+        max-width: 300px;
+        flex-direction: row;
+        align-items: center;
+    }
+    .swimming__just:nth-child(1) p {
+        margin-top: 0;
+    }
+}
+
 @media (max-width: 370px){
     .scape__cnt h1 {
         font-size: 52px;

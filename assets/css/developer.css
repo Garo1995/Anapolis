@@ -1,5 +1,5 @@
 .developer__main{
-    margin-top: 187px;
+    padding-top: 187px;
 }
 .developer__block{
     margin-bottom: 225px;
@@ -191,7 +191,7 @@
 }
 @media (max-width: 1199px){
     .developer__main {
-        margin-top: 90px;
+        padding-top: 90px;
     }
     .developer__block p {
         font-size: 18px;
@@ -320,6 +320,16 @@
         margin-top: 80px;
     }
     .developer__main {
-        margin-top: 60px;
+        padding-top: 60px;
+    }
+    .dev-partners__box span {
+        margin-top: 12px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .dev-partners__photo {
+        max-width: 180px;
+        height: 180px;
+        padding: 15px;
     }
 }

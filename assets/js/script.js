@@ -246,6 +246,7 @@ $(window).scroll(function () {
 
 
 
+
     let $developerAnim = $('.developer__main');
 
     if ($('.developerHasClass').hasClass('developer__main')){
@@ -334,18 +335,6 @@ $(window).scroll(function () {
 
 
 
-    let $contsecHasAnim = $('.contact__sec');
-
-    if ($('.contsecHasClass').hasClass('contact__sec')){
-
-        let $contsecHasTop = $contsecHasAnim.offset().top;
-        let $contsecHasBottom = $contsecHasTop + $contsecHasAnim.height();
-
-        if ($contsecHasTop + $contsecHasAnim.height() / 3 < docViewBottom && docViewBottom  < $contsecHasBottom + $contsecHasAnim.height() ) {
-            $contsecHasAnim.addClass('contact__act');
-        } else {
-        }
-    }
 
 
     let $documentAnim = $('.document-page');

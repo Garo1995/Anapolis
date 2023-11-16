@@ -664,28 +664,6 @@ let locationSwiper = new Swiper(".location__slider", {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let partnersSwiper = new Swiper(".dev-partners__slider", {
     slidesPerView: 6,
     spaceBetween: 10,
@@ -729,13 +707,9 @@ let partnersSwiper = new Swiper(".dev-partners__slider", {
             slidesPerGroup: 1,
             spaceBetween: 5,
         },
-        '420': {
-            slidesPerView: 2,
-            slidesPerGroup: 1,
-            spaceBetween: 5,
-        },
+
         '300': {
-            slidesPerView: 1,
+            slidesPerView: 2,
             slidesPerGroup: 1,
             spaceBetween: 5,
         },
