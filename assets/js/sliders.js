@@ -591,7 +591,7 @@ let locationInfoSwiper = new Swiper(".location-info__slid", {
 
 let locationSwiper = new Swiper(".location__slider", {
     slidesPerView: 4,
-    spaceBetween: 105,
+    spaceBetween: 50,
     loop: true,
     autoplay: {
         delay: 3500,

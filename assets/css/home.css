@@ -443,6 +443,7 @@ body {
 
 .location__slider .swiper-slide-next {
     opacity: 0;
+    visibility: hidden;
 }
 
 .location__photo {
