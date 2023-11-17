@@ -357,7 +357,7 @@
 .scape__main{
     margin-top: -85px;
     width: 100%;
-    padding-bottom: 108px;
+    padding-bottom: 110px;
 }
 .scape__block{
     margin-top: 134px;
@@ -829,7 +829,7 @@
     .construction__item {
         padding: 34px 25px 0;
         margin-top: 70px;
-        margin-bottom: 230px;
+        margin-bottom: 54px;
     }
     .scape__photo {
         max-width: 100%;
@@ -840,6 +840,7 @@
     }
 }
 @media (max-width: 760px){
+
     .scape__cnt h1 {
         font-size: 80px;
         line-height: 88px;
@@ -936,7 +937,7 @@
         align-items: flex-start;
     }
     .construction__item {
-        margin-bottom: 190px;
+        margin-bottom: 54px;
     }
     .meters-sea__info {
         right: 21px;
@@ -958,6 +959,10 @@
     .swimming__wrap {
         max-width: 450px;
     }
+    .product-apart__btn .btn-liner {
+        max-width: 90px;
+    }
+
 }
 @media (max-width: 420px){
     .swimming__just:nth-child(1) {

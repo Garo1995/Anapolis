@@ -74,6 +74,9 @@ function mounthPay() {
 
 
 $('.basic-program-js').on('click', function () {
+
+
+
     $('.interest-rate').removeClass('state-support-block')
     $('.state-support-none').removeClass('state-support-act')
     $('.family-mortgage-none').removeClass('family-mortgage-act')
@@ -88,12 +91,14 @@ $('.state-support-js').on('click', function () {
 })
 
 
-
+$('.calculator__href').on('click', function () {
+    $('.calculator__href').removeClass('calculator-link__act');
+    $(this).addClass('calculator-link__act');
+});
 
 $('.family-mortgage-js').on('click', function () {
     $('.interest-rate').addClass('state-support-block')
     $('.state-support-none').removeClass('state-support-act')
     $('.family-mortgage-none').toggleClass('family-mortgage-act')
 })
-
 

@@ -415,7 +415,11 @@
     }
 
 }
-
+@media (max-width: 760px){
+    .perspective__anim{
+        padding-bottom: 110px;
+    }
+}
 @media (max-width: 570px){
     .contact__user img {
         max-width: 230px;

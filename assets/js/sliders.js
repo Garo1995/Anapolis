@@ -580,22 +580,13 @@ let buildingsSwiper = new Swiper(".buildings__slider", {
 
 
 
-
-
-
-
-
-
-
-
-
-
 let locationInfoSwiper = new Swiper(".location-info__slid", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 1,
     freeMode: true,
     watchSlidesProgress: true,
+    speed: 500,
 });
 
 let locationSwiper = new Swiper(".location__slider", {
