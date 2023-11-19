@@ -1423,6 +1423,8 @@ input:checked + .slider:before {
     width: 16vw;
     background: linear-gradient(0deg, #102F5C, #102F5C), linear-gradient(231.97deg, #174A94 6.32%, #15386B 98.89%);
     padding: 2.344vw 1.563vw;
+    transform: translateX(-10vw);
+
 }
 
 .plans-free__head {
