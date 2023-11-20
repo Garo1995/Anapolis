@@ -3710,7 +3710,10 @@ input:checked + .slider:before {
     .calculator__flex {
         margin-top: 40px;
     }
+    .plans-free {
 
+        transform: translateX(-11vw);
+    }
     .calc-original {
         margin-top: 19px;
         margin-bottom: 40px;

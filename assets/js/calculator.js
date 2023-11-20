@@ -67,7 +67,6 @@ function updateMainValue() {
 function mounthPay() {
     let x = mainValue / (+dateRange.value * 12)
     monthlyPayment.innerHTML = numberWithSpaces(x.toFixed(2)) + ' ₽'
-    firstPayPrice.innerHTML = numberWithSpaces(x.toFixed(2))
 }
 
 
