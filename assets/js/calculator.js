@@ -24,6 +24,7 @@ range.addEventListener("input", function () {
     mounthPay()
 });
 
+
 getInput.addEventListener('input', function () {
     firstPayPrice.innerText = numberWithSpaces(getInput.value)
     updateMainValue()
@@ -40,8 +41,7 @@ dateRange.addEventListener('input', function () {
 for (let i = 0; i < percents.length; i++) {
     percents[i].addEventListener('click', function () {
         let dataPercent = percents[i].dataset.percent
-        console.log(dataPercent);
-        firstPayPrice.innerText = +range.value * +dataPercent / 100
+        firstPayPrice.innerText = numberWithSpaces(+range.value * +dataPercent / 100)
         getInput.value = +range.value * +dataPercent / 100
         updateMainValue()
         mounthPay()
@@ -56,9 +56,7 @@ for (let i = 0; i < percents.length; i++) {
 
 function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-
 }
-
 function updateMainValue() {
     mainValue = +range.value - +getInput.value
     addNumber.innerText = numberWithSpaces(mainValue) + ' ₽'

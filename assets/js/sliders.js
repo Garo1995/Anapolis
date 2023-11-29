@@ -587,6 +587,14 @@ let locationInfoSwiper = new Swiper(".location-info__slid", {
     freeMode: true,
     watchSlidesProgress: true,
     speed: 500,
+    pagination: {
+        el: ".location-pag",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".loc-swiper-next",
+        prevEl: ".loc-swiper-prev",
+    },
 });
 
 let locationSwiper = new Swiper(".location__slider", {
